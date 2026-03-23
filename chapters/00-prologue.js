@@ -14,8 +14,8 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_void_white.webp",
       bgm: "./assets/bgm/bgm_prologue_99.mp3",
       bgmName: "99.000000%",
-      cardDuration: 2500,
-      pauseAfter: 650
+      cardDuration: 2600,
+      pauseAfter: 700
     },
     {
       location: "99.000000%",
@@ -33,7 +33,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_002_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "那不是钟表坏掉后的静止，也不是老旧机器发出的迟钝喘息。更像某种尚未出生的东西，在最后一口气抵达喉咙前，被一只看不见的手按住。"
+      text: "那不是钟表坏掉之后的静止，也不是一台机器因为老旧而发出的迟钝喘息。那更像某种尚未出生的东西，在最后一口气抵达喉咙之前，被一只看不见的手轻轻按住了。"
     },
     {
       location: "99.000000%",
@@ -58,7 +58,7 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
-      text: "然后，某个没有来源的地方，传来一声极轻的震动。那不像声音，更像是尚未被命名的某种东西，第一次被触碰时发出的颤意。",
+      text: "然后，某个没有来源的地方，传来一声极轻的震动。那不像声音。更像是尚未被命名的某种东西，第一次被触碰时发出的颤意。",
       textSpeed: 22,
       pauseAfter: 180
     },
@@ -76,7 +76,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_007_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "远处又传来一声。这一次，更清楚一些。像哭声。"
+      text: "远处又传来一声。"
     },
     {
       location: "99.000000%",
@@ -84,7 +84,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_008_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "不是回音，不是记录，不是任何能被归类的数据噪点。那哭声带着一种极生涩的质地，像世界第一次学会悲伤，却还不会表达，只能用最接近哭泣的方式，把自己撕开一道细缝。"
+      text: "这一次，更清楚一些。像哭声。"
     },
     {
       location: "99.000000%",
@@ -92,7 +92,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_009_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "光点在黑暗中偏移了一瞬。紧接着，裂痕出现了。"
+      text: "不是回音，不是记录，不是任何能被归类的数据噪点。那哭声带着一种极生涩的质地，像世界第一次学会悲伤，却还不知道该怎样表达，于是只能用最接近哭泣的方式，把自己撕开一道细缝。"
     },
     {
       location: "99.000000%",
@@ -100,7 +100,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_010_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "不是爆炸，也不是坍塌。更像原本完整的东西忽然发现自己并不完整，于是边缘开始松动，内部开始分离，所有看似牢固的秩序，都在那一瞬间失去了彼此咬合的理由。"
+      text: "光点在黑暗中偏移了一瞬。紧接着，裂痕出现了。"
     },
     {
       location: "99.000000%",
@@ -108,7 +108,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_011_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "粒子向下落去。像灰。像雪。像尚未来得及命名的花。"
+      text: "不是爆炸，也不是坍塌。更像原本完整的东西忽然发现自己并不完整，于是边缘开始松动，内部开始分离，所有看似牢固的秩序，都在那一瞬间失去了彼此咬合的理由。"
     },
     {
       location: "99.000000%",
@@ -116,8 +116,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_012_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      sfx: "./assets/sfx/sfx_wind_light.wav",
-      text: "风，在裂开的地方出现。先是一阵几乎不敢承认自身的风；再后来，它学会了掠过树影、压低草地、拂开层叠的花瓣，最后穿过长廊与湿冷的砖石，把一整个尚未完成的世界慢慢吹了出来。"
+      text: "粒子向下落去。像灰。像雪。像尚未来得及命名的花。"
     },
     {
       location: "99.000000%",
@@ -125,7 +124,8 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_013_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "没有天空。没有地面。只有从哭声里长出来的路。"
+      sfx: "./assets/sfx/sfx_wind_light.wav",
+      text: "风，在裂开的地方出现。先是极轻的一阵，像不确定自己是否存在；再后来，它学会了掠过树影、压低草地、拂开层叠的花瓣，最后穿过长廊与湿冷的砖石，把一整个尚未完成的世界慢慢吹了出来。"
     },
     {
       location: "99.000000%",
@@ -133,12 +133,20 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/00-prologue/00-prologue_014_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
+      text: "没有天空。没有地面。只有从哭声里长出来的路。"
+    },
+    {
+      location: "99.000000%",
+      speaker: "旁白",
+      voice: "./assets/voice/00-prologue/00-prologue_015_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_void_white.webp",
       text: "最后，一切忽然黑了下去。像有人按下了暂停。"
     },
     {
       location: "99.000000%",
       speaker: "声音",
-      voice: "./assets/voice/00-prologue/00-prologue_015_voice.wav",
+      voice: "./assets/voice/00-prologue/00-prologue_016_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "……为什么……",
@@ -149,7 +157,7 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "99.000000%",
       speaker: "旁白",
-      voice: "./assets/voice/00-prologue/00-prologue_016_voice.wav",
+      voice: "./assets/voice/00-prologue/00-prologue_017_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "没有人回答。"

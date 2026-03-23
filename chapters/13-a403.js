@@ -18,67 +18,77 @@ window.AliceCourtyardChapterFiles.push({
       pauseAfter: 520
     },
     {
-      location: "喷泉边",
+      location: "庭院深夜",
       speaker: "旁白",
       voice: "./assets/voice/13-a403/13-a403_001_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      text: "那一夜，庭院先不是看见了谁，而是先感觉到某个一直压在更深处的东西终于浮了上来。回廊尽头的门牌一扇扇亮起，像有人在黑暗里依次把许多从未真正结束过的人生重新照亮。",
+      pauseBefore: 180,
+      pauseAfter: 220,
+      textSpeed: 20
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_002_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" }
       ],
-      text: "A-403不是某一天走进庭院的。她第一次被所有人真正看见，是在所有门同时亮起来的时候。最先看见她的人，是A-017。"
+      text: "A-017最先察觉到的，不是声音，而是空气忽然变重了。整座庭院像在同一瞬间屏住一口气，连喷泉边的水面都安静得过分，仿佛有什么东西正借着那层水光，把自己慢慢推回人形。",
     },
     {
-      location: "喷泉水面",
+      location: "喷泉边",
       speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_002_voice.wav",
+      voice: "./assets/voice/13-a403/13-a403_003_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" }
+      ],
+      text: "她下意识低头看了一眼。原本只该映出自己脸的地方，却先出现了一张模糊不定的脸。那张脸在很多轮廓之间缓慢晃动，有时像她自己，有时像 A-214，有时又像某个从未被真正讲完的陌生人。",
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_004_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_a403_core.webp",
-      text: "A-017只是低头看了一眼水面。原本只该映出自己脸的地方，却出现了另一张模糊不定的脸。那张脸在许多轮廓之间缓慢晃动，有时像她自己，有时像A-214，有时又像某个从未真正被讲完的陌生人。等她再抬头时，那个人已经站在喷泉对面。",
+      text: "等 A-017 再抬起头时，那个人已经站在喷泉对面。像她本来就一直在那里，只是直到这一刻，庭院才终于承认自己再也压不住她了。",
       pauseBefore: 240,
       pauseAfter: 260
     },
     {
       location: "喷泉对面",
       speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_003_voice.wav",
+      voice: "./assets/voice/13-a403/13-a403_005_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
       ],
-      text: "她像原本就一直站在那里，只是直到这一刻，才终于被所有人真正看见。她身上不是没有编号，而是那串编号并不安稳，像被反复覆写过太多次的旧痕，一会儿浮在手腕，一会儿又从锁骨边淡下去，最后总会在皮肤更深一点的地方重新显出来。"
+      text: "她身上的编号不是没有，而是不稳定。像被反复覆写过太多次的旧痕，一会儿浮在手腕，一会儿从锁骨边淡下去，最后又总会从更深一点的地方重新显出来。",
     },
     {
-      location: "记录页",
+      location: "记录页前",
       speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_004_voice.wav",
+      voice: "./assets/voice/13-a403/13-a403_006_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
-      text: "几乎是同一时间，Yume手里的册子重重翻到最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩下一行终于定下来的字。A-403。",
+      text: "几乎是同一时间，Yume手里的册子自己翻到了最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩一行终于定下来的字：A-403。",
       sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
       pauseBefore: 180
     },
     {
-      location: "喷泉边",
-      speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_005_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
-        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
-      ],
-      text: "A-017看着那三个字，心里最先升起来的不是害怕，而是一种更接近晕眩的东西。像她忽然被谁按着头，看见了一个自己本来绝不该看见的答案。"
-    },
-    {
       location: "庭院中央",
       speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_006_voice.wav",
+      voice: "./assets/voice/13-a403/13-a403_007_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -86,18 +96,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "Hana、Alice、Yume都站了起来。Alice起身时，先极轻地看了Hana一眼。那目光短得几乎不像一个动作，倒更像某种连她自己都不愿承认的确认。四人偶也从各自的位置上缓慢转过头。没有人说话。因为所有人都在同一瞬间明白，这不是一个“新来的人”。"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_007_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
-      ],
-      text: "A-403抬起眼，看向她们，眼神里没有惊慌，也没有敌意。只有一种过于疲惫之后反而显得极清醒的安静。"
+      text: "Yume没有立刻把那一页合上。Hana和Alice也一起回到了庭院中央。四人偶从各自的位置抬起头，连风都像停在了离她们更远一点的地方。",
     },
     {
       location: "喷泉对面",
@@ -119,24 +118,12 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
       ],
-      text: "她开口时，声音里像叠着许多别的残响。不是合唱。更像很多个没能完全说完的话，在她一个人的嗓子里暂时找到了出口。"
+      text: "她说出那个次数时，不像在数自己。更像在替那些早就被压成一团、再也分不出先后的失败一起确认：原来她们真的已经失败了这么多次。",
     },
     {
       location: "喷泉边",
-      speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_010_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
-        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
-      ],
-      text: "A-017甚至不知道自己为什么会在那一刻轻轻发抖。她只是本能地感觉到，眼前站着的这个人并不是“比她更大一点的悲剧”。而是所有她来不及认识的人、来不及记住的痛、来不及被谁停下来的失败，一起长成了一个终于不能再被压回去的形状。"
-    },
-    {
-      location: "喷泉对面",
       speaker: "Alice",
-      voice: "./assets/voice/13-a403/13-a403_011_alice.wav",
+      voice: "./assets/voice/13-a403/13-a403_010_alice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -151,113 +138,24 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_012_voice.wav",
+      voice: "./assets/voice/13-a403/13-a403_011_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
       ],
-      text: "A-403看着她，忽然笑了一下。那笑意很短，短得更像某种终于被逼出来的疲惫。"
+      text: "A-403看着她，忽然很轻地笑了一下。那笑意短得更像某种终于被逼出来的疲惫。",
     },
     {
       location: "喷泉对面",
       speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_013_a403.wav",
+      voice: "./assets/voice/13-a403/13-a403_012_a403.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
       ],
-      text: "你们还以为这是第四百零三个女孩吗？"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_014_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "A-017想知道，为什么没有人停下来。A-092一直说自己只是站在旁边。A-214以为只要后悔，就能重新长出一点干净的东西。A-301把自己收拾得太整齐，直到死都没人发现她其实在求救。还有很多我甚至已经记不清编号的人。"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_015_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
-      ],
-      text: "我不是她们之中的哪一个。"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_016_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
-      ],
-      text: "我是你们让四百零三次失败，最后叠出来的那个答案。"
-    },
-    {
-      location: "喷泉边",
-      speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_017_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" },
-        { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp", dim: true }
-      ],
-      text: "A-017听见这句话时，手指几乎立刻收紧，宣传页边缘一下陷进掌心。她直到那一刻才真正意识到，自己过去以为“最痛的那一个瞬间”，也许从来都不是整件事的全部。原来在她没有看见的地方，还有那么多同样没能被谁停下来的人。"
-    },
-    {
-      location: "喷泉边",
-      speaker: "旁白",
-      voice: "./assets/voice/13-a403/13-a403_018_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" }
-      ],
-      text: "而眼前这个人，正是那些她来不及认识的失败一起长出来的脸。她明明听见了自己的呼吸，却也清楚地知道，眼前的人并不是她。A-403比她更大。大到足以把所有没能被完整归档的痛、悔、空白、愤怒和未完成，一起压在同一个躯体里。"
-    },
-    {
-      location: "庭院中央",
-      speaker: "Yume",
-      voice: "./assets/voice/13-a403/13-a403_019_yume.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
-      ],
-      text: "记录错误……"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_020_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "不是错误。"
-    },
-    {
-      location: "喷泉对面",
-      speaker: "A-403",
-      voice: "./assets/voice/13-a403/13-a403_021_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "是你们一直不肯承认，Alice从来就不只一个。"
+      text: "我是你们一直没能处理完的那一页。"
     }
   ]
 });

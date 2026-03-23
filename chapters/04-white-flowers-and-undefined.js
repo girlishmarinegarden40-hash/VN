@@ -15,7 +15,7 @@ window.AliceCourtyardChapterFiles.push({
       bgm: "./assets/bgm/bgm_white_book.mp3",
       bgmName: "白之书",
       cardDuration: 2400,
-      pauseAfter: 520,
+      pauseAfter: 520
     },
     {
       location: "庭院傍晚",
@@ -39,9 +39,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "金色双马尾拖过草尖，像两道冷光。她手里各拿着一本书，一黑一白。她站在少女面前时，连周围空气都像被判定得更清晰了一点。",
-      pauseBefore: 160,
-      pauseAfter: 180,
+      text: "金色双马尾拖过草尖，像两道冷光。她手里各拿着一本书，一黑一白。她站在少女面前时，连周围空气都像被判定得更清晰了一点。"
     },
     {
       location: "庭院傍晚",
@@ -53,7 +51,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_neutral.webp" }
       ],
-      text: "后来她才知道，眼前这个金色双马尾的少女，真名本来就叫 Alice。可这反而让她更乱了。Yume最开始也这样叫过她。为什么来到这里的人会先被叫作 Alice？为什么 Hana 身边，偏偏也站着一个真正叫 Alice 的人？"
+      text: "后来她才知道，眼前这个金色双马尾少女的真名本来就叫Alice。可这反而让她更乱了。Yume最开始也这样叫过她。为什么来到这里的人会先被叫作爱丽丝？为什么Hana身边，偏偏也站着一个真正叫Alice的人？"
     },
     {
       location: "庭院傍晚",
@@ -184,7 +182,7 @@ window.AliceCourtyardChapterFiles.push({
       cg: "./assets/cg/cg_white_book_judgment.webp",
       pauseBefore: 180,
       pauseAfter: 260,
-      text: "风从喷泉那边吹过来。Alice低头看了一眼那张纸。存在幸福碎片。存在未完成渴望。存在继续停留的必要。"
+      text: "风从喷泉那边吹过来。Alice低头看了一眼那张纸。存在幸福碎片。存在未完成欲望。存在继续停留的必要。"
     },
     {
       location: "白之书",
@@ -196,7 +194,7 @@ window.AliceCourtyardChapterFiles.push({
       text: "A-017，归类：未定义。",
       pauseBefore: 220,
       pauseAfter: 300,
-      textSpeed: 34,
+      textSpeed: 34
     },
     {
       location: "庭院傍晚",
@@ -223,7 +221,7 @@ window.AliceCourtyardChapterFiles.push({
       ],
       text: "意思是，从现在开始，你可以先留在这里。直到名字回来，或者你不再需要它。",
       pauseAfter: 240,
-      textSpeed: 24,
+      textSpeed: 24
     },
     {
       location: "庭院傍晚",
@@ -237,54 +235,6 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/alice/alice_slightly_soft.webp", dim: true }
       ],
       text: "她不是被拯救，也不是被原谅。她只是第一次被允许：不必急着成为一个已经写完的答案。"
-    },
-    {
-      location: "庭院回廊",
-      speaker: "旁白",
-      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_019_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_corridor_white.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
-        { slot: "right", src: "./assets/sprites/yume/yume_observing.webp", dim: true }
-      ],
-      text: "再往后一点，Yume带她走过回廊。门一扇扇立在雾里，门牌却全都空着。少女走到第三扇时，终于还是忍不住停了下来。"
-    },
-    {
-      location: "庭院回廊",
-      speaker: "A-017",
-      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_020_a017.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_corridor_white.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
-        { slot: "right", src: "./assets/sprites/yume/yume_observing.webp", dim: true }
-      ],
-      text: "为什么这里什么都不写？"
-    },
-    {
-      location: "庭院回廊",
-      speaker: "Yume",
-      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_021_yume.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_corridor_white.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true },
-        { slot: "right", src: "./assets/sprites/yume/yume_neutral.webp" }
-      ],
-      text: "因为名字来得比痛慢。"
-    },
-    {
-      location: "庭院回廊",
-      speaker: "旁白",
-      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_022_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_corridor_white.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
-        { slot: "right", src: "./assets/sprites/yume/yume_neutral.webp", dim: true }
-      ],
-      text: "她看见册页上密密麻麻的编号。A-017、A-092、A-214、A-301……像很多来不及被完整叙述的人生，被压进同一册里。"
     }
   ]
 });

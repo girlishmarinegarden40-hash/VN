@@ -3,28 +3,31 @@ window.AliceCourtyardChapterFiles.push({
   id: "failed-answer",
   title: "第十四章",
   subtitle: "失败答案",
-  location: "月光与裂口",
+  location: "月光长椅",
   lines: [
     {
       type: "card",
       eyebrow: "Chapter 14",
       title: "失败答案",
-      subtitle: "我不够单数，没办法只恨一个人。",
-      location: "月光与裂口",
+      subtitle: "有些失败，不属于单数。",
+      location: "月光长椅",
       background: "./assets/bg/bg_garden_night.webp",
-      bgm: "./assets/bgm/bgm_mirror_relive.mp3",
-      bgmName: "镜中回声"
+      bgm: "./assets/bgm/bgm_a403_moonlight.mp3",
+      bgmName: "A-403",
+      cardDuration: 2400,
+      pauseAfter: 520
     },
     {
-      location: "庭院夜里",
+      location: "月下长椅",
       speaker: "旁白",
       voice: "./assets/voice/14-failed-answer/14-failed-answer_001_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
-      text: "那之后，庭院像突然失去了稳定的顺序。新来的编号不断消失。旧门却在夜里一扇扇自己亮起。A-403时而站在喷泉边，时而站在最深的回廊里，像她并不真正属于某一个位置。"
+      text: "A-017后来是在长椅边再次见到 A-403 的。那时庭院已经安静下来，可那种安静不是事情过去后的安静，而更像所有声音都被压到了看不见的地方，还在继续。",
+      pauseBefore: 180
     },
     {
-      location: "长椅边",
+      location: "月下长椅",
       speaker: "旁白",
       voice: "./assets/voice/14-failed-answer/14-failed-answer_002_voice.wav",
       voiceReady: false,
@@ -33,161 +36,139 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "A-017曾在月光下单独遇见过她一次。那时庭院很静。长椅边只有风。A-403垂眼看着她手里的宣传页，像她真正看见的，从来不是那张纸本身，而是纸背后那段还没来得及被人陪着走完的后来。"
+      text: "她本来只是路过。可脚步走到那里，就怎么也迈不过去了。像她其实一直都知道，自己迟早会有一句话必须亲口问出去。",
     },
     {
-      location: "长椅边",
-      speaker: "A-403",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_003_a403.wav",
+      location: "月下长椅",
+      speaker: "A-017",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_003_a017.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
-      ],
-      text: "你还想去吗？"
-    },
-    {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_004_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "少女怔住。她没想到对方会问这个。更没想到，这句话听上去竟然几乎不像来自系统异常，而像来自一个真的看见了那张纸的人。"
+      text: "你到底是谁？"
     },
     {
-      location: "长椅边",
-      speaker: "A-017",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_005_a017.wav",
+      location: "月下长椅",
+      speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_004_a403.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" }
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
-      text: "想。可那已经不是原来的那个地方了。"
+      text: "我是那些一直被解释掉、一直被说成没那么严重、一直被压回去的失败，最后叠成的样子。"
     },
     {
-      location: "长椅边",
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_005_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp", dim: true }
+      ],
+      text: "A-017没有立刻反驳。她只是把那张已经被按平很多次的水母馆宣传页捏得更紧，紧到纸边重新顶进掌心。",
+    },
+    {
+      location: "月下长椅",
       speaker: "A-403",
       voice: "./assets/voice/14-failed-answer/14-failed-answer_006_a403.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
-      text: "是啊。"
+      text: "你真正想回去的，也许从来都不是水母馆。"
     },
     {
-      location: "长椅边",
-      speaker: "A-403",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_007_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "所以你真正想去的，也许根本不是水母馆。"
-    },
-    {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_008_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "A-403的目光没有落在她脸上，而是穿过那张被反复摊平、又反复折回去的宣传页，落向更远处。"
-    },
-    {
-      location: "长椅边",
-      speaker: "A-403",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_009_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "你想去的，是那个还没被谁毁掉以前的自己。"
-    },
-    {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_010_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp", dim: true }
-      ],
-      text: "这句话让A-017第一次后退了一步。因为它太准了。准得像A-403不是在替谁说话，而是在把所有失败个案的核心一起说出来。"
-    },
-    {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_011_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
-      ],
-      text: "她想起A-214，想起A-092，想起那些一扇扇门后站着的其他人，忽然发现自己第一次不再把A-403当成“另一个异常”。她更像一切失败被压缩以后，终于不肯继续缩回去的回答。"
-    },
-    {
-      location: "长椅边",
+      location: "月下长椅",
       speaker: "A-017",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_012_a017.wav",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_007_a017.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "那你恨她们吗？"
+      text: "……你又知道什么。"
     },
     {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_013_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
-      ],
-      text: "A-403沉默了很久。月光落在她手腕边，那串反复浮出的编号痕像是也跟着一起静了下来。"
-    },
-    {
-      location: "长椅边",
+      location: "月下长椅",
       speaker: "A-403",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_014_a403.wav",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_008_a403.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
+      ],
+      text: "因为你想回去的，是那个还没有被谁毁掉以前的自己。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_009_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "那句话落下来的时候，A-017整个人都像被风从里面吹空了一下。她本来以为自己一直抓着的，是一张纸、一个地点、一个没有实现的约定。直到这时她才发现，自己抓着的其实是更早、更小、也更来不及被救回来的东西。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "A-017",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_010_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_crying.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "那我该恨谁？"
+    },
+    {
+      location: "月下长椅",
+      speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_011_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_crying.webp", dim: true }
+      ],
+      text: "你可以恨很多人。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_012_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_crying.webp", dim: true }
+      ],
+      text: "也可以恨整个让这些事一直成立下去的东西。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_013_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_crying.webp", dim: true }
       ],
       text: "我不够单数，没办法只恨一个人。"
-    },
-    {
-      location: "长椅边",
-      speaker: "A-403",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_015_a403.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
-      ],
-      text: "可我也不打算替任何人原谅任何事。"
-    },
-    {
-      location: "长椅边",
-      speaker: "旁白",
-      voice: "./assets/voice/14-failed-answer/14-failed-answer_016_voice.wav",
-      voiceReady: false,
-      background: "./assets/bg/bg_garden_night.webp",
-      text: "这就是A-403最可怕的地方。她不是复仇。也不是宽恕。她只是把所有被系统逼着分门别类的东西，重新聚回成了一个无法继续被简化的整体。"
     }
   ]
 });
