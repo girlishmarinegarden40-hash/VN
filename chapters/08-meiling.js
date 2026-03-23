@@ -37,13 +37,53 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "庭院长桌",
-      speaker: "旁白",
+      speaker: "Meiling",
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/meiling/meiling_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
-      text: "像她并不是在确认“现在有几个”，而是在确认，这一次会不会又少掉谁。A-017曾在她身边坐了一个下午，听她低声数：“五，六，七……”然后又从头开始。"
+      text: "五，六，七……"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_confused.webp" },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
+      ],
+      text: "然后她又会从头开始，像她并不是在确认“现在有几个”，而是在确认，这一次会不会又少掉谁。A-017曾在她身边坐了一个下午，听她反反复复数同样的数字，听到后来，连风声都像跟着变得小心翼翼。"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "A-017",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_confused.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "你怕数错吗？"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "Meiling",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_small_smile.webp" },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
+      ],
+      text: "怕。"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "Meiling",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_small_smile.webp" },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
+      ],
+      text: "不过更怕的是，少了也没人发现。"
     },
     {
       location: "回忆",
@@ -71,7 +111,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/meiling/meiling_confused.webp" }
       ],
-      text: "她只是被人群挤落了半步。等她抬起头时，最后一扇车门已经在她面前合上。名单的边角被手心的汗一点点浸软，贴在指腹上。她站在原地，连“我还在这里”都没来得及说出口。"
+      text: "她只是被人群挤落了半步。可那半步落下去时，谁也没有觉得哪里不对。她自己起初也没有。她只是下意识把矿泉水抱紧了一点，想等前面那阵混乱过去，再赶紧追上去。"
+    },
+    {
+      location: "回忆",
+      speaker: "旁白",
+      background: "./assets/bg/bg_classroom_afternoon.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_confused.webp" }
+      ],
+      text: "等她真正抬起头时，最后一扇车门已经在她面前合上。名单的边角被手心的汗一点点浸软，贴在指腹上。她站在原地，嘴唇动了一下，连“我还在这里”都没来得及说出口。"
     },
     {
       location: "回忆",
@@ -87,13 +136,19 @@ window.AliceCourtyardChapterFiles.push({
       location: "回忆",
       speaker: "旁白",
       background: "./assets/bg/bg_stairwell_windy.webp",
-      text: "那天前夜下过雨，坡道边缘一层很薄的青苔贴在灰白色水泥上，远看几乎和地面没有分别。她一脚踩上去的时候，先滑出去的是鞋底。紧接着，怀里的矿泉水也一起脱了手，塑料瓶滚下台阶，撞出一串又空又响的声音。"
+      text: "那天前夜下过雨，坡道边缘一层很薄的青苔贴在灰白色水泥上，远看几乎和地面没有分别。她一脚踩上去的时候，先滑出去的是鞋底。"
     },
     {
       location: "回忆",
       speaker: "旁白",
       background: "./assets/bg/bg_stairwell_windy.webp",
-      text: "她几乎是本能地伸手去捞。另一只手里的名单就在那时散开，白纸被风掀起来，贴着栏杆外沿扑出去。等她真正反应过来，身体已经跟着一起失去了重心。"
+      text: "紧接着，怀里的矿泉水也一起脱了手，塑料瓶滚下台阶，撞出一串又空又响的声音。她几乎是本能地伸手去捞。另一只手里的名单就在那时散开，白纸被风掀起来，贴着栏杆外沿扑出去。"
+    },
+    {
+      location: "回忆",
+      speaker: "旁白",
+      background: "./assets/bg/bg_stairwell_windy.webp",
+      text: "等她真正反应过来，身体已经跟着一起失去了重心。那一刻她脑子里什么都没剩下，只剩一个很短、很轻、甚至不够惨烈的念头：再慢一步就好了。只要再早一点发现，只要再有人回头数一遍人，只要她自己能早半拍抬头。"
     },
     {
       location: "后来",

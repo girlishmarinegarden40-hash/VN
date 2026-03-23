@@ -26,6 +26,16 @@ window.AliceCourtyardChapterFiles.push({
       text: "Shella很喜欢把东西分成两份。两只杯子，两块饼干，两份午后落进房间里的光。A-017一开始以为那只是习惯，后来才知道，那是她活着时就学会的生存方式。"
     },
     {
+      location: "庭院长桌",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/shella/shella_neutral.webp" },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
+      ],
+      text: "她分得很认真。点心要刚好一样大，杯口要朝向一样，连推向空位的动作都轻得像怕惊动谁。好像那并不是她的习惯，而是某种只要停下来一次，就会让整个房间都露出裂缝的程序。"
+    },
+    {
       location: "回忆",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_day.webp",
@@ -59,10 +69,19 @@ window.AliceCourtyardChapterFiles.push({
       text: "再长大一点以后，她已经知道那个位置不会真的有人回来坐下。可她还是继续分成两份，继续把靠窗的那一边擦干净，继续把两本书叠成一样高，像只要自己肯一直这样做下去，空掉的那一边就不会彻底变成空白。"
     },
     {
+      location: "回忆",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/shella/shella_neutral.webp" }
+      ],
+      text: "她原本以为，自己至少还能替那个人一直把这一份背下去。那时候她还会笑着说没关系，好像只要她自己够稳、够轻、够会把所有人的情绪兜住，现实就会多少给她留一点余地。"
+    },
+    {
       location: "病房",
       speaker: "旁白",
       background: "./assets/bg/bg_hospital_white.webp",
-      text: "她原本以为，自己至少还能替那个人一直把这一份背下去。可后来，先撑不住的却是她自己的身体。"
+      text: "可后来，先撑不住的却是她自己的身体。"
     },
     {
       location: "病房",
@@ -83,7 +102,7 @@ window.AliceCourtyardChapterFiles.push({
       location: "病房",
       speaker: "旁白",
       background: "./assets/bg/bg_hospital_white.webp",
-      text: "像她明明已经快没有力气照顾自己了，仍然不肯把替别人留下的位置收回去。"
+      text: "像她明明已经快没有力气照顾自己了，仍然不肯把替别人留下的位置收回去。就连护士来撤走一只多余的杯子时，她都会很轻地抬一下手，像下意识想说：先别动那里。"
     },
     {
       location: "病房",
@@ -131,7 +150,7 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "Shella",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/shella/shella_fading_smile.webp" },
+        { slot: "left", src: "./assets/sprites/shella/shella_fragile.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
       text: "累。"

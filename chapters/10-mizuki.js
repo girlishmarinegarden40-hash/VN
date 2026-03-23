@@ -110,7 +110,7 @@ window.AliceCourtyardChapterFiles.push({
       location: "回忆",
       speaker: "旁白",
       background: "./assets/bg/bg_void_white.webp",
-      text: "被恐惧按在地上的那段时间里，Mizuki甚至一度希望，如果自己不存在，也许妹妹就不会被一起牵连。可偏偏是在那样的时候，妹妹还会伸手碰她乱掉的领口，低声说：“姐姐，先别怕。”"
+      text: "被恐惧按在地上的那段时间里，Mizuki甚至一度希望，如果自己不存在，也许妹妹就不会被一起牵连。可偏偏是在那样的时候，妹妹还会伸手碰她乱掉的领口，低声说：姐姐，先别怕。"
     },
     {
       location: "回忆",
