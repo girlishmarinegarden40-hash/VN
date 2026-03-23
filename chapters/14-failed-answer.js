@@ -29,15 +29,14 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "A-017曾在月光下单独遇见过她一次。那时庭院很静。长椅边只有风。A-403垂眼看着她手里的宣传页，问："
+      text: "A-017曾在月光下单独遇见过她一次。那时庭院很静。长椅边只有风。A-403垂眼看着她手里的宣传页，像她真正看见的，从来不是那张纸本身，而是纸背后那段还没来得及被人陪着走完的后来。"
     },
     {
       location: "长椅边",
       speaker: "A-403",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" },
-        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
       ],
       text: "你还想去吗？"
     },
@@ -49,7 +48,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "少女怔住了。她没想到对方会问这个，更没想到，这句话听上去竟然几乎不像来自系统异常，而像来自一个真的看见了那张纸的人。"
+      text: "少女怔住。她没想到对方会问这个。更没想到，这句话听上去竟然几乎不像来自系统异常，而像来自一个真的看见了那张纸的人。"
     },
     {
       location: "长椅边",
@@ -80,6 +79,15 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "长椅边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
+      ],
+      text: "A-403的目光没有落在她脸上，而是穿过那张被反复摊平、又反复折回去的宣传页，落向更远处。"
+    },
+    {
+      location: "长椅边",
       speaker: "A-403",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -95,7 +103,16 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp", dim: true }
       ],
-      text: "这句话让少女第一次后退了一步。因为它太准了。准得像A-403不是在替谁说话，而是在把所有失败个案的核心一起说出来。"
+      text: "这句话让A-017第一次后退了一步。因为它太准了。准得像A-403不是在替谁说话，而是在把所有失败个案的核心一起说出来。"
+    },
+    {
+      location: "长椅边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
+      ],
+      text: "她想起A-214，想起A-092，想起那些一扇扇门后站着的其他人，忽然发现自己第一次不再把A-403当成“另一个异常”。她更像一切失败被压缩以后，终于不肯继续缩回去的回答。"
     },
     {
       location: "长椅边",
@@ -114,7 +131,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
       ],
-      text: "A-403沉默了很久。"
+      text: "A-403沉默了很久。月光落在她手腕边，那串反复浮出的编号痕像是也跟着一起静了下来。"
     },
     {
       location: "长椅边",
@@ -138,7 +155,7 @@ window.AliceCourtyardChapterFiles.push({
       location: "长椅边",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
-      text: "这就是A-403最可怕的地方。她不是复仇，也不是宽恕。她只是把所有被系统逼着分门别类的东西，重新聚回成了一个无法继续被简化的整体。"
+      text: "这就是A-403最可怕的地方。她不是复仇。也不是宽恕。她只是把所有被系统逼着分门别类的东西，重新聚回成了一个无法继续被简化的整体。"
     }
   ]
 });

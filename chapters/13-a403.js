@@ -25,11 +25,11 @@ window.AliceCourtyardChapterFiles.push({
       text: "A-403不是某一天走进庭院的。她第一次被所有人真正看见，是在所有门同时亮起来的时候。最先看见她的人，是A-017。"
     },
     {
-      location: "喷泉边",
+      location: "喷泉水面",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_a403_core.webp",
-      text: "她低头看向水面，原本只该映出自己脸的地方，却出现了另一张模糊不定的脸。那张脸在许多轮廓之间缓慢晃动。有时像她自己。有时像A-214。有时像某个从未真正被讲完的陌生人。等她再抬头时，那个人已经站在喷泉对面。"
+      text: "A-017只是低头看了一眼水面。原本只该映出自己脸的地方，却出现了另一张模糊不定的脸。那张脸在许多轮廓之间缓慢晃动，有时像她自己，有时像A-214，有时又像某个从未真正被讲完的陌生人。等她再抬头时，那个人已经站在喷泉对面。"
     },
     {
       location: "喷泉对面",
@@ -38,16 +38,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
       ],
-      text: "她像原本就一直站在那里，只是直到这一刻，才终于被所有人真正看见。她身上的编号并不安稳，像被反复覆写过太多次的旧痕，一会儿浮在手腕，一会儿又从锁骨边淡下去，最后总会在皮肤更深一点的地方重新显出来。"
+      text: "她像原本就一直站在那里，只是直到这一刻，才终于被所有人真正看见。她身上不是没有编号，而是那串编号并不安稳，像被反复覆写过太多次的旧痕，一会儿浮在手腕，一会儿又从锁骨边淡下去，最后总会在皮肤更深一点的地方重新显出来。"
     },
     {
       location: "记录页",
       speaker: "旁白",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
+        { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
-      text: "可Yume的册子在同一时间重重翻到最后一页，停在那串终于写清楚的字上：A-403。"
+      text: "几乎是同一时间，Yume手里的册子重重翻到最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩下一行终于定下来的字。A-403。"
     },
     {
       location: "喷泉边",
@@ -72,6 +72,15 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "喷泉对面",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
+      ],
+      text: "A-403抬起眼，看向她们，眼神里没有惊慌，也没有敌意。只有一种过于疲惫之后反而显得极清醒的安静。"
+    },
+    {
+      location: "喷泉对面",
       speaker: "A-403",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -89,6 +98,16 @@ window.AliceCourtyardChapterFiles.push({
       text: "她开口时，声音里像叠着许多别的残响。不是合唱。更像很多个没能完全说完的话，在她一个人的嗓子里暂时找到了出口。"
     },
     {
+      location: "喷泉边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "A-017甚至不知道自己为什么会在那一刻轻轻发抖。她只是本能地感觉到，眼前站着的这个人并不是“比她更大一点的悲剧”。而是所有她来不及认识的人、来不及记住的痛、来不及被谁停下来的失败，一起长成了一个终于不能再被压回去的形状。"
+    },
+    {
       location: "喷泉对面",
       speaker: "Alice",
       background: "./assets/bg/bg_garden_night.webp",
@@ -97,6 +116,15 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
       text: "你是谁？"
+    },
+    {
+      location: "喷泉对面",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
+      ],
+      text: "A-403看着她，忽然笑了一下。那笑意很短，短得更像某种终于被逼出来的疲惫。"
     },
     {
       location: "喷泉对面",
@@ -139,10 +167,19 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" },
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp", dim: true }
       ],
       text: "A-017听见这句话时，手指几乎立刻收紧，宣传页边缘一下陷进掌心。她直到那一刻才真正意识到，自己过去以为“最痛的那一个瞬间”，也许从来都不是整件事的全部。原来在她没有看见的地方，还有那么多同样没能被谁停下来的人。"
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" }
+      ],
+      text: "而眼前这个人，正是那些她来不及认识的失败一起长出来的脸。她明明听见了自己的呼吸，却也清楚地知道，眼前的人并不是她。A-403比她更大。大到足以把所有没能被完整归档的痛、悔、空白、愤怒和未完成，一起压在同一个躯体里。"
     },
     {
       location: "庭院中央",

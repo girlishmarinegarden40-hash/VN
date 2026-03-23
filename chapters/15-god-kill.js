@@ -9,14 +9,14 @@ window.AliceCourtyardChapterFiles.push({
       type: "card",
       eyebrow: "Chapter 15",
       title: "GOD_KILL",
-      subtitle: "未来第一次拒绝被代为输出。",
+      subtitle: "未来第一次拒绝再被代为输出。",
       location: "庭院崩塌前夜",
       background: "./assets/bg/bg_garden_night.webp",
       bgm: "./assets/bgm/bgm_god_kill.mp3",
       bgmName: "GOD_KILL"
     },
     {
-      location: "喷泉边",
+      location: "记录页前",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -25,7 +25,7 @@ window.AliceCourtyardChapterFiles.push({
       text: "真正的崩塌，并不是从光球碎裂开始的。而是从Yume第一次写不下去开始的。册子翻开。笔尖落下。A-403。第一个数字刚写成，墨迹就像被什么更深的东西从纸背顶开。"
     },
     {
-      location: "喷泉边",
+      location: "记录页前",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
@@ -47,6 +47,15 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "然后，喷泉先一步失去了原本的秩序。水没有落下，反而缓慢地往上倒升。长桌上的七只杯子无声开裂。回廊里所有空白门牌同时颤了一下，接着一块一块褪成更深的空白。花圃里的白花在同一瞬间盛开，又在下一瞬间像被无形的手抹掉边缘。"
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
+      ],
+      text: "Yume看着那一页纸，很久都没有说话。她终于明白，不是自己没能把她写清。而是这一次，再也没有任何一种记录，能够把这么多互相冲撞的未来，压回同一行结论里。"
     },
     {
       location: "喷泉边",
@@ -74,7 +83,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
       ],
       sfx: "./assets/sfx/sfx_book_close.wav",
-      text: "她轻轻合上册子，把它放在喷泉边。册子自动翻开最后几页，上面的字没有继续增加，只是一行一行褪成了空白。最后一页明明还剩着足够写下一个结局的位置。Yume却没有再落下一笔。"
+      text: "她轻轻合上册子，把它放在喷泉边。册子自动翻开最后几页，上面的字没有继续增加，只是一行一行褪成了空白。最后一页明明还剩着足够写下一个结局的位置。Yume却没有再落下一笔。像她终于明白，有些存在即使不再被她记下，也不该由她代写终句。"
     },
     {
       location: "喷泉边",
@@ -89,20 +98,20 @@ window.AliceCourtyardChapterFiles.push({
       location: "喷泉边",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
-      text: "A-017想叫她，却在开口之前先看见Yume的袖口开始散成极细的纸光。她转过头，先看了一眼Hana，又看了一眼Alice。那目光很轻，不像告别，倒更像一个比谁都早学会退到后面的长姐，在离开之前，最后确认两个妹妹已经不再需要她替她们把结尾写完。"
+      text: "A-017想叫她，却在开口之前先看见Yume的袖口开始散成极细的纸光。她转过头，先看了一眼Hana，又看了一眼Alice。那目光很轻，不像告别。倒更像一个比谁都早学会退到后面的长姐，在离开之前，最后确认两个妹妹已经不再需要她替她们把结尾写完。"
     },
     {
       location: "喷泉边",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
-      text: "然后她便像从来都比任何人更懂得退场的方式那样，安静地消失了。"
+      text: "然后她便像从来都比任何人更懂得退场的方式那样，安静地消失了。没有巨响。没有挣扎。她只是让“过去”先一步从庭院里轻轻退了下去。"
     },
     {
       location: "庭院中央",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
+        { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
       text: "Hana往前一步。她想像过去无数次那样，把谁送回原点，再让那个人重新看一遍自己走错的地方。可她只迈出半步，就停住了。因为A-403不是某一个还可以被送回去的人。她是许多原点被反复折回、反复覆写以后，最后堆出来的那道裂口。"
@@ -157,7 +166,7 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "Visitor",
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
-      text: "她疯了吧。 她到底是谁。 这算洗白吗？"
+      text: "她疯了吧。她到底是谁。这算洗白吗？"
     },
     {
       location: "庭院中央",
@@ -187,7 +196,14 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "旁白",
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
-      text: "下一秒，光球轰然裂开。不是向内坍塌，而是向所有方向同时张开。喷泉的水柱在半空中碎成无数悬停的水片。回廊塌下来时，没有发出石头该有的声音，倒更像无数页被撕开的纸一起坠地。长椅、空椅、门、楼梯、镜子、教室、病房、火场、名单、宣传页，全都在那一刻彼此重叠。不是世界在毁坏，而是世界终于不肯再被压成同一种样子。"
+      text: "下一秒，光球轰然裂开。不是向内坍塌，而是向所有方向同时张开。喷泉的水柱在半空中碎成无数悬停的水片。回廊塌下来时，没有发出石头该有的声音，倒更像无数页被撕开的纸一起坠地。花路一寸一寸断裂，又在断裂处生出原本不该存在的新岔口。"
+    },
+    {
+      location: "99.000000%",
+      speaker: "旁白",
+      background: "./assets/bg/bg_void_white.webp",
+      cg: "./assets/cg/cg_god_kill_collapse.webp",
+      text: "长椅、空椅、门、楼梯、镜子、教室、病房、火场、名单、宣传页，全都在那一刻彼此重叠。不是世界在毁坏。而是世界终于不肯再被压成同一种样子。"
     },
     {
       location: "GOD_KILL",
@@ -214,15 +230,14 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp", dim: true }
       ],
-      text: "那不是提醒，也不是判定，只是一个直到最后一刻，才终于像“人”一样说出来的名字。Hana立刻走过去。Alice的指尖已经开始透明。黑白两本书从她掌心滑落，书脊同时裂开。"
+      text: "那不是提醒，也不是判定，只是一个直到最后一刻，才终于像“人”一样说出来的名字。Hana立刻走过去。Alice的指尖已经开始透明。黑白两本书从她掌心滑落，书脊同时裂开，像有两道尚未成形的影正从里面慢慢呼吸。"
     },
     {
       location: "崩塌之中",
       speaker: "Alice",
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" },
-        { slot: "right", src: "./assets/sprites/hana/hana_cold.webp", dim: true }
+        { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
       text: "已经不需要了。"
     },
@@ -266,7 +281,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
-      text: "听好。我从来不是来替谁原谅任何人的。也不是来保证，所有人都能被救下来。"
+      text: "听好。"
+    },
+    {
+      location: "崩塌之中",
+      speaker: "Hana",
+      background: "./assets/bg/bg_void_white.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
+      ],
+      text: "我从来不是来替谁原谅任何人的。也不是来保证，所有人都能被救下来。"
     },
     {
       location: "崩塌之中",
@@ -301,7 +325,7 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "Hana",
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
-        { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
+        { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
       text: "这一次，不必再由我接住你们了。"
     },

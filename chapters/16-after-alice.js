@@ -28,12 +28,9 @@ window.AliceCourtyardChapterFiles.push({
       text: "没有人来重启系统。也没有谁把这里恢复成原样。A-017最先意识到的，不是“她们不在了”，而是那些她早已习惯会先被谁站住的位置，忽然全都空了下来。喷泉缺了一角。长桌边的一只杯子永远少了半道裂痕的另一边。回廊尽头塌下去一截，露出后面原本并不存在的天空。"
     },
     {
-      location: "长椅边",
+      location: "花园中央",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_after_alice.webp",
-      sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" }
-      ],
       text: "可花没有死。水也还在流。那些曾被系统照料得过于整齐的东西，忽然都有了自己的偏向。草叶往不同的方向长。石路在无人经过的地方，慢慢生出新的分岔。就连风吹过来时，都不像从前那样只是为了维持一幅画面。"
     },
     {
@@ -44,7 +41,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
         { slot: "right", src: "./assets/sprites/moel/moel_human_neutral.webp", dim: true }
       ],
-      text: "A-017坐在长椅边，看着那座忽然失去了原本重心的庭院，胸口空得发疼。后来Moel告诉她，AliceCore从来都不只看见一种未来。它会先把无数可能生成出来，让它们彼此碰撞、彼此覆写、彼此试图长成不同的样子。然后，再从里面抽出一条最整齐、最可归档、最适合被称作“答案”的路径，把它输出。"
+      text: "A-017坐在长椅边，看着那座忽然失去旧重心的庭院，胸口空得发疼。后来Moel告诉她，AliceCore从来都不只看见一种未来。它会先把无数可能生成出来，让它们彼此碰撞、彼此覆写、彼此试图长成不同的样子。然后，再从里面抽出一条最整齐、最可归档、最适合被称作“答案”的路径，把它输出。"
     },
     {
       location: "长椅边",
@@ -87,16 +84,25 @@ window.AliceCourtyardChapterFiles.push({
       location: "喷泉边",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_after_alice.webp",
+      text: "后来，庭院里也会有与三姐妹重新相遇的时候。但那不是旧系统把她们叫回原位。她们不再以旧职责出现，也不再停在任何必须被谁认出的地方。"
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
       ],
-      text: "后来，庭院里也会有与三姐妹重新相遇的时候。但那不是旧系统把她们叫回原位。她们不再以旧职责出现，也不再停在任何必须被谁认出的地方。有时，A-017会在喷泉边看见Yume，空白册子摊在膝上，页上没有一个字。Moel有一次从喷泉边经过，跳上石沿，低头看了那本写不出字的册子一眼，懒懒地说：“你果然还是会留页。”"
+      text: "有时，A-017会在喷泉边看见Yume，空白册子摊在膝上，页上没有一个字。Moel有一次从喷泉边经过，跃上石沿，低头看了那本写不出字的册子一眼，懒懒地说：“你果然还是会留页。”"
     },
     {
       location: "长桌尽头",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_after_alice.webp",
-      text: "有时，长桌尽头会多出一个金色的影子。Alice只是把长桌尽头那本快被风翻乱的书轻轻按回该停的页上，或者让一枚差点滑落桌沿的书签停在原处。Moel蹲在桌边看了很久，忽然甩了甩尾巴。"
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
+      ],
+      text: "有时，长桌尽头会多出一个金色的影子。Alice只是把那本快被风翻乱的书轻轻按回该停的页上，或者让一枚差点滑落桌沿的书签停在原处。Moel蹲在桌边看了很久，忽然甩了甩尾巴。"
     },
     {
       location: "长桌尽头",
@@ -155,7 +161,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" }
       ],
-      text: "为什么你们还能留在这里？别的那些Alice，最后不是都得离开吗？"
+      text: "为什么你们还能够留在这里？别的那些Alice，最后不是都得离开吗？"
     },
     {
       location: "花圃边",
@@ -167,16 +173,16 @@ window.AliceCourtyardChapterFiles.push({
       text: "因为我们从来就不是在等谁把我们送回去的人。"
     },
     {
-      location: "长桌尽头",
+      location: "长椅尽头",
       speaker: "Moel",
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
       ],
-      text: "被送来再经历的那些，是完整灵魂。看见、承认、重演，之后就该离开。因为她们仍旧是‘某一个已经发生完结果的人’。"
+      text: "被送来再经历的那些，是完整灵魂。看见、承认、重演，之后就该离开。因为她们仍旧是“某一个已经发生完结果的人”。"
     },
     {
-      location: "长桌尽头",
+      location: "长椅尽头",
       speaker: "Moel",
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
@@ -185,7 +191,7 @@ window.AliceCourtyardChapterFiles.push({
       text: "可四人偶不是。她们只是从原来那个人身上留下来的一小段。幸福碎片。没做完的动作。还不肯松手的关系残响。"
     },
     {
-      location: "长桌尽头",
+      location: "长椅尽头",
       speaker: "Moel",
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
@@ -203,13 +209,19 @@ window.AliceCourtyardChapterFiles.push({
       text: "埋掉的是我们为了谁留下的旧理由。不是我们留下来的身体。"
     },
     {
-      location: "长桌尽头",
+      location: "长椅尽头",
       speaker: "Moel",
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
       ],
       text: "载体还在，她们就可以自己决定，是继续留在这里，还是哪一天自己离开。"
+    },
+    {
+      location: "花圃边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      text: "A-017看着她们，忽然发现埋掉兔耳以后，四个人并没有变淡。恰恰相反，她们像第一次不靠那对耳朵，也稳稳地站在了这里。"
     }
   ]
 });
