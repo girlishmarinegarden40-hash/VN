@@ -120,6 +120,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/08-meiling/08-meiling_009_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
+      cg: "./assets/cg/cg_meiling_being_forgotten.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/meiling/meiling_neutral.webp" }
       ],
@@ -190,6 +191,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/08-meiling/08-meiling_016_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
+      cg: "./assets/cg/cg_meiling_left_behind_too_late.webp",
       text: "后来真正有人发现少了一个人，已经是几天以后。有人是在几天后的护坡下面找到她的。矿泉水滚得东一瓶、西一瓶，名单被雨打成一团，贴在泥里，像谁仓促丢下的一叠废纸。"
     },
     {

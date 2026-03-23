@@ -47,6 +47,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/09-shella/09-shella_003_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
+      cg: "./assets/cg/cg_shella_as_a_child.webp",
       text: "小时候的Shella其实很健康。她会踩着椅子去够柜子最上层的糖，会在午后的地板上跑得满头是汗，会把两只杯子摆得整整齐齐，然后认真等另一个人来和自己一起把点心吃完。"
     },
     {
@@ -79,6 +80,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/09-shella/09-shella_007_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
+      cg: "./assets/cg/cg_shella_two_portions.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/shella/shella_neutral.webp" }
       ],
@@ -136,6 +138,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/09-shella/09-shella_013_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_hospital_white.webp",
+      cg: "./assets/cg/cg_shella_in_the_white_room.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/shella/shella_fading_smile.webp" }
       ],

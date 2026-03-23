@@ -23,6 +23,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/10-mizuki/10-mizuki_001_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
+      cg: "./assets/cg/cg_mizuki_at_the_door.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
@@ -87,6 +88,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/10-mizuki/10-mizuki_007_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
+      cg: "./assets/cg/cg_mizuki_dressed_by_younger_sister.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_neutral.webp" }
       ],
@@ -157,6 +159,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/10-mizuki/10-mizuki_015_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
+      cg: "./assets/cg/cg_mizuki_shielded_by_younger_sister.webp",
       text: "直到最后一次，门真的被她们撞开了一条能让风灌进来的缝。妹妹先把她往外推了一把。那个一直拉着她往前跑、一直替她把细节整理好的人，也就是在那一刻忽然回过身来，挡在她前面。"
     },
     {
@@ -176,6 +179,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/10-mizuki/10-mizuki_017_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
+      cg: "./assets/cg/cg_mizuki_last_failed_resistance.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_last_stand.webp" }
       ],

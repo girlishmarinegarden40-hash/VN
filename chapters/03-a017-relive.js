@@ -122,6 +122,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/03-a017-relive/03-a017-relive_009_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
+      cg: "./assets/cg/cg_a017_in_the_classroom.webp",
       bgm: "./assets/bgm/bgm_mirror_relive.mp3",
       bgmName: "镜中回声",
       sprites: [
@@ -148,6 +149,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/03-a017-relive/03-a017-relive_011_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
+      cg: "./assets/cg/cg_a017_at_the_stairwell.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
       ],

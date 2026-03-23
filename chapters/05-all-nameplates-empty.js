@@ -121,6 +121,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_009_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
+      cg: "./assets/cg/cg_corridor_of_the_a_lines.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],

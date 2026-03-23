@@ -92,6 +92,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/07-a214/07-a214_007_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
+      cg: "./assets/cg/cg_bully_girl_in_ordinary_daylight.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a214/a214_neutral.webp" }
       ],
