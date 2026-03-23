@@ -1,15 +1,33 @@
-<!doctype html>
-<html lang="zh-Hans">
+﻿<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>爱丽丝庭院 | Web VN</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>Alice Courtyard | Web VN</title>
+  <link rel="stylesheet" href="./styles.css?v=20260323c">
 </head>
 <body>
   <div class="app-shell">
+    <div id="coverOverlay" class="cover-overlay" hidden>
+      <div class="cover-panel">
+        <p class="cover-eyebrow">Web Visual Novel</p>
+        <h1 class="cover-title">Alice Courtyard</h1>
+        <p class="cover-subtitle">A dream that does not vanish when it wakes.</p>
+        <p class="cover-copy">Dreams do not disappear when they wake.</p>
+        <div class="cover-actions">
+          <button id="coverContinueButton" class="cover-button ghost" type="button">Continue</button>
+          <button id="coverStartButton" class="cover-button" type="button">Start from Beginning</button>
+          <button id="coverGalleryButton" class="cover-button ghost" type="button">Gallery</button>
+          <button id="coverCreditsButton" class="cover-button ghost" type="button">Credits</button>
+        </div>
+      </div>
+      <div class="cover-notice" aria-label="Copyright Notice">
+        <p class="cover-notice-copy">Alice Courtyard. All rights reserved.</p>
+      </div>
+    </div>
+
     <main class="player-shell">
-      <section id="stageShell" class="stage-shell" aria-label="故事舞台">
+      <section id="stageShell" class="stage-shell" aria-label="Story Stage">
         <div id="backgroundLayer" class="background-layer"></div>
         <div class="vignette-layer"></div>
         <div id="cgFrame" class="cg-frame">
@@ -32,8 +50,8 @@
       <section id="textboxShell" class="textbox-shell" aria-live="polite">
         <div class="textbox-meta">
           <div class="textbox-meta-left">
-            <p id="speakerTag" class="speaker-tag">旁白</p>
-            <p id="sceneMeta" class="scene-meta">序章 · 99.000000%</p>
+            <p id="speakerTag" class="speaker-tag">Narration</p>
+            <p id="sceneMeta" class="scene-meta">Prologue · 99.000000%</p>
           </div>
 
           <div class="textbox-tools">
@@ -47,7 +65,7 @@
         <p id="dialogueText" class="dialogue-text"></p>
 
         <div class="textbox-footer">
-          <p id="textboxHint" class="textbox-hint">点击继续</p>
+          <p id="textboxHint" class="textbox-hint">Tap to continue</p>
         </div>
       </section>
 
@@ -59,35 +77,37 @@
     <div class="overlay-panel setting-panel">
       <div class="overlay-header">
         <h2>Setting</h2>
-        <button id="closeSettingButton" class="overlay-close" type="button">关闭</button>
+        <button id="closeSettingButton" class="overlay-close" type="button">Close</button>
       </div>
 
       <section class="setting-summary">
         <div class="setting-card">
-          <p class="meta-label">章节</p>
-          <p id="chapterName" class="meta-value">序章</p>
+          <p class="meta-label">Chapter</p>
+          <p id="chapterName" class="meta-value">Prologue</p>
         </div>
         <div class="setting-card">
-          <p class="meta-label">地点</p>
+          <p class="meta-label">Location</p>
           <p id="locationName" class="meta-value">99.000000%</p>
         </div>
         <div class="setting-card">
-          <p class="meta-label">音乐</p>
+          <p class="meta-label">BGM</p>
           <p id="bgmName" class="meta-value">Not started</p>
         </div>
         <div class="setting-card">
-          <p class="meta-label">语音</p>
+          <p class="meta-label">Voice</p>
           <p id="voiceName" class="meta-value">Not set</p>
         </div>
       </section>
 
       <section class="setting-actions">
+        <button id="galleryButton" class="ghost-button" type="button">Gallery</button>
+        <button id="returnToTitleButton" class="ghost-button" type="button">Return to Title</button>
         <button id="muteButton" class="ghost-button" type="button">Mute</button>
-        <button id="resetButton" class="ghost-button danger" type="button">重置进度</button>
+        <button id="resetButton" class="ghost-button danger" type="button">Reset Progress</button>
       </section>
 
       <section class="setting-chapters">
-        <div class="setting-block-title">章节跳转</div>
+        <div class="setting-block-title">Chapter Select</div>
         <div id="chapterList" class="chapter-list"></div>
       </section>
     </div>
@@ -97,33 +117,133 @@
     <div class="overlay-panel">
       <div class="overlay-header">
         <h2>Replay</h2>
-        <button id="closeBacklogButton" class="overlay-close" type="button">关闭</button>
+        <button id="closeBacklogButton" class="overlay-close" type="button">Close</button>
       </div>
       <div id="backlogList" class="backlog-list"></div>
     </div>
   </div>
 
-  <script src="./chapters/00-prologue.js"></script>
-  <script src="./chapters/01-touchless-street.js"></script>
-  <script src="./chapters/02-a017-arrival.js"></script>
-  <script src="./chapters/03-a017-relive.js"></script>
-  <script src="./chapters/04-white-flowers-and-undefined.js"></script>
-  <script src="./chapters/05-all-nameplates-empty.js"></script>
-  <script src="./chapters/06-a092.js"></script>
-  <script src="./chapters/07-a214.js"></script>
-  <script src="./chapters/07-azalea.js"></script>
-  <script src="./chapters/08-meiling.js"></script>
-  <script src="./chapters/09-shella.js"></script>
-  <script src="./chapters/10-mizuki.js"></script>
-  <script src="./chapters/11-rabbit-ears.js"></script>
-  <script src="./chapters/12-visitor.js"></script>
-  <script src="./chapters/13-a403.js"></script>
-  <script src="./chapters/14-failed-answer.js"></script>
-  <script src="./chapters/15-god-kill.js"></script>
-  <script src="./chapters/16-after-alice.js"></script>
-  <script src="./chapters/17-noa.js"></script>
-  <script src="./chapters/18-thirteenth-card.js"></script>
-  <script src="./story-data.js"></script>
-  <script src="./app.js"></script>
+  <div id="galleryOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel gallery-panel">
+      <div class="overlay-header">
+        <h2>Gallery</h2>
+        <button id="closeGalleryButton" class="overlay-close" type="button">Close</button>
+      </div>
+
+      <div class="gallery-tabs" role="tablist" aria-label="Gallery Tabs">
+        <button id="galleryTabCg" class="gallery-tab is-active" type="button" role="tab" aria-selected="true">CG</button>
+        <button id="galleryTabBgm" class="gallery-tab" type="button" role="tab" aria-selected="false">BGM</button>
+      </div>
+
+      <section id="gallerySectionCg" class="gallery-section">
+        <div class="setting-block-title">CG</div>
+        <div id="galleryCgList" class="gallery-cg-list"></div>
+      </section>
+
+      <section id="gallerySectionBgm" class="gallery-section" hidden>
+        <div class="setting-block-title">BGM</div>
+        <div id="galleryBgmList" class="gallery-bgm-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <div id="cgPreviewOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel cg-preview-panel">
+      <div class="overlay-header">
+        <div>
+          <h2 id="cgPreviewTitle">CG Preview</h2>
+          <p id="cgPreviewChapter" class="cg-preview-chapter"></p>
+        </div>
+        <button id="closeCgPreviewButton" class="overlay-close" type="button">Close</button>
+      </div>
+      <div class="cg-preview-frame">
+        <img id="cgPreviewImage" class="cg-preview-image" alt="" draggable="false">
+      </div>
+    </div>
+  </div>
+
+  <div id="creditsOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel credits-panel">
+      <div class="overlay-header">
+        <h2>Credits</h2>
+        <button id="closeCreditsButton" class="overlay-close" type="button">Close</button>
+      </div>
+
+      <section class="credits-block">
+        <p class="credits-lead">
+          Alice Courtyard is a handmade visual novel adaptation built from a long-form original novel,
+          its rewrites, its setting notes, its character voices, and the quiet persistence behind them.
+        </p>
+      </section>
+
+      <section class="credits-block">
+        <h3>Work Statement</h3>
+        <p>
+          This build exists to present the story in an interactive reading form. Its text, images,
+          music, staging, and interface belong to the project and its creators. Please do not repost,
+          redistribute, mirror, commercialize, extract assets, or republish any part of this build
+          without permission.
+        </p>
+      </section>
+
+      <section class="credits-block">
+        <h3>Thanks</h3>
+        <p>
+          To every scene that was rewritten until it finally hurt in the right way. To every character
+          who insisted on becoming more than a role. To every image, note, and draft that helped the
+          garden keep growing. And to the readers who step into it carefully enough to let it wake.
+        </p>
+      </section>
+
+      <section class="credits-block">
+        <h3>Build Note</h3>
+        <p>
+          This is a living web VN build. The novel remains the source, and the staging, audio, CG
+          timing, menus, and presentation can continue to evolve as the garden becomes more complete.
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div id="confirmOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel confirm-panel">
+      <div class="overlay-header">
+        <h2>Start from Beginning?</h2>
+        <button id="cancelConfirmButton" class="overlay-close" type="button">Close</button>
+      </div>
+      <section class="credits-block">
+        <p class="credits-lead">
+          This will erase the current save, unlocked chapters, and gallery progress on this browser.
+        </p>
+      </section>
+      <section class="confirm-actions">
+        <button id="cancelStartButton" class="ghost-button" type="button">Cancel</button>
+        <button id="confirmStartButton" class="ghost-button danger" type="button">Erase and Restart</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="./chapters/00-prologue.js?v=20260323b"></script>
+  <script src="./chapters/01-touchless-street.js?v=20260323b"></script>
+  <script src="./chapters/02-a017-arrival.js?v=20260323b"></script>
+  <script src="./chapters/03-a017-relive.js?v=20260323b"></script>
+  <script src="./chapters/04-white-flowers-and-undefined.js?v=20260323b"></script>
+  <script src="./chapters/05-all-nameplates-empty.js?v=20260323b"></script>
+  <script src="./chapters/06-a092.js?v=20260323b"></script>
+  <script src="./chapters/07-a214.js?v=20260323b"></script>
+  <script src="./chapters/07-azalea.js?v=20260323b"></script>
+  <script src="./chapters/08-meiling.js?v=20260323b"></script>
+  <script src="./chapters/09-shella.js?v=20260323b"></script>
+  <script src="./chapters/10-mizuki.js?v=20260323b"></script>
+  <script src="./chapters/11-rabbit-ears.js?v=20260323b"></script>
+  <script src="./chapters/12-visitor.js?v=20260323b"></script>
+  <script src="./chapters/13-a403.js?v=20260323b"></script>
+  <script src="./chapters/14-failed-answer.js?v=20260323b"></script>
+  <script src="./chapters/15-god-kill.js?v=20260323b"></script>
+  <script src="./chapters/16-after-alice.js?v=20260323b"></script>
+  <script src="./chapters/17-noa.js?v=20260323b"></script>
+  <script src="./chapters/18-thirteenth-card.js?v=20260323b"></script>
+  <script src="./story-data.js?v=20260323b"></script>
+  <script src="./app.js?v=20260323b"></script>
 </body>
 </html>

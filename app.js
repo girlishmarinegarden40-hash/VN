@@ -5,10 +5,16 @@
   }
 
   const storageKey = "alice-courtyard-web-progress";
-  const typingSpeed = 18;
-  const autoDelay = 1800;
+  const defaultTypingSpeed = 18;
+  const defaultAutoDelay = 1800;
+  const defaultCardDuration = 2150;
 
   const ui = {
+    coverOverlay: document.getElementById("coverOverlay"),
+    coverStartButton: document.getElementById("coverStartButton"),
+    coverContinueButton: document.getElementById("coverContinueButton"),
+    coverGalleryButton: document.getElementById("coverGalleryButton"),
+    coverCreditsButton: document.getElementById("coverCreditsButton"),
     chapterName: document.getElementById("chapterName"),
     locationName: document.getElementById("locationName"),
     bgmName: document.getElementById("bgmName"),
@@ -32,14 +38,35 @@
     showTextboxButton: document.getElementById("showTextboxButton"),
     settingButton: document.getElementById("settingButton"),
     muteButton: document.getElementById("muteButton"),
+    galleryButton: document.getElementById("galleryButton"),
+    returnToTitleButton: document.getElementById("returnToTitleButton"),
     backlogButton: document.getElementById("backlogButton"),
     resetButton: document.getElementById("resetButton"),
     settingOverlay: document.getElementById("settingOverlay"),
     backlogOverlay: document.getElementById("backlogOverlay"),
+    galleryOverlay: document.getElementById("galleryOverlay"),
+    creditsOverlay: document.getElementById("creditsOverlay"),
+    confirmOverlay: document.getElementById("confirmOverlay"),
     chapterList: document.getElementById("chapterList"),
     backlogList: document.getElementById("backlogList"),
+    galleryTabCg: document.getElementById("galleryTabCg"),
+    galleryTabBgm: document.getElementById("galleryTabBgm"),
+    gallerySectionCg: document.getElementById("gallerySectionCg"),
+    gallerySectionBgm: document.getElementById("gallerySectionBgm"),
+    galleryCgList: document.getElementById("galleryCgList"),
+    galleryBgmList: document.getElementById("galleryBgmList"),
+    cgPreviewOverlay: document.getElementById("cgPreviewOverlay"),
+    cgPreviewTitle: document.getElementById("cgPreviewTitle"),
+    cgPreviewChapter: document.getElementById("cgPreviewChapter"),
+    cgPreviewImage: document.getElementById("cgPreviewImage"),
     closeSettingButton: document.getElementById("closeSettingButton"),
     closeBacklogButton: document.getElementById("closeBacklogButton"),
+    closeGalleryButton: document.getElementById("closeGalleryButton"),
+    closeCgPreviewButton: document.getElementById("closeCgPreviewButton"),
+    closeCreditsButton: document.getElementById("closeCreditsButton"),
+    cancelConfirmButton: document.getElementById("cancelConfirmButton"),
+    cancelStartButton: document.getElementById("cancelStartButton"),
+    confirmStartButton: document.getElementById("confirmStartButton"),
     stageShell: document.getElementById("stageShell"),
     textboxShell: document.getElementById("textboxShell")
   };
@@ -67,10 +94,16 @@
 
   const chapterMetaById = Object.fromEntries(chapterMeta.map((chapter) => [chapter.id, chapter]));
   const preloadedImages = new Map();
+  const galleryCgs = collectUniqueCgs();
+  const galleryBgms = collectUniqueBgms();
 
   const bgmAudio = new Audio();
   bgmAudio.loop = true;
   bgmAudio.volume = 0.55;
+
+  const galleryAudio = new Audio();
+  galleryAudio.loop = true;
+  galleryAudio.volume = 0.55;
 
   const voiceAudio = new Audio();
   voiceAudio.loop = false;
@@ -83,36 +116,57 @@
     autoMode: false,
     autoTimer: null,
     typingTimer: null,
+    preLineTimer: null,
+    bgmFadeTimer: null,
+    chapterCardTimer: null,
+    sceneGateTimer: null,
+    cgRevealTimer: null,
     typingDone: true,
     pendingOnDone: null,
+    pendingLineStarter: null,
+    deferredLineStarter: null,
     audioUnlocked: false,
     muted: false,
     currentBgmSrc: null,
+    currentBgmTargetVolume: 0.55,
     currentBgmLabel: "Not started",
     currentVoiceSrc: null,
+    currentGalleryBgmSrc: null,
+    coverActive: true,
+    chapterCardActive: false,
+    cgRevealLocked: false,
+    awaitingCgRevealTap: false,
+    userTextboxHidden: false,
+    systemTextboxHidden: false,
     textboxHidden: false,
     unlockedChapters: new Set(),
-    completedChapters: new Set()
+    completedChapters: new Set(),
+    seenCgs: new Set(),
+    seenBgms: new Set(),
+    renderToken: 0
   };
 
   hydrateProgressState();
   preloadVisualAssets();
   buildChapterMenu();
   bindEvents();
-  renderCurrentLine(true);
+  openCover();
 
   function saveProgress() {
     const payload = {
       index: state.index,
       unlockedChapters: Array.from(state.unlockedChapters),
-      completedChapters: Array.from(state.completedChapters)
+      completedChapters: Array.from(state.completedChapters),
+      seenCgs: Array.from(state.seenCgs),
+      seenBgms: Array.from(state.seenBgms)
     };
     window.localStorage.setItem(storageKey, JSON.stringify(payload));
   }
 
   function bindEvents() {
-    ui.stageShell.addEventListener("click", handleAdvanceClick);
-    ui.textboxShell.addEventListener("click", handleAdvanceClick);
+    ui.stageShell.addEventListener("pointerup", handleAdvanceClick);
+    ui.textboxShell.addEventListener("pointerup", handleAdvanceClick);
+
     ui.stageShell.addEventListener("dragstart", (event) => {
       event.preventDefault();
     });
@@ -159,6 +213,12 @@
       toggleMute();
     });
 
+    ui.returnToTitleButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      playUiClick();
+      returnToTitle();
+    });
+
     ui.resetButton.addEventListener("click", (event) => {
       event.stopPropagation();
       unlockAudio();
@@ -188,6 +248,132 @@
       if (event.target === ui.backlogOverlay) {
         setOverlay(ui.backlogOverlay, false);
       }
+    });
+
+    ui.galleryOverlay.addEventListener("click", (event) => {
+      if (event.target === ui.galleryOverlay) {
+        setOverlay(ui.galleryOverlay, false);
+      }
+    });
+
+    ui.cgPreviewOverlay.addEventListener("click", (event) => {
+      if (event.target === ui.cgPreviewOverlay) {
+        setOverlay(ui.cgPreviewOverlay, false);
+      }
+    });
+
+    ui.creditsOverlay.addEventListener("click", (event) => {
+      if (event.target === ui.creditsOverlay) {
+        setOverlay(ui.creditsOverlay, false);
+      }
+    });
+
+    ui.confirmOverlay.addEventListener("click", (event) => {
+      if (event.target === ui.confirmOverlay) {
+        setOverlay(ui.confirmOverlay, false);
+      }
+    });
+
+    ui.galleryButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      renderGallery();
+      setGalleryTab("cg");
+      setOverlay(ui.galleryOverlay, true);
+    });
+
+    ui.coverGalleryButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      renderGallery();
+      setGalleryTab("cg");
+      setOverlay(ui.galleryOverlay, true);
+    });
+
+    ui.galleryTabCg.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setGalleryTab("cg");
+    });
+
+    ui.galleryTabBgm.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setGalleryTab("bgm");
+    });
+
+    ui.coverCreditsButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.creditsOverlay, true);
+    });
+
+    ui.closeGalleryButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.galleryOverlay, false);
+    });
+
+    ui.closeCgPreviewButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.cgPreviewOverlay, false);
+    });
+
+    ui.closeCreditsButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.creditsOverlay, false);
+    });
+
+    ui.cancelConfirmButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.confirmOverlay, false);
+    });
+
+    ui.cancelStartButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.confirmOverlay, false);
+    });
+
+    ui.confirmStartButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      unlockAudio();
+      playUiClick();
+      setOverlay(ui.confirmOverlay, false);
+      state.coverActive = false;
+      setOverlay(ui.coverOverlay, false);
+      resetProgress();
+    });
+
+    ui.coverStartButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      setOverlay(ui.confirmOverlay, true);
+    });
+
+    ui.coverContinueButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      unlockAudio();
+      playUiClick();
+      state.coverActive = false;
+      setOverlay(ui.coverOverlay, false);
+      renderCurrentLine(false);
     });
 
     window.addEventListener("keydown", (event) => {
@@ -223,19 +409,36 @@
       if (event.key === "Escape") {
         setOverlay(ui.settingOverlay, false);
         setOverlay(ui.backlogOverlay, false);
+        setOverlay(ui.galleryOverlay, false);
+        setOverlay(ui.cgPreviewOverlay, false);
+        setOverlay(ui.creditsOverlay, false);
+        setOverlay(ui.confirmOverlay, false);
         setTextboxVisibility(true);
       }
     });
   }
 
   function handleAdvanceClick(event) {
+    event.stopPropagation();
+
     if (event.target.closest("button")) {
       return;
     }
+
+    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked) {
+      return;
+    }
+
+    if (resumeDeferredSceneIfReady()) {
+      unlockAudio();
+      return;
+    }
+
     if (state.textboxHidden) {
       setTextboxVisibility(true);
       return;
     }
+
     unlockAudio();
     advanceOrComplete();
   }
@@ -250,6 +453,7 @@
       button.type = "button";
       button.className = "chapter-item";
       button.disabled = !isUnlocked;
+
       if (!isUnlocked) {
         button.classList.add("is-locked");
       }
@@ -259,7 +463,7 @@
         statusText = isCompleted ? "Read" : "Unlocked";
       }
 
-      button.innerHTML = `<h3>${chapter.title}</h3><span>${chapter.subtitle} · ${statusText}</span>`;
+      button.innerHTML = `<h3>${chapter.title}</h3><span>${chapter.subtitle} - ${statusText}</span>`;
       button.addEventListener("click", (event) => {
         event.stopPropagation();
         if (!isUnlocked) {
@@ -280,53 +484,156 @@
   function renderCurrentLine(forceCard) {
     clearAutoTimer();
     clearTypingTimer();
+    clearPreLineTimer();
+    clearChapterCardTimer();
+    clearCgRevealTimer();
     stopVoice();
 
     const line = story.lines[state.index];
     const chapter = story.chapters.find((item) => item.id === line.chapterId);
     const sceneLabel = line.location || chapter?.location || "";
-    const chapterLabel = chapter ? `${chapter.title} · ${chapter.subtitle}` : story.title;
+    const chapterLabel = chapter ? `${chapter.title} - ${chapter.subtitle}` : story.title;
 
     ui.chapterName.textContent = chapterLabel;
     ui.locationName.textContent = sceneLabel;
-    ui.sceneMeta.textContent = sceneLabel ? `${chapter?.title || story.title} · ${sceneLabel}` : chapterLabel;
-    ui.speakerTag.textContent = line.speaker || "旁白";
+    ui.sceneMeta.textContent = sceneLabel ? `${chapter?.title || story.title} - ${sceneLabel}` : chapterLabel;
+    ui.speakerTag.textContent = line.speaker || "Narration";
 
     applyBackground(line);
     applyCg(line);
     applySprites(line);
     updateBgm(line);
-    updateVoice(line);
+    ui.textboxShell.classList.toggle("is-cg-scene", Boolean(line.cg));
 
-    if (forceCard || line.type === "card") {
-      showChapterCard(line, chapter);
-    }
-
-    typeText(line.text || "", () => {
-      if (line.sfx) {
-        playSfx(line.sfx);
+    const renderToken = ++state.renderToken;
+    const beginLine = (skipTyping = false) => {
+      if (renderToken !== state.renderToken) {
+        return;
       }
 
-      if (line.type !== "card" && line.text) {
-        state.backlog.push({
-          speaker: line.speaker || "旁白",
-          text: line.text
-        });
+      state.preLineTimer = null;
+      state.pendingLineStarter = null;
+
+      if (line.sfxAtStart) {
+        playSfx(line.sfxAtStart, line.sfxAtStartVolume);
       }
 
-      if (state.backlog.length > 160) {
-        state.backlog.shift();
-      }
+      updateVoice(line);
 
-      if (state.autoMode) {
-        state.autoTimer = window.setTimeout(() => {
-          if (!ui.settingOverlay.hidden || !ui.backlogOverlay.hidden) {
+      typeText(
+        line.text || "",
+        { ...line, instant: skipTyping || Boolean(line.instant) },
+        () => {
+          if (line.type === "card" && !line.text) {
+            const autoCardDelay = (line.cardDuration ?? defaultCardDuration) + (line.pauseAfter ?? 0);
+            state.autoTimer = window.setTimeout(() => {
+              if (state.coverActive || !ui.settingOverlay.hidden || !ui.backlogOverlay.hidden || !ui.galleryOverlay.hidden || !ui.cgPreviewOverlay.hidden || !ui.creditsOverlay.hidden || !ui.confirmOverlay.hidden) {
+                return;
+              }
+              nextLine();
+            }, autoCardDelay);
             return;
           }
-          nextLine();
-        }, autoDelay);
+
+          if (line.sfx) {
+            playSfx(line.sfx, line.sfxVolume);
+          }
+
+          if (line.type !== "card" && line.text) {
+            state.backlog.push({
+              speaker: line.speaker || "Narration",
+              text: line.text
+            });
+          }
+
+          if (state.backlog.length > 160) {
+            state.backlog.shift();
+          }
+
+          if (state.autoMode) {
+            const autoDelay = line.autoDelay ?? defaultAutoDelay;
+            const pauseAfter = line.pauseAfter ?? 0;
+            state.autoTimer = window.setTimeout(() => {
+              if (state.coverActive || !ui.settingOverlay.hidden || !ui.backlogOverlay.hidden || !ui.galleryOverlay.hidden || !ui.cgPreviewOverlay.hidden || !ui.creditsOverlay.hidden || !ui.confirmOverlay.hidden) {
+                return;
+              }
+              nextLine();
+            }, autoDelay + pauseAfter);
+          }
+        }
+      );
+    };
+
+    const startWithPause = (skipTyping = false) => {
+      const pauseBefore = line.pauseBefore ?? 0;
+      if (pauseBefore > 0) {
+        ui.dialogueText.textContent = "";
+        state.typingDone = false;
+        state.pendingOnDone = null;
+        state.pendingLineStarter = beginLine;
+        ui.textboxHint.textContent = state.autoMode ? "Auto playing" : "Tap to continue";
+        state.preLineTimer = window.setTimeout(() => {
+          state.preLineTimer = null;
+          beginLine(skipTyping);
+        }, pauseBefore);
+        return;
       }
-    });
+
+      beginLine(skipTyping);
+    };
+
+    const startAfterCgReveal = () => {
+      if (renderToken !== state.renderToken) {
+        return;
+      }
+
+      if (shouldTriggerFirstCgReveal(line.cg)) {
+        state.awaitingCgRevealTap = false;
+        state.cgRevealLocked = true;
+        state.deferredLineStarter = () => startWithPause(false);
+        markCgAsSeen(line.cg);
+        setSystemTextboxHidden(true);
+        ui.textboxHint.textContent = "CG moment";
+        state.cgRevealTimer = window.setTimeout(() => {
+          if (renderToken !== state.renderToken) {
+            return;
+          }
+          state.cgRevealTimer = null;
+          state.cgRevealLocked = false;
+          state.awaitingCgRevealTap = true;
+          ui.textboxHint.textContent = "Tap to continue";
+        }, 2000);
+        return;
+      }
+
+      setSystemTextboxHidden(false);
+      startWithPause(false);
+    };
+
+    if (line.type === "card") {
+      setSystemTextboxHidden(true);
+      state.chapterCardActive = true;
+      showChapterCard(line, chapter, true);
+      startWithPause(false);
+      return;
+    }
+
+    if (forceCard) {
+      setSystemTextboxHidden(true);
+      state.chapterCardActive = true;
+      showChapterCard(line, chapter, true);
+      state.sceneGateTimer = window.setTimeout(() => {
+        if (renderToken !== state.renderToken) {
+          return;
+        }
+        state.sceneGateTimer = null;
+        state.chapterCardActive = false;
+        startAfterCgReveal();
+      }, line.cardDuration ?? defaultCardDuration);
+      return;
+    }
+
+    startAfterCgReveal();
   }
 
   function applyBackground(line) {
@@ -364,11 +671,7 @@
       sprite.classList.remove("is-visible", "is-dim");
     });
 
-    if (line.cg) {
-      return;
-    }
-
-    if (!Array.isArray(line.sprites)) {
+    if (line.cg || !Array.isArray(line.sprites)) {
       return;
     }
 
@@ -377,6 +680,7 @@
       if (!target) {
         return;
       }
+
       setImageSourceWhenReady(target, spriteDef.src, () => {
         target.classList.add("is-visible");
         if (spriteDef.dim) {
@@ -394,17 +698,20 @@
 
     state.currentBgmLabel = line.bgmName || "Playing";
     ui.bgmName.textContent = state.currentBgmLabel;
+    markBgmAsSeen(line.bgm);
 
+    const targetVolume = typeof line.bgmVolume === "number" ? line.bgmVolume : 0.55;
     if (state.currentBgmSrc === line.bgm) {
+      state.currentBgmTargetVolume = targetVolume;
+      if (!state.muted) {
+        bgmAudio.volume = targetVolume;
+      }
       return;
     }
 
     state.currentBgmSrc = line.bgm;
-    bgmAudio.src = line.bgm;
-
-    if (state.audioUnlocked && !state.muted) {
-      bgmAudio.play().catch(() => {});
-    }
+    state.currentBgmTargetVolume = targetVolume;
+    transitionBgm(line.bgm, targetVolume, line.bgmFadeMs ?? 650);
   }
 
   function updateVoice(line) {
@@ -414,8 +721,14 @@
       return;
     }
 
+    if (line.voiceReady === false) {
+      state.currentVoiceSrc = null;
+      ui.voiceName.textContent = line.speaker ? `${line.speaker} - Reserved` : "Reserved";
+      return;
+    }
+
     state.currentVoiceSrc = line.voice;
-    ui.voiceName.textContent = line.speaker ? `${line.speaker} · Ready` : "Ready";
+    ui.voiceName.textContent = line.speaker ? `${line.speaker} - Ready` : "Ready";
     voiceAudio.src = line.voice;
     voiceAudio.volume = typeof line.voiceVolume === "number" ? line.voiceVolume : 0.92;
 
@@ -428,23 +741,32 @@
     ui.chapterCardEyebrow.textContent = line.eyebrow || "Alice Courtyard";
     ui.chapterCardTitle.textContent = line.title || chapter?.title || "";
     ui.chapterCardSubtitle.textContent = line.subtitle || chapter?.subtitle || "";
+    ui.chapterCard.classList.add("is-cinematic");
     ui.chapterCard.classList.add("is-visible");
-    window.setTimeout(() => {
+
+    state.chapterCardTimer = window.setTimeout(() => {
+      state.chapterCardTimer = null;
+      state.chapterCardActive = false;
       ui.chapterCard.classList.remove("is-visible");
-    }, 1650);
+      ui.chapterCard.classList.remove("is-cinematic");
+    }, line.cardDuration ?? defaultCardDuration);
   }
 
-  function typeText(text, onDone) {
+  function typeText(text, line, onDone) {
     ui.dialogueText.textContent = "";
     state.typingDone = false;
     state.pendingOnDone = onDone;
     ui.textboxHint.textContent = state.autoMode ? "Auto playing" : "Tap to continue";
 
-    if (!text) {
+    const lineTypingSpeed = line?.textSpeed ?? defaultTypingSpeed;
+    if (!text || line?.instant || lineTypingSpeed <= 0) {
+      ui.dialogueText.textContent = text || "";
       state.typingDone = true;
       const callback = state.pendingOnDone;
       state.pendingOnDone = null;
-      callback();
+      if (callback) {
+        callback();
+      }
       return;
     }
 
@@ -457,12 +779,21 @@
         state.typingDone = true;
         const callback = state.pendingOnDone;
         state.pendingOnDone = null;
-        callback();
+        if (callback) {
+          callback();
+        }
       }
-    }, typingSpeed);
+    }, lineTypingSpeed);
   }
 
   function completeTyping() {
+    if (state.preLineTimer && state.pendingLineStarter) {
+      const starter = state.pendingLineStarter;
+      clearPreLineTimer();
+      starter(true);
+      return;
+    }
+
     clearTypingTimer();
     const line = story.lines[state.index];
     ui.dialogueText.textContent = line.text || "";
@@ -475,11 +806,19 @@
   }
 
   function advanceOrComplete() {
-    if (!ui.settingOverlay.hidden || !ui.backlogOverlay.hidden) {
+    if (!ui.settingOverlay.hidden || !ui.backlogOverlay.hidden || !ui.galleryOverlay.hidden || !ui.cgPreviewOverlay.hidden || !ui.creditsOverlay.hidden || !ui.confirmOverlay.hidden) {
       return;
     }
 
-    if (!state.typingDone) {
+    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked) {
+      return;
+    }
+
+    if (resumeDeferredSceneIfReady()) {
+      return;
+    }
+
+    if (!state.typingDone || state.preLineTimer) {
       completeTyping();
       return;
     }
@@ -524,8 +863,8 @@
       return;
     }
 
-    if (state.typingDone) {
-      state.autoTimer = window.setTimeout(nextLine, autoDelay);
+    if (state.typingDone && !state.preLineTimer && !state.coverActive) {
+      state.autoTimer = window.setTimeout(nextLine, defaultAutoDelay);
     }
   }
 
@@ -534,6 +873,12 @@
     ui.muteButton.textContent = state.muted ? "Unmute" : "Mute";
     bgmAudio.muted = state.muted;
     voiceAudio.muted = state.muted;
+    galleryAudio.muted = state.muted;
+
+    if (!state.muted && state.audioUnlocked && state.currentBgmSrc && bgmAudio.paused) {
+      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.play().catch(() => {});
+    }
   }
 
   function renderBacklog() {
@@ -552,13 +897,32 @@
 
   function setOverlay(target, visible) {
     target.hidden = !visible;
+
+    if (target === ui.galleryOverlay) {
+      if (visible) {
+        ui.textboxHint.textContent = "Gallery open";
+      } else {
+        stopGalleryBgm(true);
+        ui.textboxHint.textContent = state.autoMode ? "Auto playing" : "Tap to continue";
+      }
+    }
   }
 
   function setTextboxVisibility(visible) {
-    state.textboxHidden = !visible;
-    ui.textboxShell.classList.toggle("is-hidden", !visible);
-    ui.showTextboxButton.hidden = visible;
-    ui.hideTextboxButton.textContent = visible ? "Hide" : "Hidden";
+    state.userTextboxHidden = !visible;
+    syncTextboxVisibility();
+  }
+
+  function setSystemTextboxHidden(hidden) {
+    state.systemTextboxHidden = hidden;
+    syncTextboxVisibility();
+  }
+
+  function syncTextboxVisibility() {
+    state.textboxHidden = state.userTextboxHidden || state.systemTextboxHidden;
+    ui.textboxShell.classList.toggle("is-hidden", state.textboxHidden);
+    ui.showTextboxButton.hidden = !state.textboxHidden || state.systemTextboxHidden;
+    ui.hideTextboxButton.textContent = "Hide";
   }
 
   function playUiClick() {
@@ -607,6 +971,21 @@
     }
   }
 
+  function clearPreLineTimer() {
+    if (state.preLineTimer) {
+      window.clearTimeout(state.preLineTimer);
+      state.preLineTimer = null;
+    }
+    state.pendingLineStarter = null;
+  }
+
+  function clearBgmFadeTimer() {
+    if (state.bgmFadeTimer) {
+      window.clearInterval(state.bgmFadeTimer);
+      state.bgmFadeTimer = null;
+    }
+  }
+
   function stopVoice() {
     if (!voiceAudio.src) {
       return;
@@ -615,18 +994,79 @@
     voiceAudio.currentTime = 0;
   }
 
+  function transitionBgm(src, targetVolume, fadeMs) {
+    clearBgmFadeTimer();
+
+    const startNextTrack = () => {
+      bgmAudio.src = src;
+      bgmAudio.volume = state.muted ? 0 : 0;
+
+      if (state.audioUnlocked && !state.muted) {
+        bgmAudio.play().catch(() => {});
+      }
+
+      const steps = Math.max(1, Math.round(fadeMs / 50));
+      let step = 0;
+      state.bgmFadeTimer = window.setInterval(() => {
+        step += 1;
+        const progress = step / steps;
+        bgmAudio.volume = state.muted ? 0 : targetVolume * progress;
+        if (step >= steps) {
+          clearBgmFadeTimer();
+          bgmAudio.volume = state.muted ? 0 : targetVolume;
+        }
+      }, 50);
+    };
+
+    if (!bgmAudio.src || !state.audioUnlocked || state.muted) {
+      startNextTrack();
+      return;
+    }
+
+    const fromVolume = bgmAudio.volume;
+    const steps = Math.max(1, Math.round(fadeMs / 50));
+    let step = 0;
+    state.bgmFadeTimer = window.setInterval(() => {
+      step += 1;
+      const progress = step / steps;
+      bgmAudio.volume = fromVolume * (1 - progress);
+      if (step >= steps) {
+        clearBgmFadeTimer();
+        bgmAudio.pause();
+        startNextTrack();
+      }
+    }, 50);
+  }
+
   function resetProgress() {
     clearAutoTimer();
     clearTypingTimer();
+    clearPreLineTimer();
+    clearChapterCardTimer();
+    clearCgRevealTimer();
+    clearBgmFadeTimer();
+    stopVoice();
     state.index = 0;
     state.backlog = [];
     state.pendingOnDone = null;
+    state.deferredLineStarter = null;
+    state.awaitingCgRevealTap = false;
+    state.cgRevealLocked = false;
+    state.chapterCardActive = false;
+    state.userTextboxHidden = false;
+    state.systemTextboxHidden = false;
     state.unlockedChapters = new Set([chapterMeta[0]?.id].filter(Boolean));
     state.completedChapters = new Set();
+    state.seenCgs = new Set();
+    state.seenBgms = new Set();
     window.localStorage.removeItem(storageKey);
     setOverlay(ui.settingOverlay, false);
     setOverlay(ui.backlogOverlay, false);
-    setTextboxVisibility(true);
+    setOverlay(ui.galleryOverlay, false);
+    setOverlay(ui.cgPreviewOverlay, false);
+    setOverlay(ui.creditsOverlay, false);
+    setOverlay(ui.confirmOverlay, false);
+    syncTextboxVisibility();
     renderCurrentLine(true);
     buildChapterMenu();
     saveProgress();
@@ -757,6 +1197,22 @@
           }
         });
       }
+
+      if (Array.isArray(parsed.seenCgs)) {
+        parsed.seenCgs.forEach((src) => {
+          if (typeof src === "string" && src) {
+            state.seenCgs.add(src);
+          }
+        });
+      }
+
+      if (Array.isArray(parsed.seenBgms)) {
+        parsed.seenBgms.forEach((src) => {
+          if (typeof src === "string" && src) {
+            state.seenBgms.add(src);
+          }
+        });
+      }
     } catch (error) {
       const parsedNumber = Number.parseInt(raw, 10);
       state.index = Number.isNaN(parsedNumber) ? 0 : clampIndex(parsedNumber);
@@ -802,4 +1258,285 @@
   function clampIndex(index) {
     return Math.min(Math.max(index, 0), story.lines.length - 1);
   }
+
+  function clearChapterCardTimer() {
+    if (state.chapterCardTimer) {
+      window.clearTimeout(state.chapterCardTimer);
+      state.chapterCardTimer = null;
+    }
+    if (state.sceneGateTimer) {
+      window.clearTimeout(state.sceneGateTimer);
+      state.sceneGateTimer = null;
+    }
+    state.chapterCardActive = false;
+    ui.chapterCard.classList.remove("is-visible", "is-cinematic");
+  }
+
+  function clearCgRevealTimer() {
+    if (state.cgRevealTimer) {
+      window.clearTimeout(state.cgRevealTimer);
+      state.cgRevealTimer = null;
+    }
+    state.cgRevealLocked = false;
+    state.awaitingCgRevealTap = false;
+    state.deferredLineStarter = null;
+  }
+
+  function shouldTriggerFirstCgReveal(cgSrc) {
+    return Boolean(cgSrc) && !state.seenCgs.has(cgSrc);
+  }
+
+  function markCgAsSeen(cgSrc) {
+    if (!cgSrc) {
+      return;
+    }
+    state.seenCgs.add(cgSrc);
+    saveProgress();
+  }
+
+  function markBgmAsSeen(bgmSrc) {
+    if (!bgmSrc || state.seenBgms.has(bgmSrc)) {
+      return;
+    }
+    state.seenBgms.add(bgmSrc);
+    saveProgress();
+  }
+
+  function resumeDeferredSceneIfReady() {
+    if (!state.awaitingCgRevealTap || !state.deferredLineStarter) {
+      return false;
+    }
+
+    const starter = state.deferredLineStarter;
+    state.deferredLineStarter = null;
+    state.awaitingCgRevealTap = false;
+    setSystemTextboxHidden(false);
+    starter();
+    return true;
+  }
+
+  function openCover() {
+    clearAutoTimer();
+    state.coverActive = true;
+    setOverlay(ui.coverOverlay, true);
+    ui.coverContinueButton.hidden = !hasSavedProgress();
+  }
+
+  function returnToTitle() {
+    clearAutoTimer();
+    setOverlay(ui.settingOverlay, false);
+    setOverlay(ui.backlogOverlay, false);
+    setOverlay(ui.galleryOverlay, false);
+    setOverlay(ui.cgPreviewOverlay, false);
+    setOverlay(ui.creditsOverlay, false);
+    setOverlay(ui.confirmOverlay, false);
+    openCover();
+  }
+
+  function hasSavedProgress() {
+    return state.index > 0 || state.completedChapters.size > 0 || state.unlockedChapters.size > 1;
+  }
+
+  function renderGallery() {
+    renderGalleryCgs();
+    renderGalleryBgms();
+  }
+
+  function setGalleryTab(mode) {
+    const showCg = mode !== "bgm";
+    ui.gallerySectionCg.hidden = !showCg;
+    ui.gallerySectionBgm.hidden = showCg;
+    ui.galleryTabCg.classList.toggle("is-active", showCg);
+    ui.galleryTabBgm.classList.toggle("is-active", !showCg);
+    ui.galleryTabCg.setAttribute("aria-selected", showCg ? "true" : "false");
+    ui.galleryTabBgm.setAttribute("aria-selected", showCg ? "false" : "true");
+  }
+
+  function renderGalleryCgs() {
+    ui.galleryCgList.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    galleryCgs.forEach((item) => {
+      const unlocked = state.seenCgs.has(item.src);
+      const card = document.createElement("article");
+      card.className = `gallery-cg-item${unlocked ? "" : " is-locked"}`;
+      if (unlocked) {
+        card.tabIndex = 0;
+        card.setAttribute("role", "button");
+        card.setAttribute("aria-label", `Open CG: ${item.label}`);
+      }
+
+      const image = document.createElement("img");
+      image.alt = unlocked ? item.label : "Locked CG";
+      image.src = item.src;
+      image.loading = "lazy";
+      image.draggable = false;
+
+      const title = document.createElement("h3");
+      title.textContent = unlocked ? item.label : "Locked";
+
+      const chapter = document.createElement("p");
+      chapter.textContent = unlocked ? item.chapter : "Read further to unlock this CG.";
+
+      card.appendChild(image);
+      card.appendChild(title);
+      card.appendChild(chapter);
+      if (unlocked) {
+        card.addEventListener("click", () => {
+          playUiClick();
+          openCgPreview(item);
+        });
+        card.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            playUiClick();
+            openCgPreview(item);
+          }
+        });
+      }
+      fragment.appendChild(card);
+    });
+
+    ui.galleryCgList.appendChild(fragment);
+  }
+
+  function renderGalleryBgms() {
+    ui.galleryBgmList.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    galleryBgms.forEach((item) => {
+      const unlocked = state.seenBgms.has(item.src);
+      const row = document.createElement("article");
+      row.className = `gallery-bgm-item${unlocked ? "" : " is-locked"}`;
+
+      const copy = document.createElement("div");
+      copy.className = "gallery-bgm-copy";
+
+      const title = document.createElement("h3");
+      title.textContent = unlocked ? item.label : "Locked";
+
+      const chapter = document.createElement("p");
+      chapter.textContent = unlocked ? item.chapter : "Read further to unlock this BGM.";
+
+      copy.appendChild(title);
+      copy.appendChild(chapter);
+
+      const actions = document.createElement("div");
+      actions.className = "gallery-bgm-actions";
+
+      const playButton = document.createElement("button");
+      playButton.type = "button";
+      playButton.className = "gallery-bgm-button";
+      playButton.textContent = "Play";
+      playButton.disabled = !unlocked;
+      playButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        unlockAudio();
+        playUiClick();
+        playGalleryBgm(item.src);
+      });
+
+      const stopButton = document.createElement("button");
+      stopButton.type = "button";
+      stopButton.className = "gallery-bgm-button";
+      stopButton.textContent = "Stop";
+      stopButton.disabled = !unlocked;
+      stopButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        playUiClick();
+        stopGalleryBgm(true);
+      });
+
+      actions.appendChild(playButton);
+      actions.appendChild(stopButton);
+      row.appendChild(copy);
+      row.appendChild(actions);
+      fragment.appendChild(row);
+    });
+
+    ui.galleryBgmList.appendChild(fragment);
+  }
+
+  function playGalleryBgm(src) {
+    if (!src) {
+      return;
+    }
+
+    state.currentGalleryBgmSrc = src;
+    galleryAudio.src = src;
+    galleryAudio.volume = state.muted ? 0 : state.currentBgmTargetVolume;
+    bgmAudio.pause();
+    galleryAudio.play().catch(() => {});
+  }
+
+  function stopGalleryBgm(restoreStoryBgm) {
+    if (galleryAudio.src) {
+      galleryAudio.pause();
+      galleryAudio.currentTime = 0;
+    }
+    state.currentGalleryBgmSrc = null;
+
+    if (restoreStoryBgm && state.audioUnlocked && !state.muted && state.currentBgmSrc) {
+      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.play().catch(() => {});
+    }
+  }
+
+  function collectUniqueCgs() {
+    const seen = new Set();
+    const list = [];
+
+    story.lines.forEach((line) => {
+      if (!line.cg || seen.has(line.cg)) {
+        return;
+      }
+      seen.add(line.cg);
+      const chapter = story.chapters.find((item) => item.id === line.chapterId);
+      list.push({
+        src: line.cg,
+        label: humanizeAssetName(line.cg),
+        chapter: chapter?.title || line.chapterId
+      });
+    });
+
+    return list;
+  }
+
+  function collectUniqueBgms() {
+    const seen = new Set();
+    const list = [];
+
+    story.lines.forEach((line) => {
+      if (!line.bgm || seen.has(line.bgm)) {
+        return;
+      }
+      seen.add(line.bgm);
+      const chapter = story.chapters.find((item) => item.id === line.chapterId);
+      list.push({
+        src: line.bgm,
+        label: line.bgmName || humanizeAssetName(line.bgm),
+        chapter: chapter?.title || line.chapterId
+      });
+    });
+
+    return list;
+  }
+
+  function humanizeAssetName(src) {
+    const fileName = src.split("/").pop() || src;
+    return fileName
+      .replace(/\.[^.]+$/, "")
+      .replace(/^cg_|^bgm_/, "")
+      .replace(/[_-]+/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+
+  function openCgPreview(item) {
+    ui.cgPreviewTitle.textContent = item.label;
+    ui.cgPreviewChapter.textContent = item.chapter;
+    ui.cgPreviewImage.src = item.src;
+    ui.cgPreviewImage.alt = item.label;
+    setOverlay(ui.cgPreviewOverlay, true);
+  }
+
 })();
