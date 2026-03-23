@@ -26,6 +26,7 @@
     backgroundLayer: document.getElementById("backgroundLayer"),
     cgFrame: document.getElementById("cgFrame"),
     cgLayer: document.getElementById("cgLayer"),
+    spriteLayer: document.getElementById("spriteLayer"),
     spriteLeft: document.getElementById("spriteLeft"),
     spriteCenter: document.getElementById("spriteCenter"),
     spriteRight: document.getElementById("spriteRight"),
@@ -33,6 +34,10 @@
     chapterCardEyebrow: document.getElementById("chapterCardEyebrow"),
     chapterCardTitle: document.getElementById("chapterCardTitle"),
     chapterCardSubtitle: document.getElementById("chapterCardSubtitle"),
+    propCard: document.getElementById("propCard"),
+    propImage: document.getElementById("propImage"),
+    propTitle: document.getElementById("propTitle"),
+    propCaption: document.getElementById("propCaption"),
     autoButton: document.getElementById("autoButton"),
     hideTextboxButton: document.getElementById("hideTextboxButton"),
     showTextboxButton: document.getElementById("showTextboxButton"),
@@ -121,6 +126,8 @@
     chapterCardTimer: null,
     sceneGateTimer: null,
     cgRevealTimer: null,
+    propDisplayTimer: null,
+    propHideTimer: null,
     typingDone: true,
     pendingOnDone: null,
     pendingLineStarter: null,
@@ -143,6 +150,8 @@
     completedChapters: new Set(),
     seenCgs: new Set(),
     seenBgms: new Set(),
+    currentProp: null,
+    propLockedUntil: 0,
     renderToken: 0
   };
 
@@ -172,6 +181,23 @@
     });
     ui.textboxShell.addEventListener("dragstart", (event) => {
       event.preventDefault();
+    });
+    ui.propCard.addEventListener("dragstart", (event) => {
+      event.preventDefault();
+    });
+
+    ui.propCard.addEventListener("click", (event) => {
+      if (!state.currentProp) {
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+      playUiClick();
+      openCgPreview({
+        src: state.currentProp.src,
+        label: state.currentProp.title,
+        chapter: state.currentProp.caption || state.currentProp.chapter || "Story Item"
+      });
     });
 
     ui.autoButton.addEventListener("click", (event) => {
@@ -487,6 +513,7 @@
     clearPreLineTimer();
     clearChapterCardTimer();
     clearCgRevealTimer();
+    clearPropTimers();
     stopVoice();
 
     const line = story.lines[state.index];
@@ -502,6 +529,7 @@
     applyBackground(line);
     applyCg(line);
     applySprites(line);
+    applyProp(line, chapter);
     updateBgm(line);
     ui.textboxShell.classList.toggle("is-cg-scene", Boolean(line.cg));
 
@@ -690,6 +718,39 @@
     });
   }
 
+  function applyProp(line, chapter) {
+    const prop = normalizeProp(line.prop, chapter);
+    state.currentProp = prop;
+    clearPropTimers();
+
+    ui.propCard.classList.remove("is-visible");
+
+    if (!prop) {
+      state.propLockedUntil = 0;
+      ui.spriteLayer.classList.remove("is-suppressed");
+      ui.propCard.hidden = true;
+      ui.propImage.onload = null;
+      ui.propImage.removeAttribute("src");
+      ui.propTitle.textContent = "";
+      ui.propCaption.textContent = "";
+      ui.propCaption.hidden = true;
+      return;
+    }
+
+    ui.propCard.hidden = false;
+    ui.spriteLayer.classList.add("is-suppressed");
+    ui.propTitle.textContent = prop.title;
+    ui.propCaption.textContent = prop.caption || "";
+    ui.propCaption.hidden = !prop.caption;
+    ui.propCard.setAttribute("aria-label", `Open ${prop.title}`);
+
+    setImageSourceWhenReady(ui.propImage, prop.src, () => {
+      const displayMs = prop.displayMs ?? 3000;
+      state.propLockedUntil = Date.now() + displayMs;
+      ui.propCard.classList.add("is-visible");
+    });
+  }
+
   function updateBgm(line) {
     if (!line.bgm) {
       ui.bgmName.textContent = state.currentBgmLabel;
@@ -818,6 +879,10 @@
       return;
     }
 
+    if (getRemainingPropLockMs() > 0) {
+      return;
+    }
+
     if (!state.typingDone || state.preLineTimer) {
       completeTyping();
       return;
@@ -828,6 +893,13 @@
   }
 
   function nextLine() {
+    const remainingPropLockMs = getRemainingPropLockMs();
+    if (remainingPropLockMs > 0) {
+      clearAutoTimer();
+      state.autoTimer = window.setTimeout(nextLine, remainingPropLockMs);
+      return;
+    }
+
     clearAutoTimer();
     const currentLine = story.lines[state.index];
     const currentChapterId = currentLine.chapterId;
@@ -1044,6 +1116,7 @@
     clearPreLineTimer();
     clearChapterCardTimer();
     clearCgRevealTimer();
+    clearPropTimers();
     clearBgmFadeTimer();
     stopVoice();
     state.index = 0;
@@ -1111,6 +1184,10 @@
             imageSources.add(sprite.src);
           }
         });
+      }
+      const prop = normalizeProp(line.prop);
+      if (prop?.src) {
+        imageSources.add(prop.src);
       }
     });
 
@@ -1280,6 +1357,22 @@
     state.cgRevealLocked = false;
     state.awaitingCgRevealTap = false;
     state.deferredLineStarter = null;
+  }
+
+  function clearPropTimers() {
+    if (state.propDisplayTimer) {
+      window.clearTimeout(state.propDisplayTimer);
+      state.propDisplayTimer = null;
+    }
+    if (state.propHideTimer) {
+      window.clearTimeout(state.propHideTimer);
+      state.propHideTimer = null;
+    }
+    state.propLockedUntil = 0;
+  }
+
+  function getRemainingPropLockMs() {
+    return Math.max(0, state.propLockedUntil - Date.now());
   }
 
   function shouldTriggerFirstCgReveal(cgSrc) {
@@ -1529,6 +1622,32 @@
       .replace(/^cg_|^bgm_/, "")
       .replace(/[_-]+/g, " ")
       .replace(/\b\w/g, (char) => char.toUpperCase());
+  }
+
+  function normalizeProp(propDef, chapter) {
+    if (!propDef) {
+      return null;
+    }
+
+    if (typeof propDef === "string") {
+      return {
+        src: propDef,
+        title: humanizeAssetName(propDef),
+        caption: chapter?.title || "Story Item",
+        chapter: chapter?.title || "Story Item"
+      };
+    }
+
+    if (!propDef.src) {
+      return null;
+    }
+
+    return {
+      src: propDef.src,
+      title: propDef.title || humanizeAssetName(propDef.src),
+      caption: propDef.caption || "",
+      chapter: propDef.chapter || chapter?.title || "Story Item"
+    };
   }
 
   function openCgPreview(item) {

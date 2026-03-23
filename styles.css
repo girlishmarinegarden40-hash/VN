@@ -306,6 +306,13 @@ button,
   grid-template-columns: 1fr minmax(240px, 360px) 1fr;
   align-items: end;
   padding: 20px 32px 180px;
+  transition: opacity 220ms ease, transform 260ms ease;
+}
+
+.sprite-layer.is-suppressed {
+  opacity: 0;
+  transform: scale(0.985);
+  pointer-events: none;
 }
 
 .sprite-slot {
@@ -378,6 +385,70 @@ button,
   margin: 10px 0 0;
   color: var(--ink-1);
   font-size: 1rem;
+}
+
+.prop-card {
+  position: absolute;
+  left: 50%;
+  top: clamp(82px, 11vh, 132px);
+  z-index: 9;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 0;
+  width: min(248px, calc(100vw - 40px));
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  color: var(--ink-0);
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px) scale(0.96);
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    transform 260ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.prop-card[hidden] {
+  display: none !important;
+}
+
+.prop-card.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.prop-card:hover {
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.16));
+}
+
+.prop-card-frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 7 / 9;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+}
+
+.prop-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.22));
+}
+
+.prop-card-copy {
+  display: none;
 }
 
 .textbox-shell {
@@ -896,6 +967,12 @@ button,
     padding: 14px 14px 16px;
   }
 
+  .prop-card {
+    top: clamp(72px, 10vh, 112px);
+    width: min(224px, calc(100vw - 24px));
+    padding: 0;
+  }
+
   .dialogue-text {
     min-height: 11.8rem;
     line-height: 1.84;
@@ -953,6 +1030,12 @@ button,
     right: 8px;
     bottom: max(8px, env(safe-area-inset-bottom));
     padding: 12px 12px 14px;
+  }
+
+  .prop-card {
+    top: clamp(64px, 9vh, 92px);
+    width: min(188px, calc(100vw - 16px));
+    padding: 0;
   }
 
   .textbox-meta {
