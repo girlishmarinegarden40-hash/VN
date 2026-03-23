@@ -23,7 +23,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
-      text: "A-092是在一个阴天进来的。她来的时候，鞋底还沾着像校门口带进来的泥，表情却空白得像刚从一场很普通的午睡里醒来。"
+      text: "A-092是在一个阴天进来的。她来的时候，鞋底还带着像校门口一路踩进来的泥，袖口也有一点没拍干净的潮气。可她脸上的神情却空白得过分，像刚从一场很普通的午睡里醒来，还没完全弄明白自己为什么会站在这里。"
     },
     {
       location: "庭院入口",
@@ -39,9 +39,9 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "旁白",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
+        { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }
       ],
-      text: "那个少女先是愣了一下，像没听清这个名字为什么会落到自己头上。过了一会儿，她才慢半拍地问："
+      text: "那个少女先是怔住，像没听清这个名字为什么会落到自己头上。她下意识低头看了一眼自己沾着泥点的鞋尖，又慢慢抬起头，语气里甚至没有真正的恐惧，只剩一种试图把异常推回原位的茫然。"
     },
     {
       location: "庭院入口",
@@ -53,13 +53,13 @@ window.AliceCourtyardChapterFiles.push({
       location: "镜前",
       speaker: "旁白",
       background: "./assets/bg/bg_classroom_afternoon.webp",
-      text: "她甚至不知道自己是怎么死的。又或者，那段真正通向死亡的后来，已经离这个阴天太远了，远到最后跟着她一起误入庭院的，只剩下那种最熟悉、也最普通的旧日常。"
+      text: "她甚至不知道自己是怎么死的。或者说，那段真正通向死亡的后来，已经离这个阴天太远了。最后跟着她一起误入庭院的，只剩下最熟悉、也最普通的旧日常。"
     },
     {
       location: "镜前",
       speaker: "旁白",
       background: "./assets/bg/bg_classroom_afternoon.webp",
-      text: "她说那句“我不是已经回家了吗”的时候，语气里甚至没有真正的恐惧。更像一个人明明已经察觉哪里不对，却还在本能地抓住自己最熟悉的那套日常，想把眼前所有异样都勉强推回去。"
+      text: "镜子先把那段午后铺开。教室的窗帘被风微微掀起，天色潮闷，桌面上摊着还没写完的练习册。她坐在人群中央，不显眼，也不慌张，看起来只是又度过了一个谁都不会记住的普通下午。"
     },
     {
       location: "镜前",
@@ -90,7 +90,7 @@ window.AliceCourtyardChapterFiles.push({
       speaker: "旁白",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
-        { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
+        { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
       text: "A-017站在远处，看着A-092在镜前一点点崩掉。她这才明白，原来不是只有直接伤人的人才会来到这里。"
     },
@@ -101,7 +101,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
       ],
-      text: "有些人停在“没有伸手拦一下”。有些人停在“那一刻我笑了”。而系统一样会把这些也收进来。"
+      text: "有些人停在“没有伸手拦一下”。有些人停在“那一刻我笑了”。有些人停在“我明明知道，却还是顺着人群往前走了一步”。而系统一样会把这些也收进来。"
     },
     {
       location: "镜前",
@@ -119,7 +119,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
-      text: "去看。看见你没做什么，究竟意味着什么。"
+      text: "去看。"
+    },
+    {
+      location: "镜前",
+      speaker: "Hana",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
+      ],
+      text: "看见你没做什么，究竟意味着什么。"
     },
     {
       location: "再经历之后",
@@ -127,9 +136,9 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
-        { slot: "center", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
+        { slot: "right", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
-      text: "那场再经历没有维持很久。A-092回来的时候，整个人都在抖。她没有选白书，也没有选黑书。她只是盯着自己的手，像第一次知道它们也能什么都不做。"
+      text: "那场再经历没有维持很久。A-092回来的时候，整个人都在抖。她没有选白书，也没有选黑书，只是盯着自己的手，像第一次知道它们原来也能什么都不做。"
     },
     {
       location: "再经历之后",
@@ -138,13 +147,37 @@ window.AliceCourtyardChapterFiles.push({
       text: "我真的没有推她。"
     },
     {
+      location: "再经历之后",
+      speaker: "旁白",
+      background: "./assets/bg/bg_corridor_white.webp",
+      text: "她反反复复说的只有这一句。可谁都知道，这一刻已经没有人在问她有没有伸手推。庭院要她看的，从来就是更早、更轻、也更容易被所有人说成“那不算什么”的那些时刻。"
+    },
+    {
       location: "判定",
       speaker: "Alice",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "黑之书。没有幸福碎片。不予停留。"
+      text: "黑之书。"
+    },
+    {
+      location: "判定",
+      speaker: "Alice",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
+      ],
+      text: "没有幸福碎片。"
+    },
+    {
+      location: "判定",
+      speaker: "Alice",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
+      ],
+      text: "不予停留。"
     },
     {
       location: "离开",
@@ -168,7 +201,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
-      text: "她并不怜悯她，却也第一次清楚地意识到，庭院处理的不是“好人”和“坏人”。它处理的是那些在某个瞬间，再也无法往前走的人。"
+      text: "她并不怜悯她。却也第一次清楚地意识到，庭院处理的不是“好人”和“坏人”。它处理的是那些在某个瞬间，再也无法往前走的人。"
     }
   ]
 });

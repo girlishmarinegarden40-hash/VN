@@ -23,7 +23,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/a214/a214_guarded.webp", dim: true }
       ],
-      text: "A-214来的那天，风很大。她一进庭院，少女就认出了她。不是因为脸，而是因为那种先习惯性把下巴抬高一点、仿佛已经预备好用轻蔑遮住慌乱的姿态。"
+      text: "A-214来的那天，风很大。她一进庭院，A-017就认出了她。不是因为脸，而是因为那种先习惯性把下巴抬高一点、仿佛已经预备好用轻蔑遮住慌乱的姿态。"
     },
     {
       location: "庭院入口",
@@ -43,7 +43,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/a214/a214_guarded.webp", dim: true }
       ],
-      text: "少女站在长廊尽头，浑身发冷。那一瞬间，她甚至不是先看清了对方的脸，而是先看见那人把下巴抬起、把轻蔑挂回嘴角的动作，像某种已经熟到可以自动长回去的表情。"
+      text: "A-017站在长廊尽头，浑身发冷。那一瞬间，她甚至不是先看清了对方的脸，而是先看见那人把下巴抬起、把轻蔑挂回嘴角的动作，像某种已经熟到可以自动长回去的表情。"
     },
     {
       location: "庭院入口",
@@ -52,16 +52,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/a214/a214_guarded.webp" }
       ],
-      text: "A-214最开始还在否认。她说话的时候，下巴一直抬着。可指尖却不受控制地收得很紧，像她自己也知道，那些一出口就显得轻飘飘的借口，根本撑不住她现在站着的地方。"
+      text: "A-214最开始还在否认。她说那只是玩笑，说她只是想吓吓她，说她没想到那张纸会被风卷出去，说她更没想到，两个人会一起摔下去。她嘴上每一句都说得很快，可手指却越收越紧，像连她自己都知道，这些借口根本撑不住她此刻站着的地方。"
     },
     {
       location: "庭院入口",
-      speaker: "旁白",
+      speaker: "A-214",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a214/a214_guarded.webp" }
       ],
-      text: "她说那只是玩笑。说她只是想吓吓她。说她没想到那张纸会被风卷出去。说她更没想到，两个人会一起摔下去。说学校里这种事天天都有，凭什么都算到她头上。"
+      text: "学校里这种事天天都有，凭什么都算到我头上？"
     },
     {
       location: "庭院入口",
@@ -125,6 +125,15 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "再经历",
+      speaker: "旁白",
+      background: "./assets/bg/bg_classroom_afternoon.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a214/a214_shaken.webp" }
+      ],
+      text: "那些平时熟得像本能的句子一下卡在她喉咙里。她张了张嘴，才发现自己连一句最轻飘飘的嘲讽都挤不出来。"
+    },
+    {
+      location: "再经历",
       speaker: "A-214",
       background: "./assets/bg/bg_classroom_afternoon.webp",
       sprites: [
@@ -176,7 +185,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a214/a214_remorse.webp" }
       ],
-      text: "那两个字像针一样扎进她耳朵里。她几乎是狼狈地站起身，再也不敢回头。"
+      text: "那两个字像针一样扎进她耳朵里。她几乎是狼狈地站起身，再也不敢回头。她直到那时才意识到，原来一点点偏离常态的善意，也会让被伤害太久的人先怀疑那是不是真的。"
     },
     {
       location: "楼梯间",
@@ -260,7 +269,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "center", src: "./assets/sprites/a214/a214_remorse.webp" }
       ],
-      text: "A-214没有回答。她的眼泪很快掉下来。"
+      text: "A-214没有回答。她的眼泪很快掉下来。那不是能把什么洗干净的眼泪，更像终于承认自己此后每一次看见那场风，都会想起自己也在场。"
     },
     {
       location: "判定前",
@@ -324,6 +333,15 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "白门",
+      speaker: "旁白",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a214/a214_guarded.webp" }
+      ],
+      text: "A-214站在原地，很久没有动。她看着那扇门，又低头看了一眼自己的手，像直到这一刻都没完全明白，原来“承认成立”以后，留下来的并不是停留，而只是某种终于要独自去承担的后来。"
+    },
+    {
+      location: "白门",
       speaker: "Moel",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
@@ -334,19 +352,47 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "白门",
+      speaker: "A-214",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a214/a214_guarded.webp" }
+      ],
+      text: "连你也在看我笑话？"
+    },
+    {
+      location: "白门",
+      speaker: "Moel",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" },
+        { slot: "center", src: "./assets/sprites/a214/a214_guarded.webp", dim: true }
+      ],
+      text: "我只是在看，你这次会不会自己走。"
+    },
+    {
+      location: "白门",
+      speaker: "旁白",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "center", src: "./assets/sprites/a214/a214_guarded.webp" }
+      ],
+      text: "最后，她还是走了过去。门后没有人等她，也没有谁对她说，这算不算被原谅。那点白光只是在她迈进去以后，一寸一寸把她的背影吞薄。先是发梢，再是肩线，最后连她那种总会下意识先把下巴抬起来一点的姿态，也一起被收进了门后。"
+    },
+    {
+      location: "白门之后",
       speaker: "旁白",
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
       ],
-      text: "A-214走进去的时候，少女站在原地，没有追上去。她第一次真正意识到，原来有些人会离开，而自己还要留在这里。"
+      text: "门重新合上的时候，A-017站在回廊里，胸口忽然发紧。她第一次清楚地意识到：原来有些人会离开。而自己还要留在这里。"
     },
     {
       location: "回廊夜里",
       speaker: "旁白",
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_Alice_Asking_for_One_More_Page.webp",
-      text: "门后的白光彻底收拢以后，Yume正要把册子合上。Alice却先一步按住了那页。"
+      text: "门后的白光彻底收拢以后，Yume正要把册子合上。Alice却忽然伸出手，轻轻按住了那一页页角。那动作很轻，轻得像连她自己都没意识到，这已经近乎一个请求。"
     },
     {
       location: "回廊夜里",
