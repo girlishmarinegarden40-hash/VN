@@ -26,6 +26,10 @@
     backgroundLayer: document.getElementById("backgroundLayer"),
     cgFrame: document.getElementById("cgFrame"),
     cgLayer: document.getElementById("cgLayer"),
+    videoShell: document.getElementById("videoShell"),
+    videoLayer: document.getElementById("videoLayer"),
+    videoLabel: document.getElementById("videoLabel"),
+    videoSkipButton: document.getElementById("videoSkipButton"),
     spriteLayer: document.getElementById("spriteLayer"),
     spriteLeft: document.getElementById("spriteLeft"),
     spriteCenter: document.getElementById("spriteCenter"),
@@ -99,6 +103,7 @@
 
   const chapterMetaById = Object.fromEntries(chapterMeta.map((chapter) => [chapter.id, chapter]));
   const preloadedImages = new Map();
+  const preloadedVideos = new Map();
   const galleryCgs = collectUniqueCgs();
   const galleryBgms = collectUniqueBgms();
 
@@ -139,9 +144,12 @@
     currentBgmLabel: "Not started",
     currentVoiceSrc: null,
     currentGalleryBgmSrc: null,
+    currentVideoSrc: null,
     coverActive: true,
     chapterCardActive: false,
     cgRevealLocked: false,
+    videoActive: false,
+    videoSkippable: false,
     awaitingCgRevealTap: false,
     userTextboxHidden: false,
     systemTextboxHidden: false,
@@ -402,6 +410,16 @@
       renderCurrentLine(false);
     });
 
+    ui.videoSkipButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (!state.videoActive || !state.videoSkippable) {
+        return;
+      }
+      playUiClick();
+      finishVideoLine(true);
+    });
+
     window.addEventListener("keydown", (event) => {
       if (event.key === " " || event.key === "Enter") {
         event.preventDefault();
@@ -451,7 +469,7 @@
       return;
     }
 
-    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked) {
+    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked || state.videoActive) {
       return;
     }
 
@@ -515,6 +533,7 @@
     clearCgRevealTimer();
     clearPropTimers();
     stopVoice();
+    stopVideoPlayback(false);
 
     const line = story.lines[state.index];
     const chapter = story.chapters.find((item) => item.id === line.chapterId);
@@ -532,6 +551,11 @@
     applyProp(line, chapter);
     updateBgm(line);
     ui.textboxShell.classList.toggle("is-cg-scene", Boolean(line.cg));
+
+    if (line.video || line.type === "video") {
+      startVideoLine(line, chapter);
+      return;
+    }
 
     const renderToken = ++state.renderToken;
     const beginLine = (skipTyping = false) => {
@@ -766,6 +790,9 @@
       state.currentBgmTargetVolume = targetVolume;
       if (!state.muted) {
         bgmAudio.volume = targetVolume;
+        if (state.audioUnlocked && bgmAudio.paused) {
+          bgmAudio.play().catch(() => {});
+        }
       }
       return;
     }
@@ -773,6 +800,121 @@
     state.currentBgmSrc = line.bgm;
     state.currentBgmTargetVolume = targetVolume;
     transitionBgm(line.bgm, targetVolume, line.bgmFadeMs ?? 650);
+  }
+
+  function startVideoLine(line, chapter) {
+    const src = line.video;
+    if (!src) {
+      nextLine();
+      return;
+    }
+
+    const renderToken = ++state.renderToken;
+    state.videoActive = true;
+    state.videoSkippable = line.videoSkippable !== false;
+    state.currentVideoSrc = src;
+
+    ui.videoShell.hidden = false;
+    ui.videoShell.classList.add("is-visible");
+    ui.videoLabel.hidden = !line.videoLabel;
+    ui.videoLabel.textContent = line.videoLabel || "";
+    ui.videoSkipButton.hidden = !state.videoSkippable;
+
+    setSystemTextboxHidden(true);
+    ui.sceneMeta.textContent = line.location || chapter?.location || "Movie";
+    ui.speakerTag.textContent = line.speaker || "Movie";
+    ui.dialogueText.textContent = "";
+    ui.textboxHint.textContent = state.videoSkippable ? "Video playing" : "Video locked";
+
+    const shouldKeepBgm = line.videoKeepBgm === true;
+    if (!shouldKeepBgm) {
+      bgmAudio.pause();
+    }
+
+    preloadVideo(src);
+    ui.videoLayer.pause();
+    ui.videoLayer.removeAttribute("poster");
+    ui.videoLayer.currentTime = 0;
+    ui.videoLayer.src = src;
+    ui.videoLayer.loop = Boolean(line.videoLoop);
+    ui.videoLayer.muted = state.muted || !state.audioUnlocked || line.videoMuted === true;
+    ui.videoLayer.volume = typeof line.videoVolume === "number" ? line.videoVolume : 1;
+    if (line.poster) {
+      ui.videoLayer.poster = line.poster;
+      preloadImage(line.poster);
+    }
+
+    const onEnded = () => {
+      if (renderToken !== state.renderToken) {
+        return;
+      }
+      finishVideoLine(false, line.pauseAfterVideo ?? 0);
+    };
+
+    const onError = () => {
+      if (renderToken !== state.renderToken) {
+        return;
+      }
+      finishVideoLine(true, 0);
+    };
+
+    ui.videoLayer.onended = onEnded;
+    ui.videoLayer.onerror = onError;
+    ui.videoLayer.onloadedmetadata = null;
+
+    ui.videoLayer.play().catch(() => {
+      // Keep the video frame visible and allow manual skip if autoplay is blocked.
+      ui.textboxHint.textContent = state.videoSkippable ? "Tap Skip to continue" : "Video ready";
+    });
+  }
+
+  function finishVideoLine(skipped, pauseAfterVideo) {
+    if (!state.videoActive) {
+      return;
+    }
+
+    stopVideoPlayback(true);
+    const delay = Math.max(0, pauseAfterVideo || 0);
+    if (delay > 0) {
+      state.autoTimer = window.setTimeout(() => {
+        nextLine();
+      }, delay);
+      return;
+    }
+
+    nextLine();
+  }
+
+  function stopVideoPlayback(restoreStoryBgm) {
+    ui.videoLayer.onended = null;
+    ui.videoLayer.onerror = null;
+    ui.videoLayer.onloadedmetadata = null;
+
+    if (!ui.videoLayer.paused) {
+      ui.videoLayer.pause();
+    }
+
+    if (ui.videoLayer.currentTime) {
+      ui.videoLayer.currentTime = 0;
+    }
+
+    ui.videoLayer.removeAttribute("src");
+    ui.videoLayer.load();
+
+    ui.videoShell.classList.remove("is-visible");
+    ui.videoShell.hidden = true;
+    ui.videoLabel.hidden = true;
+    ui.videoLabel.textContent = "";
+    ui.videoSkipButton.hidden = true;
+
+    if (state.videoActive && restoreStoryBgm && state.audioUnlocked && !state.muted && state.currentBgmSrc && bgmAudio.paused) {
+      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.play().catch(() => {});
+    }
+
+    state.videoActive = false;
+    state.videoSkippable = false;
+    state.currentVideoSrc = null;
   }
 
   function updateVoice(line) {
@@ -871,7 +1013,7 @@
       return;
     }
 
-    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked) {
+    if (state.coverActive || state.chapterCardActive || state.cgRevealLocked || state.videoActive) {
       return;
     }
 
@@ -946,6 +1088,7 @@
     bgmAudio.muted = state.muted;
     voiceAudio.muted = state.muted;
     galleryAudio.muted = state.muted;
+    ui.videoLayer.muted = state.muted || !state.audioUnlocked;
 
     if (!state.muted && state.audioUnlocked && state.currentBgmSrc && bgmAudio.paused) {
       bgmAudio.volume = state.currentBgmTargetVolume;
@@ -1021,11 +1164,15 @@
     }
 
     state.audioUnlocked = true;
+    ui.videoLayer.muted = state.muted;
     if (state.currentBgmSrc && !state.muted) {
       bgmAudio.play().catch(() => {});
     }
     if (state.currentVoiceSrc && !state.muted) {
       voiceAudio.play().catch(() => {});
+    }
+    if (state.videoActive && !state.muted) {
+      ui.videoLayer.play().catch(() => {});
     }
   }
 
@@ -1119,6 +1266,7 @@
     clearPropTimers();
     clearBgmFadeTimer();
     stopVoice();
+    stopVideoPlayback(false);
     state.index = 0;
     state.backlog = [];
     state.pendingOnDone = null;
@@ -1170,6 +1318,7 @@
 
   function preloadVisualAssets() {
     const imageSources = new Set();
+    const videoSources = new Set();
 
     story.lines.forEach((line) => {
       if (line.background) {
@@ -1189,9 +1338,16 @@
       if (prop?.src) {
         imageSources.add(prop.src);
       }
+      if (line.video) {
+        videoSources.add(line.video);
+      }
+      if (line.poster) {
+        imageSources.add(line.poster);
+      }
     });
 
     imageSources.forEach((src) => preloadImage(src));
+    videoSources.forEach((src) => preloadVideo(src));
   }
 
   function preloadImage(src) {
@@ -1217,6 +1373,27 @@
 
     img.src = src;
     preloadedImages.set(src, entry);
+    return entry;
+  }
+
+  function preloadVideo(src) {
+    if (!src) {
+      return null;
+    }
+
+    if (preloadedVideos.has(src)) {
+      return preloadedVideos.get(src);
+    }
+
+    const video = document.createElement("video");
+    video.preload = "metadata";
+    video.src = src;
+
+    const entry = {
+      video
+    };
+
+    preloadedVideos.set(src, entry);
     return entry;
   }
 
@@ -1410,6 +1587,7 @@
 
   function openCover() {
     clearAutoTimer();
+    stopVideoPlayback(false);
     state.coverActive = true;
     setOverlay(ui.coverOverlay, true);
     ui.coverContinueButton.hidden = !hasSavedProgress();
@@ -1417,6 +1595,7 @@
 
   function returnToTitle() {
     clearAutoTimer();
+    stopVideoPlayback(false);
     setOverlay(ui.settingOverlay, false);
     setOverlay(ui.backlogOverlay, false);
     setOverlay(ui.galleryOverlay, false);

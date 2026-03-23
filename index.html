@@ -34,6 +34,14 @@
           <img id="cgLayer" class="cg-layer" alt="" draggable="false">
         </div>
 
+        <div id="videoShell" class="video-shell" hidden aria-label="Story Video">
+          <video id="videoLayer" class="video-layer" playsinline preload="metadata"></video>
+          <div class="video-overlay">
+            <p id="videoLabel" class="video-label" hidden></p>
+            <button id="videoSkipButton" class="video-skip-button" type="button" hidden>Skip</button>
+          </div>
+        </div>
+
         <div id="spriteLayer" class="sprite-layer">
           <img id="spriteLeft" class="sprite-slot left" alt="" draggable="false">
           <img id="spriteCenter" class="sprite-slot center" alt="" draggable="false">
@@ -233,6 +241,7 @@
     </div>
   </div>
 
+  <script src="./chapters/00-opening-movie.js?v=20260324a"></script>
   <script src="./chapters/00-prologue.js?v=20260323b"></script>
   <script src="./chapters/01-touchless-street.js?v=20260323b"></script>
   <script src="./chapters/02-a017-arrival.js?v=20260323b"></script>
@@ -253,7 +262,8 @@
   <script src="./chapters/16-after-alice.js?v=20260323b"></script>
   <script src="./chapters/17-noa.js?v=20260323b"></script>
   <script src="./chapters/18-thirteenth-card.js?v=20260323b"></script>
+  <script src="./chapters/19-ending-movie.js?v=20260324a"></script>
   <script src="./story-data.js?v=20260323c"></script>
-  <script src="./app.js?v=20260323c"></script>
+  <script src="./app.js?v=20260324a"></script>
 </body>
 </html>

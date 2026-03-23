@@ -20,6 +20,15 @@
   // Future-ready line fields:
   // voice: "./assets/voice/ch03/ch03_001_hana.wav"
   // voiceVolume: 0.9
+  // video: "./assets/video/op_main.webm"
+  // videoLabel: "Opening Movie"
+  // videoSkippable: true
+  // videoVolume: 1
+  // videoMuted: false
+  // videoKeepBgm: false
+  // videoLoop: false
+  // poster: "./assets/bg/bg_garden_night.webp"
+  // pauseAfterVideo: 300
 
   window.AliceCourtyardStory = {
     title: "爱丽丝庭院",
