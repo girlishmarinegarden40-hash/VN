@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "第四百零三次失败",
       background: "./assets/bg/bg_garden_night.webp",
       bgm: "./assets/bgm/bgm_visitor_intrusion.mp3",
-      bgmName: "Visitor"
+      bgmName: "Visitor",
+      cardDuration: 2400,
+      pauseAfter: 520
     },
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" }
@@ -27,13 +31,19 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉水面",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_a403_core.webp",
-      text: "A-017只是低头看了一眼水面。原本只该映出自己脸的地方，却出现了另一张模糊不定的脸。那张脸在许多轮廓之间缓慢晃动，有时像她自己，有时像A-214，有时又像某个从未真正被讲完的陌生人。等她再抬头时，那个人已经站在喷泉对面。"
+      text: "A-017只是低头看了一眼水面。原本只该映出自己脸的地方，却出现了另一张模糊不定的脸。那张脸在许多轮廓之间缓慢晃动，有时像她自己，有时像A-214，有时又像某个从未真正被讲完的陌生人。等她再抬头时，那个人已经站在喷泉对面。",
+      pauseBefore: 240,
+      pauseAfter: 260
     },
     {
       location: "喷泉对面",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
@@ -43,15 +53,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "记录页",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
-      text: "几乎是同一时间，Yume手里的册子重重翻到最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩下一行终于定下来的字。A-403。"
+      text: "几乎是同一时间，Yume手里的册子重重翻到最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩下一行终于定下来的字。A-403。",
+      sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
+      pauseBefore: 180
     },
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -62,6 +78,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -73,6 +91,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -82,6 +102,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_008_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -91,6 +113,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -100,6 +124,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -110,16 +136,23 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "Alice",
+      voice: "./assets/voice/13-a403/13-a403_011_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" },
         { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
-      text: "你是谁？"
+      text: "你是谁？",
+      pauseBefore: 180,
+      pauseAfter: 260,
+      textSpeed: 34
     },
     {
       location: "喷泉对面",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -129,6 +162,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_013_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -138,6 +173,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_014_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -147,6 +184,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_015_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
@@ -156,6 +195,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_016_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
@@ -165,6 +206,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" },
@@ -175,6 +218,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -184,6 +229,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "Yume",
+      voice: "./assets/voice/13-a403/13-a403_019_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
@@ -193,6 +240,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_020_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -202,6 +251,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉对面",
       speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_021_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }

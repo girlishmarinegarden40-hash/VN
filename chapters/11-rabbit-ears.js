@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "关系印记",
       background: "./assets/bg/bg_garden_day.webp",
       bgm: "./assets/bgm/bgm_garden_daily.mp3",
-      bgmName: "庭院日常"
+      bgmName: "庭院日常",
+      cardDuration: 2450,
+      pauseAfter: 520,
     },
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -28,6 +32,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "A-017",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_002_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -38,6 +44,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -47,6 +55,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_004_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -56,6 +66,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_005_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -65,6 +77,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_006_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -74,15 +88,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_007_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
-      text: "女仆不是身份，是姿态。"
+      text: "女仆不是身份，是姿态。",
+      pauseAfter: 220,
+      textSpeed: 30,
     },
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -93,6 +113,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "A-017",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_009_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -103,6 +125,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -112,15 +136,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_011_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
       ],
-      text: "关系印记。"
+      text: "关系印记。",
+      pauseBefore: 180,
+      textSpeed: 38,
     },
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_012_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -130,19 +160,27 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       cg: "./assets/cg/cg_long_table_seven_cups.webp",
+      pauseBefore: 180,
+      pauseAfter: 220,
       text: "A-017低头看向手里的宣传页。那张纸在某种意义上，难道不也是她自己的印记吗？不是地点本身，而是那个再也没人能陪她去抵达的以后。"
     },
     {
       location: "花圃边",
       speaker: "A-017",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_014_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       text: "所以她们是因为还抓着谁，才会留在这里吗？"
     },
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_015_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -152,6 +190,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_016_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
@@ -161,6 +201,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -171,6 +213,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -181,6 +225,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "旁白",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }

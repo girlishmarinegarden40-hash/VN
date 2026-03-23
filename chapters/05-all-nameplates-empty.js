@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "庭院回廊",
       background: "./assets/bg/bg_garden_day.webp",
       bgm: "./assets/bgm/bgm_garden_daily.mp3",
-      bgmName: "庭院日常"
+      bgmName: "庭院日常",
+      cardDuration: 2450,
+      pauseAfter: 520,
     },
     {
       location: "庭院回廊",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_neutral.webp" },
@@ -28,6 +32,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "门牌前",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_neutral.webp" },
@@ -38,6 +44,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "门牌前",
       speaker: "A-017",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_003_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -48,6 +56,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -58,16 +68,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "Yume",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_005_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp", dim: true }
       ],
-      text: "因为名字来得比痛慢。"
+      text: "因为名字来得比痛慢。",
+      pauseAfter: 240,
+      textSpeed: 30,
     },
     {
       location: "回廊尽头",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -78,6 +94,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "Yume",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_007_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -88,6 +106,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "Yume",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_008_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -98,6 +118,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊尽头",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -107,13 +129,19 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       cg: "./assets/cg/cg_long_table_seven_cups.webp",
+      pauseBefore: 220,
+      pauseAfter: 260,
       text: "先浮出来的是水声。很轻，细细地从不远处传来，像喷泉先于景象一步抵达这里。接着是茶杯彼此轻碰时极短的一声脆响，再后来，长桌边缘、椅背弧度、石阶上的花影，才一层一层从雾里显出来。"
     },
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       cg: "./assets/cg/cg_long_table_seven_cups.webp",
       text: "长桌边摆着七只杯子。可庭院里，除了三姐妹和她自己，只剩四个带着兔耳的少女。"
@@ -121,6 +149,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_neutral.webp" },
@@ -132,6 +162,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/shella/shella_neutral.webp" },
@@ -143,6 +175,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "Meiling",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_014_meiling.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/meiling/meiling_confused.webp" }
@@ -152,6 +186,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "A-017",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_015_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
@@ -161,6 +197,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "Azalea",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_016_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -171,6 +209,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "Azalea",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_017_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -181,6 +221,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -191,16 +233,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "Azalea",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_019_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_serious.webp" },
         { slot: "center", src: "./assets/sprites/hana/hana_tired.webp", dim: true }
       ],
-      text: "先坐下。"
+      text: "先坐下。",
+      pauseBefore: 180,
+      textSpeed: 36,
     },
     {
       location: "长桌夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_020_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_tired.webp", dim: true },
@@ -211,6 +259,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌夜色",
       speaker: "Shella",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_021_shella.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_long_table_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/shella/shella_smile.webp" },
@@ -221,6 +271,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_022_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -231,6 +283,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "A-017",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_023_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -241,26 +295,36 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "Alice",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_024_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp", dim: true },
         { slot: "right", src: "./assets/sprites/alice/alice_slightly_soft.webp" }
       ],
-      text: "因为有些名字，最开始只是统称。"
+      text: "因为有些名字，最开始只是统称。",
+      pauseAfter: 180,
+      textSpeed: 32,
     },
     {
       location: "长窗边",
       speaker: "Alice",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_025_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp", dim: true },
         { slot: "right", src: "./assets/sprites/alice/alice_slightly_soft.webp" }
       ],
-      text: "后来，总要有人把它活成真名。"
+      text: "后来，总要有人把它活成真名。",
+      pauseAfter: 220,
+      textSpeed: 28,
     },
     {
       location: "长窗边",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_026_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -271,6 +335,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "Moel",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_027_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -280,6 +346,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "A-017",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_028_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -290,6 +358,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长窗边",
       speaker: "Moel",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_029_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -299,6 +369,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_030_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp", dim: true },
@@ -310,6 +382,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜色",
       speaker: "Yume",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_031_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_soft.webp" },
@@ -321,13 +395,19 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_032_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_Hana_at_Yume_Shoulder.webp",
+      pauseBefore: 220,
+      pauseAfter: 260,
       text: "Hana站着没动，像连“停下来”这件事，对她而言都需要一点很慢的学习。过了一会儿，她才在 Yume 身边坐下，很轻地把额角抵过去。那不是撒娇，更像终于被允许从整天没有停过的运转里，暂时撤下来一会儿。"
     },
     {
       location: "回廊夜色",
       speaker: "Moel",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_033_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" },
@@ -338,6 +418,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜色",
       speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_034_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp", dim: true },

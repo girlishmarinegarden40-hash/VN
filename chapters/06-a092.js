@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "阴天之后",
       background: "./assets/bg/bg_corridor_white.webp",
       bgm: "./assets/bgm/bgm_mirror_relive.mp3",
-      bgmName: "镜中回声"
+      bgmName: "镜中回声",
+      cardDuration: 2400,
+      pauseAfter: 520,
     },
     {
       location: "庭院入口",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -28,6 +32,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院入口",
       speaker: "Yume",
+      voice: "./assets/voice/06-a092/06-a092_002_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -37,6 +43,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院入口",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }
@@ -46,48 +54,67 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院入口",
       speaker: "A-092",
+      voice: "./assets/voice/06-a092/06-a092_004_a092.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "我不是已经回家了吗？"
     },
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "她甚至不知道自己是怎么死的。或者说，那段真正通向死亡的后来，已经离这个阴天太远了。最后跟着她一起误入庭院的，只剩下最熟悉、也最普通的旧日常。"
     },
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "镜子先把那段午后铺开。教室的窗帘被风微微掀起，天色潮闷，桌面上摊着还没写完的练习册。她坐在人群中央，不显眼，也不慌张，看起来只是又度过了一个谁都不会记住的普通下午。"
     },
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "镜子很快给了答案。她不是动手的人。也不是被推下楼梯的人。她只是站在旁边，笑过，附和过，在别人欺负谁的时候没有拦住，也在对方需要一句“够了”的时候，把头转向了别处。"
     },
     {
       location: "镜前",
       speaker: "A-092",
+      voice: "./assets/voice/06-a092/06-a092_008_a092.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
-      text: "我又没做什么。"
+      text: "我又没做什么。",
+      pauseBefore: 220,
+      pauseAfter: 220,
+      textSpeed: 34,
     },
     {
       location: "镜前",
       speaker: "A-092",
+      voice: "./assets/voice/06-a092/06-a092_009_a092.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "我只是跟着她们而已。"
     },
     {
       location: "镜前",
       speaker: "A-092",
+      voice: "./assets/voice/06-a092/06-a092_010_a092.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "而且大家都这样。"
     },
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -97,6 +124,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -106,6 +135,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -115,15 +146,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "Hana",
+      voice: "./assets/voice/06-a092/06-a092_014_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
-      text: "去看。"
+      text: "去看。",
+      pauseBefore: 180,
+      textSpeed: 38,
     },
     {
       location: "镜前",
       speaker: "Hana",
+      voice: "./assets/voice/06-a092/06-a092_015_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -133,6 +170,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "再经历之后",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
@@ -143,51 +182,70 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "再经历之后",
       speaker: "A-092",
+      voice: "./assets/voice/06-a092/06-a092_017_a092.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "我真的没有推她。"
     },
     {
       location: "再经历之后",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "她反反复复说的只有这一句。可谁都知道，这一刻已经没有人在问她有没有伸手推。庭院要她看的，从来就是更早、更轻、也更容易被所有人说成“那不算什么”的那些时刻。"
     },
     {
       location: "判定",
       speaker: "Alice",
+      voice: "./assets/voice/06-a092/06-a092_019_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "黑之书。"
+      text: "黑之书。",
+      pauseBefore: 180,
+      textSpeed: 36,
     },
     {
       location: "判定",
       speaker: "Alice",
+      voice: "./assets/voice/06-a092/06-a092_020_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "没有幸福碎片。"
+      text: "没有幸福碎片。",
+      textSpeed: 32,
     },
     {
       location: "判定",
       speaker: "Alice",
+      voice: "./assets/voice/06-a092/06-a092_021_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "不予停留。"
+      text: "不予停留。",
+      pauseAfter: 240,
+      textSpeed: 32,
     },
     {
       location: "离开",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_022_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "A-092站在原地，一点一点淡下去的时候，长廊深处并没有替她打开任何门。没有回廊继续往前延伸，也没有哪一条白下去的路肯把她接住。"
     },
     {
       location: "离开",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_023_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
@@ -197,6 +255,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "离开之后",
       speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_024_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }

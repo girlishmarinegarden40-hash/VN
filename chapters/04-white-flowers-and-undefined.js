@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "庭院傍晚",
       background: "./assets/bg/bg_garden_dusk.webp",
       bgm: "./assets/bgm/bgm_white_book.mp3",
-      bgmName: "白之书"
+      bgmName: "白之书",
+      cardDuration: 2400,
+      pauseAfter: 520,
     },
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -28,16 +32,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "金色双马尾拖过草尖，像两道冷光。她手里各拿着一本书，一黑一白。她站在少女面前时，连周围空气都像被判定得更清晰了一点。"
+      text: "金色双马尾拖过草尖，像两道冷光。她手里各拿着一本书，一黑一白。她站在少女面前时，连周围空气都像被判定得更清晰了一点。",
+      pauseBefore: 160,
+      pauseAfter: 180,
     },
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -48,6 +58,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "Alice",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_004_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp", dim: true },
@@ -58,6 +70,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_005_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -68,6 +82,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "Alice",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_006_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp", dim: true },
@@ -78,6 +94,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_007_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
@@ -88,6 +106,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "Alice",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_008_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_teary.webp", dim: true },
@@ -98,6 +118,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
@@ -108,6 +130,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_010_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -118,6 +142,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "Alice",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_011_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true },
@@ -128,6 +154,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
@@ -138,6 +166,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_013_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
@@ -148,20 +178,31 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "白之书",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       cg: "./assets/cg/cg_white_book_judgment.webp",
+      pauseBefore: 180,
+      pauseAfter: 260,
       text: "风从喷泉那边吹过来。Alice低头看了一眼那张纸。存在幸福碎片。存在未完成渴望。存在继续停留的必要。"
     },
     {
       location: "白之书",
       speaker: "Alice",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_015_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       cg: "./assets/cg/cg_white_book_judgment.webp",
-      text: "A-017，归类：未定义。"
+      text: "A-017，归类：未定义。",
+      pauseBefore: 220,
+      pauseAfter: 300,
+      textSpeed: 34,
     },
     {
       location: "庭院傍晚",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_016_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -172,17 +213,23 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "Yume",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_017_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp", dim: true },
         { slot: "right", src: "./assets/sprites/alice/alice_neutral.webp", dim: true }
       ],
-      text: "意思是，从现在开始，你可以先留在这里。直到名字回来，或者你不再需要它。"
+      text: "意思是，从现在开始，你可以先留在这里。直到名字回来，或者你不再需要它。",
+      pauseAfter: 240,
+      textSpeed: 24,
     },
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_soft.webp", dim: true },
@@ -194,6 +241,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院回廊",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -204,6 +253,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院回廊",
       speaker: "A-017",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_020_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -214,6 +265,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院回廊",
       speaker: "Yume",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_021_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true },
@@ -224,6 +277,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院回廊",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_022_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },

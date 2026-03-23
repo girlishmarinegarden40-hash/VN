@@ -18,12 +18,16 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院夜里",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "那之后，庭院像突然失去了稳定的顺序。新来的编号不断消失。旧门却在夜里一扇扇自己亮起。A-403时而站在喷泉边，时而站在最深的回廊里，像她并不真正属于某一个位置。"
     },
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -34,6 +38,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_003_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -43,6 +49,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -53,6 +61,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-017",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_005_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -62,6 +72,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_006_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -71,6 +83,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_007_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -80,6 +94,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -89,6 +105,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_009_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -98,6 +116,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -108,6 +128,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -117,6 +139,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-017",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_012_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -127,6 +151,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -136,6 +162,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_014_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp" }
@@ -145,6 +173,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_015_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -154,6 +184,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "这就是A-403最可怕的地方。她不是复仇。也不是宽恕。她只是把所有被系统逼着分门别类的东西，重新聚回成了一个无法继续被简化的整体。"
     }

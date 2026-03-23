@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "纯白回廊",
       background: "./assets/bg/bg_corridor_white.webp",
       bgm: "./assets/bgm/bgm_mirror_relive.mp3",
-      bgmName: "回廊与镜"
+      bgmName: "回廊与镜",
+      cardDuration: 2400,
+      pauseAfter: 520,
     },
     {
       location: "纯白边缘",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -28,6 +32,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_002_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -38,6 +44,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_neutral.webp" },
@@ -48,6 +56,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_004_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_neutral.webp" },
@@ -58,6 +68,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "A-017",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_005_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_neutral.webp", dim: true },
@@ -68,6 +80,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_006_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
@@ -78,6 +92,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -88,27 +104,38 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_008_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
-      text: "先睡一睡吧。"
+      text: "先睡一睡吧。",
+      pauseBefore: 220,
+      pauseAfter: 320,
+      textSpeed: 34,
     },
     {
       location: "教室午后",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       bgm: "./assets/bgm/bgm_mirror_relive.mp3",
       bgmName: "镜中回声",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
-      text: "教室在下一秒重新亮起。同样的风扇，同样的阳光，同样的笑声。连黑板右上角的日期都分毫不差。"
+      text: "教室在下一秒重新亮起。同样的风扇，同样的阳光，同样的笑声。连黑板右上角的日期都分毫不差。",
+      pauseBefore: 180,
+      pauseAfter: 180,
     },
     {
       location: "教室午后",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -118,6 +145,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -127,6 +156,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -136,15 +167,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "A-017",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_013_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
       ],
-      text: "别碰它。"
+      text: "别碰它。",
+      pauseBefore: 220,
+      pauseAfter: 220,
+      textSpeed: 38,
     },
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -154,6 +192,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_015_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -163,16 +203,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
-      sfx: "./assets/sfx/sfx_wind_gust.wav",
+      sfxAtStart: "./assets/sfx/sfx_wind_gust.wav",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
-      text: "对方把那张纸举高，像只是想再吓她一下，作势要往高窗外一扬。她脚下已经先往前冲了一步。可也正是在那一步里，她忽然知道接下来会发生什么。"
+      text: "对方把那张纸举高，像只是想再吓她一下，作势要往高窗外一扬。她脚下已经先往前冲了一步。可也正是在那一步里，她忽然知道接下来会发生什么。",
+      pauseBefore: 180,
     },
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -182,16 +227,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
-      sfx: "./assets/sfx/sfx_wind_gust.wav",
+      sfxAtStart: "./assets/sfx/sfx_wind_gust.wav",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
       ],
-      text: "高窗外的风猛地撞了进来。宣传页从两人指间一抖，像突然活过来一样，被整个掀向栏杆外侧。她的身体几乎本能地还想扑过去。可这一次，她在最后一下硬生生停住了。"
+      text: "高窗外的风猛地撞了进来。宣传页从两人指间一抖，像突然活过来一样，被整个掀向栏杆外侧。她的身体几乎本能地还想扑过去。可这一次，她在最后一下硬生生停住了。",
+      pauseBefore: 220,
+      pauseAfter: 260,
     },
     {
       location: "楼梯口",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_stairwell_windy.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -201,6 +252,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回到庭院",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_020_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -212,17 +265,24 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回到庭院",
       speaker: "A-017",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_021_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp", dim: true },
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/yume/yume_observing.webp", dim: true }
       ],
-      text: "我停下了。这一次，我停下了。"
+      text: "我停下了。这一次，我停下了。",
+      pauseBefore: 260,
+      pauseAfter: 280,
+      textSpeed: 32,
     },
     {
       location: "回到庭院",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_022_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -234,6 +294,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回到庭院",
       speaker: "Yume",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_023_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
@@ -245,6 +307,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回到庭院",
       speaker: "Hana",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_024_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp" },
@@ -256,6 +320,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_025_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       bgm: "./assets/bgm/bgm_garden_daily.mp3",
       bgmName: "庭院日常",
@@ -269,6 +335,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_026_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_soft.webp", dim: true },

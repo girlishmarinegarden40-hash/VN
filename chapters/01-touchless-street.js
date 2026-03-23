@@ -13,30 +13,42 @@ window.AliceCourtyardChapterFiles.push({
       location: "古老城市",
       background: "./assets/bg/bg_old_city_day.webp",
       bgm: "./assets/bgm/bgm_old_city_day.mp3",
-      bgmName: "古城白昼"
+      bgmName: "古城白昼",
+      cardDuration: 2350,
+      pauseAfter: 500
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       text: "最先被写出来的是一座古老的城市。"
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       text: "阳光落在石板路上，颜色太干净，连阴影都像精心摆放过。街边摊贩的叫卖、人群交错的脚步、窗台上垂下的花、檐角被风擦出的细响，全都真实得近乎过分，像一个人明明不会做梦，却硬要模仿出一场白昼的热闹。"
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       cg: "./assets/cg/cg_dead_bird.webp",
-      text: "街道中央蹲着一只黑猫。它面前躺着一只死去的小鸟。羽毛有一点乱，像刚刚还挣扎过，可它已经不再呼吸了。"
+      text: "街道中央蹲着一只黑猫。它面前躺着一只死去的小鸟。羽毛有一点乱，像刚刚还挣扎过，可它已经不再呼吸了。",
+      pauseBefore: 180,
+      pauseAfter: 220
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       cg: "./assets/cg/cg_dead_bird.webp",
       text: "黑猫看着它，很久，没有靠近，没有嗅闻，也没有伸爪。它只是安静地守在旁边，像忘了猫本该做什么。"
@@ -44,6 +56,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -55,6 +69,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -66,6 +82,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -77,6 +95,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Hana",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_008_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -88,6 +108,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Yume",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_009_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -99,6 +121,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Alice",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_010_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -110,6 +134,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sfx: "./assets/sfx/sfx_wind_gust.wav",
       text: "风从街口吹过，人群衣角翻动，所有人都绕过了街心那只猫，像谁都没看见它。Yume站起身，把那只死鸟递向身后的两人。没有人去接。"
@@ -117,19 +143,28 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       cg: "./assets/cg/cg_dead_bird.webp",
-      text: "她的手停在半空。下一秒，那只鸟忽然在她掌心里散开了。不是碎掉，而是失去了“鸟”这个形状，只剩下一点极细的光，像一小段没有归处的痕迹，被风卷走。"
+      text: "她的手停在半空。下一秒，那只鸟忽然在她掌心里散开了。不是碎掉，而是失去了“鸟”这个形状，只剩下一点极细的光，像一小段没有归处的痕迹，被风卷走。",
+      pauseBefore: 220,
+      pauseAfter: 260,
+      textSpeed: 19
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       text: "黑猫抬起头，看了她一眼。那双眼睛暗得发亮，像早就知道会发生这一幕。然后它低下头，转身走进人群，几步之后，竟像从画面里被抹掉一样，消失得毫无声息。"
     },
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -141,6 +176,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Yume",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_015_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -152,6 +189,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Hana",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_016_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -163,6 +202,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Yume",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_017_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -174,6 +215,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "Alice",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_018_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -185,6 +228,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "古老城市",
       speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_old_city_day.webp",
       sfx: "./assets/sfx/sfx_bell_distant.wav",
       text: "她们从街心离开时，远处钟楼无声地敲了一下。没有钟声。只有一阵极轻的震感，从看不见的地方传来，像某个还没真正醒来的梦，在骨头里翻了个身。"

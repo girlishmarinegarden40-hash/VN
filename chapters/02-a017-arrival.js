@@ -18,6 +18,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -27,6 +29,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -36,6 +40,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -45,6 +51,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -54,6 +62,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -65,6 +75,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -76,6 +88,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -87,6 +101,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "Yume",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_008_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -98,6 +114,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "A-017",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_009_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -109,6 +127,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "A-017",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_010_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -120,6 +140,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -132,6 +154,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "Yume",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_012_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -143,6 +167,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白回廊",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -154,6 +180,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -163,6 +191,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_015_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -172,6 +202,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "Yume",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_016_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -182,6 +214,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -191,6 +225,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -200,6 +236,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -209,6 +247,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_020_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -218,6 +258,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_021_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -227,6 +269,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_022_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }
@@ -236,6 +280,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "A-017",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_023_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }
@@ -245,6 +291,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "Yume",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_024_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
@@ -255,6 +303,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_025_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }
@@ -264,6 +314,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_026_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_soft_smile.webp" }
@@ -273,12 +325,16 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "母亲",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_027_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "等这个周末过去，妈妈就带你去看水母。"
     },
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_028_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }
@@ -288,6 +344,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_029_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }
@@ -297,6 +355,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_030_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }
@@ -306,6 +366,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "Yume",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_031_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -316,6 +378,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "镜前",
       speaker: "A-017",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_032_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
@@ -326,6 +390,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_033_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_soft.webp", dim: true },
@@ -337,6 +403,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "纯白边缘",
       speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_034_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_soft.webp", dim: true },

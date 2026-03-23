@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "庭院崩塌前夜",
       background: "./assets/bg/bg_garden_night.webp",
       bgm: "./assets/bgm/bgm_god_kill.mp3",
-      bgmName: "GOD_KILL"
+      bgmName: "GOD_KILL",
+      cardDuration: 2600,
+      pauseAfter: 700
     },
     {
       location: "记录页前",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -27,6 +31,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "记录页前",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
@@ -36,14 +42,20 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
-      sfx: "./assets/sfx/sfx_text_noise.wav",
-      text: "最先到来的不是崩塌，而是一种过分安静的停顿。整座庭院像忽然屏住了气。风没有立刻停，反而比平时更轻，轻得几乎像谁正小心地替这里维持最后一点体面。喷泉里的水也还在原位，只是静得太久，静得像一整池透明的玻璃。"
+      sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
+      text: "最先到来的不是崩塌，而是一种过分安静的停顿。整座庭院像忽然屏住了气。风没有立刻停，反而比平时更轻，轻得几乎像谁正小心地替这里维持最后一点体面。喷泉里的水也还在原位，只是静得太久，静得像一整池透明的玻璃。",
+      pauseBefore: 240,
+      textSpeed: 20
     },
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "然后，喷泉先一步失去了原本的秩序。水没有落下，反而缓慢地往上倒升。长桌上的七只杯子无声开裂。回廊里所有空白门牌同时颤了一下，接着一块一块褪成更深的空白。花圃里的白花在同一瞬间盛开，又在下一瞬间像被无形的手抹掉边缘。"
@@ -51,6 +63,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -60,15 +74,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "Yume",
+      voice: "./assets/voice/15-god-kill/15-god-kill_006_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
       ],
-      text: "原来如此。"
+      text: "原来如此。",
+      textSpeed: 34,
+      pauseAfter: 220
     },
     {
       location: "喷泉边",
       speaker: "Yume",
+      voice: "./assets/voice/15-god-kill/15-god-kill_007_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -78,16 +98,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
       ],
-      sfx: "./assets/sfx/sfx_book_close.wav",
-      text: "她轻轻合上册子，把它放在喷泉边。册子自动翻开最后几页，上面的字没有继续增加，只是一行一行褪成了空白。最后一页明明还剩着足够写下一个结局的位置。Yume却没有再落下一笔。像她终于明白，有些存在即使不再被她记下，也不该由她代写终句。"
+      sfxAtStart: "./assets/sfx/sfx_book_close.wav",
+      text: "她轻轻合上册子，把它放在喷泉边。册子自动翻开最后几页，上面的字没有继续增加，只是一行一行褪成了空白。最后一页明明还剩着足够写下一个结局的位置。Yume却没有再落下一笔。像她终于明白，有些存在即使不再被她记下，也不该由她代写终句。",
+      pauseBefore: 180,
+      pauseAfter: 220
     },
     {
       location: "喷泉边",
       speaker: "Yume",
+      voice: "./assets/voice/15-god-kill/15-god-kill_009_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -97,18 +123,24 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "A-017想叫她，却在开口之前先看见Yume的袖口开始散成极细的纸光。她转过头，先看了一眼Hana，又看了一眼Alice。那目光很轻，不像告别。倒更像一个比谁都早学会退到后面的长姐，在离开之前，最后确认两个妹妹已经不再需要她替她们把结尾写完。"
     },
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "然后她便像从来都比任何人更懂得退场的方式那样，安静地消失了。没有巨响。没有挣扎。她只是让“过去”先一步从庭院里轻轻退了下去。"
     },
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" },
@@ -119,6 +151,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -128,6 +162,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "A-403",
+      voice: "./assets/voice/15-god-kill/15-god-kill_014_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }
@@ -137,6 +173,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "最黑的边缘",
       speaker: "Moel",
+      voice: "./assets/voice/15-god-kill/15-god-kill_015_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -146,6 +184,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "A-403",
+      voice: "./assets/voice/15-god-kill/15-god-kill_016_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -155,6 +195,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "A-403",
+      voice: "./assets/voice/15-god-kill/15-god-kill_017_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
@@ -164,6 +206,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "高处的裂缝",
       speaker: "Visitor",
+      voice: "./assets/voice/15-god-kill/15-god-kill_018_visitor.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
       text: "她疯了吧。她到底是谁。这算洗白吗？"
@@ -171,6 +215,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "Alice",
+      voice: "./assets/voice/15-god-kill/15-god-kill_019_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -180,6 +226,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "99.000000%",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_020_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "A-403往前走了一步。脚下的花影、数据、镜面和石砖同时裂开。她把手按在那颗停滞已久的99.000000%光球上。一瞬间，无数细碎的影从她身体里透出来。A-017在其中看见自己，看见A-092，看见A-214站在楼梯转角的那一下回头，也看见更多她从未真正认识过、却又像已经与自己一同跌落过很多次的面孔。"
@@ -187,13 +235,20 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "99.000000%",
       speaker: "A-403",
+      voice: "./assets/voice/15-god-kill/15-god-kill_021_a403.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
-      text: "关掉它。"
+      text: "关掉它。",
+      pauseBefore: 360,
+      pauseAfter: 320,
+      textSpeed: 40
     },
     {
       location: "99.000000%",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_022_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "下一秒，光球轰然裂开。不是向内坍塌，而是向所有方向同时张开。喷泉的水柱在半空中碎成无数悬停的水片。回廊塌下来时，没有发出石头该有的声音，倒更像无数页被撕开的纸一起坠地。花路一寸一寸断裂，又在断裂处生出原本不该存在的新岔口。"
@@ -201,6 +256,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "99.000000%",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_023_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "长椅、空椅、门、楼梯、镜子、教室、病房、火场、名单、宣传页，全都在那一刻彼此重叠。不是世界在毁坏。而是世界终于不肯再被压成同一种样子。"
@@ -208,23 +265,34 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "GOD_KILL",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_024_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
-      text: "GOD_KILL。不是杀死神。而是“未来”第一次拒绝再被某套系统代为输出。A-403在那团张开的裂光里失去固定轮廓，像把自己重新还给了那些从前一直被她独自背着的失败答案。"
+      text: "GOD_KILL。不是杀死神。而是“未来”第一次拒绝再被某套系统代为输出。A-403在那团张开的裂光里失去固定轮廓，像把自己重新还给了那些从前一直被她独自背着的失败答案。",
+      pauseBefore: 260,
+      textSpeed: 20
     },
     {
       location: "崩塌之中",
       speaker: "Alice",
+      voice: "./assets/voice/15-god-kill/15-god-kill_025_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp", dim: true }
       ],
-      text: "Hana。"
+      text: "Hana。",
+      pauseBefore: 420,
+      pauseAfter: 280,
+      textSpeed: 40
     },
     {
       location: "崩塌之中",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_026_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" },
@@ -235,6 +303,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Alice",
+      voice: "./assets/voice/15-god-kill/15-god-kill_027_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -244,6 +314,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_028_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -253,6 +325,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Alice",
+      voice: "./assets/voice/15-god-kill/15-god-kill_029_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -262,12 +336,16 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_030_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "下一秒，她便在Hana臂弯里化成极细的白金色光点。没有留下身体，只留下跌落在石地上的两本书。"
     },
     {
       location: "崩塌之中",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_031_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -277,6 +355,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_032_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -286,6 +366,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_033_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -295,6 +377,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_034_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -304,6 +388,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_035_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -313,6 +399,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_036_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -323,6 +411,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "Hana",
+      voice: "./assets/voice/15-god-kill/15-god-kill_037_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" }
@@ -332,6 +422,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "崩塌之中",
       speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_038_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "风从崩裂的回廊尽头穿过来。她银白色的长发被吹得微微扬起。下一秒，她整个人便像被那阵风轻轻碰碎了一样，散成了无数细小的光点。那些光没有立刻消失。它们在庭院里停留了一瞬，像谁终于松开手以后，仍旧留下的一点体温。然后才一点一点，落进草叶、碎石、长桌与花圃之间。"

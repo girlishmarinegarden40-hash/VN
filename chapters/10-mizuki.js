@@ -13,11 +13,15 @@ window.AliceCourtyardChapterFiles.push({
       location: "门边",
       background: "./assets/bg/bg_garden_night.webp",
       bgm: "./assets/bgm/bgm_mirror_relive.mp3",
-      bgmName: "镜中回声"
+      bgmName: "镜中回声",
+      cardDuration: 2450,
+      pauseAfter: 560,
     },
     {
       location: "庭院门边",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp" },
@@ -28,6 +32,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院门边",
       speaker: "A-017",
+      voice: "./assets/voice/10-mizuki/10-mizuki_002_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp", dim: true },
@@ -38,6 +44,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院门边",
       speaker: "Mizuki",
+      voice: "./assets/voice/10-mizuki/10-mizuki_003_mizuki.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp" },
@@ -48,6 +56,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院门边",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp", dim: true },
@@ -58,18 +68,24 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院门边",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "所以Mizuki这句近乎本能的话，才会显得这么重。她的故事是四个人里最锋利的一道。不是因为她最强，而是因为她最清楚地知道，自己失败过。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_006_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       text: "那是一个姐姐终于打算承担起“姐姐”这个词的时候。可来不及了。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_neutral.webp" }
@@ -79,54 +95,75 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       text: "Mizuki总嫌麻烦，嫌那些小动作幼稚，嫌妹妹像在把自己当成需要被整理的人。可她后来才明白，原来那就是妹妹一直在朝她伸手的方式。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "她们家那时在当地太显眼。不是什么传奇的大人物，只是足够让人相信，两个女儿一旦被带走，就能很快换来一大笔钱。上下学的路线、司机偶尔不在的日子、她们会在哪个街角停下来买水，早就被人记得比她们自己还清楚。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "所以那一夜，被带走的从来不只妹妹。是她们两个人一起。黑掉的楼道、被反锁的门、脚边翻倒的椅子、还有怎么都压不下去的呼吸声，一起把时间拖得又长又钝。"
     },
     {
       location: "回忆",
       speaker: "绑匪",
+      voice: "./assets/voice/10-mizuki/10-mizuki_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
-      text: "姐妹都在，价会更高。东西拿到就走，别留活口。"
+      text: "姐妹都在，价会更高。东西拿到就走，别留活口。",
+      pauseBefore: 180,
+      pauseAfter: 240,
+      textSpeed: 28,
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "那句话落下去的时候，妹妹的手指明显收紧了一下。Mizuki也是在那一刻才真正明白，留给她们的根本不是“等”。是逃。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "被恐惧按在地上的那段时间里，Mizuki甚至一度希望，如果自己不存在，也许妹妹就不会被一起牵连。可偏偏是在那样的时候，妹妹还会伸手碰她乱掉的领口，低声说：姐姐，先别怕。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "她们试过往后门跑。试过把一把倒下的椅子悄悄拖到窗边。试过在脚步声换班的那几十秒里，屏住呼吸，把门闩一点一点抬起来。可每一次，刚露出来的那一点缝隙都会很快重新合上。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_015_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "直到最后一次，门真的被她们撞开了一条能让风灌进来的缝。妹妹先把她往外推了一把。那个一直拉着她往前跑、一直替她把细节整理好的人，也就是在那一刻忽然回过身来，挡在她前面。"
     },
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_shocked.webp" }
@@ -136,35 +173,50 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_last_stand.webp" }
       ],
-      text: "可她还是失败了。妹妹先死在她眼前。而她扑上去的时候，只来得及把那个人影撞歪半步。接下来的那一下，终于落到她自己身上。她倒在妹妹身边，血一点点从身下漫开，最后也死在了那一夜。"
+      text: "可她还是失败了。妹妹先死在她眼前。而她扑上去的时候，只来得及把那个人影撞歪半步。接下来的那一下，终于落到她自己身上。她倒在妹妹身边，血一点点从身下漫开，最后也死在了那一夜。",
+      pauseBefore: 220,
+      pauseAfter: 260,
+      textSpeed: 22,
     },
     {
       location: "庭院门边",
       speaker: "Mizuki",
+      voice: "./assets/voice/10-mizuki/10-mizuki_018_mizuki.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }
       ],
-      text: "守不住。"
+      text: "守不住。",
+      pauseBefore: 180,
+      textSpeed: 38,
     },
     {
       location: "庭院门边",
       speaker: "Mizuki",
+      voice: "./assets/voice/10-mizuki/10-mizuki_019_mizuki.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }
       ],
-      text: "但如果还有下一个人路过这里，我至少能先看见。"
+      text: "但如果还有下一个人路过这里，我至少能先看见。",
+      pauseAfter: 220,
+      textSpeed: 28,
     },
     {
       location: "庭院门边",
       speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_020_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp", dim: true },

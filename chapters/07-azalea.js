@@ -18,6 +18,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_singing.webp" },
@@ -28,6 +30,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_neutral.webp" },
@@ -38,6 +42,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_neutral.webp" },
@@ -48,6 +54,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "A-017",
+      voice: "./assets/voice/07-azalea/07-azalea_004_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_neutral.webp", dim: true },
@@ -58,6 +66,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "Azalea",
+      voice: "./assets/voice/07-azalea/07-azalea_005_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -68,6 +78,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "Azalea",
+      voice: "./assets/voice/07-azalea/07-azalea_006_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -78,6 +90,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -87,6 +101,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -98,6 +114,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp" },
@@ -108,6 +126,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "Azalea",
+      voice: "./assets/voice/07-azalea/07-azalea_010_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_serious.webp" },
@@ -118,6 +138,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "Azalea",
+      voice: "./assets/voice/07-azalea/07-azalea_011_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_serious.webp" },
@@ -128,6 +150,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/hana/hana_tired.webp" }
@@ -137,6 +161,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "Hana",
+      voice: "./assets/voice/07-azalea/07-azalea_013_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_azalea_mansion_girl_tie_shoes.webp",
       text: "后来，Hana把Azalea的故事讲给她听。老宅。雷雨天。大厅里那架总被擦得很亮的旧钢琴。病弱的夫人总在傍晚听她弹琴，那个总也系不好鞋带、总要她催着喝完牛奶的小女孩会趴在一旁，安安静静等她把最后一段弹完。"
@@ -144,6 +170,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_014_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_azalea_mansion_girl_tie_shoes.webp",
       text: "她会在弹琴前先把琴凳的位置调好，会在乐谱角上压一枚不会反光的小夹子，会先蹲下来给小女孩把鞋带系成对称的兔耳，再起身提醒她把牛奶喝完。她像总能比所有人更早一步看见：什么还没有准备妥当。"
@@ -151,6 +179,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_015_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_azalea_mansion_in_fire.webp",
       text: "火烧起来的时候，Azalea已经把很多人往外带到了门口。可她还是回头了。不是为了把自己带出去，而是为了确认所有人是不是都已经出去。风从走廊尽头卷过来，火苗顺着帘布往上窜，老宅在雷声里一截一截塌下去。"
@@ -158,6 +188,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       cg: "./assets/cg/cg_azalea_mansion_in_fire.webp",
       text: "她最后停下来的地方，本来不是旋律该结束的位置。也不是歌应该断掉的位置。那其实只是她心里最后一遍没来得及确认完的名单。"
@@ -165,6 +197,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "Hana",
+      voice: "./assets/voice/07-azalea/07-azalea_017_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
@@ -175,6 +209,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回忆",
       speaker: "Hana",
+      voice: "./assets/voice/07-azalea/07-azalea_018_hana.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
@@ -185,6 +221,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_019_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/azalea/azalea_singing.webp" },

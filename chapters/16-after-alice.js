@@ -13,29 +13,43 @@ window.AliceCourtyardChapterFiles.push({
       location: "梦醒之后",
       background: "./assets/bg/bg_garden_after_alice.webp",
       bgm: "./assets/bgm/bgm_after_alice.mp3",
-      bgmName: "After Alice"
+      bgmName: "After Alice",
+      cardDuration: 2500,
+      pauseAfter: 650
     },
     {
       location: "崩塌之后",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
-      text: "风不是一下回来的。它先从塌开的那截回廊外面试探着吹进来，把几片还没落稳的光点轻轻拨开。等A-017再抬起头时，庭院里已经看不见Yume、Alice和Hana站在原来的位置上了。"
+      text: "风不是一下回来的。它先从塌开的那截回廊外面试探着吹进来，把几片还没落稳的光点轻轻拨开。等A-017再抬起头时，庭院里已经看不见Yume、Alice和Hana站在原来的位置上了。",
+      sfxAtStart: "./assets/sfx/sfx_wind_light.wav",
+      pauseBefore: 220,
+      pauseAfter: 280,
+      textSpeed: 20
     },
     {
       location: "崩塌之后",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       text: "没有人来重启系统。也没有谁把这里恢复成原样。A-017最先意识到的，不是“她们不在了”，而是那些她早已习惯会先被谁站住的位置，忽然全都空了下来。喷泉缺了一角。长桌边的一只杯子永远少了半道裂痕的另一边。回廊尽头塌下去一截，露出后面原本并不存在的天空。"
     },
     {
       location: "花园中央",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       text: "可花没有死。水也还在流。那些曾被系统照料得过于整齐的东西，忽然都有了自己的偏向。草叶往不同的方向长。石路在无人经过的地方，慢慢生出新的分岔。就连风吹过来时，都不像从前那样只是为了维持一幅画面。"
     },
     {
       location: "长椅边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
@@ -46,6 +60,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_005_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -55,6 +71,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "A-017",
+      voice: "./assets/voice/16-after-alice/16-after-alice_006_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
@@ -65,6 +83,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_007_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -74,6 +94,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅边",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_008_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -83,12 +105,16 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_009_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       text: "后来，庭院里也会有与三姐妹重新相遇的时候。但那不是旧系统把她们叫回原位。她们不再以旧职责出现，也不再停在任何必须被谁认出的地方。"
     },
     {
       location: "喷泉边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_010_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -98,6 +124,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌尽头",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -107,6 +135,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长桌尽头",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_012_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -116,6 +146,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜里",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_013_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -125,6 +157,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜里",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_014_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -134,6 +168,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "回廊夜里",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_015_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_smile.webp" }
@@ -143,6 +179,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_016_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       cg: "./assets/cg/cg_bury_rabbit_ears.webp",
       text: "黄昏时，Azalea、Meiling、Shella和Mizuki一起走进花圃。没有人提醒她们该这么做，也没有谁替她们把这件事说得更像仪式。她们把那些曾经维持她们存在方式的印记，一对一对埋进松开的土里。"
@@ -150,6 +188,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       cg: "./assets/cg/cg_bury_rabbit_ears.webp",
       text: "这一次，蹲下来把土覆回去的人，不再是Hana，而是A-017。她忽然清楚地意识到，那个总会在最后帮谁把一切轻轻覆平的人，已经不能再像从前那样站在这里了。"
@@ -157,6 +197,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "A-017",
+      voice: "./assets/voice/16-after-alice/16-after-alice_018_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" }
@@ -166,6 +208,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Azalea",
+      voice: "./assets/voice/16-after-alice/16-after-alice_019_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/azalea/azalea_soft.webp" }
@@ -175,6 +219,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅尽头",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_020_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -184,6 +230,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅尽头",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_021_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -193,6 +241,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅尽头",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_022_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -202,6 +252,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "Azalea",
+      voice: "./assets/voice/16-after-alice/16-after-alice_023_azalea.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "center", src: "./assets/sprites/azalea/azalea_soft.webp" }
@@ -211,6 +263,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "长椅尽头",
       speaker: "Moel",
+      voice: "./assets/voice/16-after-alice/16-after-alice_024_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" }
@@ -220,6 +274,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花圃边",
       speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_025_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       text: "A-017看着她们，忽然发现埋掉兔耳以后，四个人并没有变淡。恰恰相反，她们像第一次不靠那对耳朵，也稳稳地站在了这里。"
     }

@@ -13,27 +13,38 @@ window.AliceCourtyardChapterFiles.push({
       location: "被观测的观测者",
       background: "./assets/bg/bg_garden_night.webp",
       bgm: "./assets/bgm/bgm_visitor_intrusion.mp3",
-      bgmName: "Visitor"
+      bgmName: "Visitor",
+      cardDuration: 2500,
+      pauseAfter: 560,
     },
     {
       location: "庭院最深处",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_001_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
-      text: "异常真正扩散，是在下一次记录开始之前。那一行字写出来以后，庭院先安静了很久。不是平时那种有风、有水声、有远处哼唱的安静，而是一种太完整、太用力，像整座庭院都在屏住最后一口气的静。"
+      text: "异常真正扩散，是在下一次记录开始之前。那一行字写出来以后，庭院先安静了很久。不是平时那种有风、有水声、有远处哼唱的安静，而是一种太完整、太用力，像整座庭院都在屏住最后一口气的静。",
+      pauseBefore: 180,
+      pauseAfter: 220,
     },
     {
       location: "庭院最深处",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_002_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
-      sfx: "./assets/sfx/sfx_text_noise.wav",
-      text: "下一秒，最深处传来一阵极轻的震。像有什么东西终于在无数次覆写之后，第一次找到了可以暂时成形的位置。喷泉里的水纹先乱了一瞬，紧接着，整座庭院都跟着重重颤了一下。Yume猛地低下头。她手里的册子忽然烫得惊人，像有谁在纸页最底层把一整行旧编号同时烧穿。"
+      sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
+      text: "下一秒，最深处传来一阵极轻的震。像有什么东西终于在无数次覆写之后，第一次找到了可以暂时成形的位置。喷泉里的水纹先乱了一瞬，紧接着，整座庭院都跟着重重颤了一下。Yume猛地低下头。她手里的册子忽然烫得惊人，像有谁在纸页最底层把一整行旧编号同时烧穿。",
+      pauseAfter: 220,
     },
     {
       location: "册子页尾",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_003_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
@@ -43,6 +54,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院最深处",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_004_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -52,6 +65,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花架阴影",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_005_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -61,6 +76,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "花架阴影",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_006_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -70,6 +87,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_007_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
@@ -81,13 +100,19 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "高处的裂缝",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_008_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
+      pauseBefore: 220,
+      pauseAfter: 240,
       text: "紧接着，庭院上方那片一直过分平静的天，像被谁从正中缓缓撕开了一道很细的缝。纯白空间里，镜面还未浮现，画面角落里便先出现了一行字。"
     },
     {
       location: "高处的裂缝",
       speaker: "Visitor",
+      voice: "./assets/voice/12-visitor/12-visitor_009_visitor.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
       text: "这女的好可怜。 这庭院什么设定？ 兔耳女仆是不是有点太刻意了。 银发那个像管理员。 双马尾那个果然像核心。 黑头发那个一直在记什么？ 七个杯子到底在等谁？"
@@ -95,6 +120,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "高处的裂缝",
       speaker: "Visitor",
+      voice: "./assets/voice/12-visitor/12-visitor_010_visitor.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
       text: "她不是霸凌者吗？活该吧。 我觉得她只是跟风。 她怎么一点都不反抗？ 换成我早翻脸了。 一直低头，不就是默认别人可以这样对她？"
@@ -102,6 +129,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_011_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -113,6 +142,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_012_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -122,6 +153,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "A-017",
+      voice: "./assets/voice/12-visitor/12-visitor_013_a017.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -131,6 +164,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "高处的裂缝",
       speaker: "Visitor",
+      voice: "./assets/voice/12-visitor/12-visitor_014_visitor.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_visitor_intrusion.webp",
       text: "她看到我们了？ 系统 bug？ 演的吧？"
@@ -138,6 +173,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "记录页",
       speaker: "Yume",
+      voice: "./assets/voice/12-visitor/12-visitor_015_yume.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
@@ -147,6 +184,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "Alice",
+      voice: "./assets/voice/12-visitor/12-visitor_016_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -156,12 +195,16 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "系统提示",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_017_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_void_white.webp",
       text: "无数文字的最底层，缓缓亮起一行系统提示：新增分类：Visitor。状态：未归档 / 未记录 / 未定义。"
     },
     {
       location: "横梁高处",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_018_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
@@ -171,15 +214,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "横梁高处",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_019_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "终于肯看清楚了吗？"
+      text: "终于肯看清楚了吗？",
+      pauseBefore: 180,
+      pauseAfter: 180,
+      textSpeed: 30,
     },
     {
       location: "横梁高处",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_020_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
@@ -189,15 +239,21 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "横梁高处",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_021_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "连一个人该怎么害怕、怎么求救、怎么反抗，你们也想替她规定。"
+      text: "连一个人该怎么害怕、怎么求救、怎么反抗，你们也想替她规定。",
+      pauseAfter: 220,
+      textSpeed: 26,
     },
     {
       location: "庭院中央",
       speaker: "Alice",
+      voice: "./assets/voice/12-visitor/12-visitor_022_alice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
@@ -207,6 +263,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "横梁高处",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_023_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
@@ -216,24 +274,34 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "横梁高处",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_024_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "想看，就自己看完。"
+      text: "想看，就自己看完。",
+      pauseBefore: 180,
+      textSpeed: 34,
     },
     {
       location: "横梁高处",
       speaker: "Moel",
+      voice: "./assets/voice/12-visitor/12-visitor_025_moel.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "别急着替这里下结论。"
+      text: "别急着替这里下结论。",
+      pauseAfter: 260,
+      textSpeed: 30,
     },
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_026_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
@@ -245,6 +313,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院中央",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_027_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
@@ -259,17 +329,23 @@ window.AliceCourtyardChapterFiles.push({
       title: "卷间二",
       subtitle: "被覆写的回廊",
       location: "回廊深处",
-      background: "./assets/bg/bg_corridor_white.webp"
+      background: "./assets/bg/bg_corridor_white.webp",
+      cardDuration: 2200,
+      pauseAfter: 460,
     },
     {
       location: "被覆写的回廊",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_028_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       text: "那之后，庭院里开始出现许多原本不该同时存在的东西。长桌上的七只杯子，到了傍晚会变成六只。Meiling明明数过的花盆，第二天却会多出一个。Shella有时会对着空位说到一半，忽然停住，像听见了并不存在的回答。Mizuki夜里守在门边，会听见第二道脚步声。"
     },
     {
       location: "被覆写的回廊",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_029_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
@@ -279,6 +355,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "被覆写的回廊",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_030_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -288,6 +366,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "被覆写的回廊",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_031_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
@@ -297,6 +377,8 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "被覆写的回廊",
       speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_032_voice.wav",
+      voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
