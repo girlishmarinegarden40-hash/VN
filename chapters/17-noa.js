@@ -167,6 +167,11 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       cg: "./assets/cg/cg_a017_future_left_behind.webp",
+      prop: {
+        src: "./assets/props/prop_jellyfish_flyer.webp",
+        title: "水母馆传单",
+        caption: "那段没能属于她的后来，终于交出去了。"
+      },
       text: "她慢慢把宣传页重新摊平。这一次，纸角没有再卷回去。她把它轻轻夹进Noa摊开的空白本子里。"
     },
     {

@@ -32,6 +32,11 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/02-a017-arrival/02-a017-arrival_002_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
+      prop: {
+        src: "./assets/props/prop_jellyfish_flyer.webp",
+        title: "水母馆传单",
+        caption: "她一直攥在手里的最后一个约定。"
+      },
       sprites: [
         { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
       ],
