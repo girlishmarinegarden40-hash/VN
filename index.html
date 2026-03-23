@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>爱丽丝庭院 | Web VN</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <main class="player-shell">
+      <section id="stageShell" class="stage-shell" aria-label="故事舞台">
+        <div id="backgroundLayer" class="background-layer"></div>
+        <div class="vignette-layer"></div>
+        <div id="cgFrame" class="cg-frame">
+          <img id="cgLayer" class="cg-layer" alt="" draggable="false">
+        </div>
+
+        <div id="spriteLayer" class="sprite-layer">
+          <img id="spriteLeft" class="sprite-slot left" alt="" draggable="false">
+          <img id="spriteCenter" class="sprite-slot center" alt="" draggable="false">
+          <img id="spriteRight" class="sprite-slot right" alt="" draggable="false">
+        </div>
+
+        <div id="chapterCard" class="chapter-card" aria-hidden="true">
+          <p id="chapterCardEyebrow" class="chapter-card-eyebrow"></p>
+          <h2 id="chapterCardTitle" class="chapter-card-title"></h2>
+          <p id="chapterCardSubtitle" class="chapter-card-subtitle"></p>
+        </div>
+      </section>
+
+      <section id="textboxShell" class="textbox-shell" aria-live="polite">
+        <div class="textbox-meta">
+          <div class="textbox-meta-left">
+            <p id="speakerTag" class="speaker-tag">旁白</p>
+            <p id="sceneMeta" class="scene-meta">序章 · 99.000000%</p>
+          </div>
+
+          <div class="textbox-tools">
+            <button id="autoButton" class="tool-button" type="button">Auto</button>
+            <button id="hideTextboxButton" class="tool-button" type="button">Hide</button>
+            <button id="backlogButton" class="tool-button" type="button">Replay</button>
+            <button id="settingButton" class="tool-button" type="button">Setting</button>
+          </div>
+        </div>
+
+        <p id="dialogueText" class="dialogue-text"></p>
+
+        <div class="textbox-footer">
+          <p id="textboxHint" class="textbox-hint">点击继续</p>
+        </div>
+      </section>
+
+      <button id="showTextboxButton" class="show-ui-chip" type="button" hidden>Show</button>
+    </main>
+  </div>
+
+  <div id="settingOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel setting-panel">
+      <div class="overlay-header">
+        <h2>Setting</h2>
+        <button id="closeSettingButton" class="overlay-close" type="button">关闭</button>
+      </div>
+
+      <section class="setting-summary">
+        <div class="setting-card">
+          <p class="meta-label">章节</p>
+          <p id="chapterName" class="meta-value">序章</p>
+        </div>
+        <div class="setting-card">
+          <p class="meta-label">地点</p>
+          <p id="locationName" class="meta-value">99.000000%</p>
+        </div>
+        <div class="setting-card">
+          <p class="meta-label">音乐</p>
+          <p id="bgmName" class="meta-value">Not started</p>
+        </div>
+        <div class="setting-card">
+          <p class="meta-label">语音</p>
+          <p id="voiceName" class="meta-value">Not set</p>
+        </div>
+      </section>
+
+      <section class="setting-actions">
+        <button id="muteButton" class="ghost-button" type="button">Mute</button>
+        <button id="resetButton" class="ghost-button danger" type="button">重置进度</button>
+      </section>
+
+      <section class="setting-chapters">
+        <div class="setting-block-title">章节跳转</div>
+        <div id="chapterList" class="chapter-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <div id="backlogOverlay" class="overlay-shell" hidden>
+    <div class="overlay-panel">
+      <div class="overlay-header">
+        <h2>Replay</h2>
+        <button id="closeBacklogButton" class="overlay-close" type="button">关闭</button>
+      </div>
+      <div id="backlogList" class="backlog-list"></div>
+    </div>
+  </div>
+
+  <script src="./chapters/00-prologue.js"></script>
+  <script src="./chapters/01-touchless-street.js"></script>
+  <script src="./chapters/02-a017-arrival.js"></script>
+  <script src="./chapters/03-a017-relive.js"></script>
+  <script src="./chapters/04-white-flowers-and-undefined.js"></script>
+  <script src="./chapters/05-all-nameplates-empty.js"></script>
+  <script src="./chapters/06-a092.js"></script>
+  <script src="./chapters/07-a214.js"></script>
+  <script src="./chapters/07-azalea.js"></script>
+  <script src="./chapters/08-meiling.js"></script>
+  <script src="./chapters/09-shella.js"></script>
+  <script src="./chapters/10-mizuki.js"></script>
+  <script src="./chapters/11-rabbit-ears.js"></script>
+  <script src="./chapters/12-visitor.js"></script>
+  <script src="./chapters/13-a403.js"></script>
+  <script src="./chapters/14-failed-answer.js"></script>
+  <script src="./chapters/15-god-kill.js"></script>
+  <script src="./chapters/16-after-alice.js"></script>
+  <script src="./chapters/17-noa.js"></script>
+  <script src="./chapters/18-thirteenth-card.js"></script>
+  <script src="./story-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
