@@ -23,7 +23,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp", dim: true }
       ],
-      text: "有一天，A-017终于问出那个她看了很久的问题。那天Hana正蹲在花圃边修剪枯枝，风不大，四人偶也都在各自的位置上，像这座庭院里最安静的日常。"
+      text: "有一天，A-017终于问出那个她看了很久的问题。那天Hana正蹲在花圃边修剪枯枝，风不大，喷泉有细细的水声，四人偶也都在各自的位置上，像这座庭院里最安静的一段日常。"
     },
     {
       location: "花圃边",
@@ -69,7 +69,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
       ],
-      text: "所以她们自然会把自己留成最适合待在别人身边的样子。女仆不是身份，是姿态。"
+      text: "所以她们自然会把自己留成最适合待在别人身边的样子。"
+    },
+    {
+      location: "花圃边",
+      speaker: "Hana",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/hana/hana_cold.webp" }
+      ],
+      text: "女仆不是身份，是姿态。"
     },
     {
       location: "花圃边",
@@ -107,7 +116,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
       ],
-      text: "关系印记。戴上它们的时候，她们等于承认，自己仍旧愿意把存在交给某段关系去维持。"
+      text: "关系印记。"
+    },
+    {
+      location: "花圃边",
+      speaker: "Hana",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
+      ],
+      text: "戴上它们的时候，她们等于承认，自己仍旧愿意把存在交给某段关系去维持。"
     },
     {
       location: "花圃边",
@@ -129,7 +147,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
       ],
-      text: "有时候是。可也不只是。留住她们的，从来都不只是爱，很多时候也是没做完的动作，是还不肯停下的那一点。"
+      text: "有时候是。"
+    },
+    {
+      location: "花圃边",
+      speaker: "Hana",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
+      ],
+      text: "可也不只是。留住她们的，从来都不只是爱。很多时候，也是没做完的动作，是还不肯停下的那一点。"
     },
     {
       location: "花圃边",
@@ -139,7 +166,17 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp", dim: true }
       ],
-      text: "A-017还想再问，回廊尽头却忽然起了一阵不合时宜的风。那风不是从花圃这边来的，也不像会经过喷泉和长桌。它更像直接从庭院最深处掠过来，带着一点尚未写进日常里的冷。"
+      text: "A-017听完以后，没有立刻再问。她只是把那张宣传页按得更平一点。她忽然觉得，自己也许从来没有真正松开过什么。只是有些东西被她握在手里时，还像愿望；而有些东西被她们握在手里时，已经长成了足以继续活下去的形。"
+    },
+    {
+      location: "花圃边",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "right", src: "./assets/sprites/hana/hana_soft.webp", dim: true }
+      ],
+      text: "她还想再问，回廊尽头却忽然起了一阵不合时宜的风。那风不是从花圃这边来的，也不像会经过喷泉和长桌。它更像直接从庭院最深处掠过来，带着一点尚未写进日常里的冷。"
     },
     {
       location: "回廊尽头",
@@ -148,7 +185,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
       ],
-      text: "Yume站在那里，没有走近。她手里的册子压着页角，像也刚刚被什么看不见的东西翻动过。"
+      text: "Yume站在那里，没有走近。她手里的册子压着页角，像也刚刚被什么看不见的东西翻动过。A-017一看见她，心里那种说不清的不安就慢慢浮了上来。"
     }
   ]
 });

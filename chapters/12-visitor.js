@@ -29,7 +29,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
       sfx: "./assets/sfx/sfx_text_noise.wav",
-      text: "下一秒，最深处传来一阵极轻的震。喷泉里的水纹先乱了一瞬，紧接着，整座庭院都跟着重重颤了一下。Yume猛地低下头。她手里的册子忽然烫得惊人，像有谁在纸页最底层把一整行旧编号同时烧穿。"
+      text: "下一秒，最深处传来一阵极轻的震。像有什么东西终于在无数次覆写之后，第一次找到了可以暂时成形的位置。喷泉里的水纹先乱了一瞬，紧接着，整座庭院都跟着重重颤了一下。Yume猛地低下头。她手里的册子忽然烫得惊人，像有谁在纸页最底层把一整行旧编号同时烧穿。"
     },
     {
       location: "册子页尾",
@@ -47,7 +47,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
       ],
-      text: "几乎是同一时间，庭院最深处那片一直像被薄雾压着的暗处，慢慢站起了一个人影。她像不是“走出来”的，更像一直在那里面，被无数个失败的轮廓反复叠压，直到这一刻才终于有了边界。更高一点的花架阴影里，那只黑猫先一步抬起了头。"
+      text: "几乎是同一时间，庭院最深处那片一直像被薄雾压着的暗处，慢慢站起了一个人影。她像不是“走出来”的，更像一直在那里面，被无数个失败的轮廓反复叠压，直到这一刻才终于有了边界。她睁开眼的时候，喷泉边所有玻璃般的反光都齐齐暗了一下。"
+    },
+    {
+      location: "花架阴影",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_cat.webp" }
+      ],
+      text: "更高一点的花架阴影里，那只黑猫先一步抬起了头。它盯着那片暗处看了很久，像终于等到了一个拖延过久的答案。"
     },
     {
       location: "花架阴影",
@@ -67,7 +76,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp" },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
       ],
-      text: "Alice最先从回廊尽头转回庭院中央。Yume合上发烫的册子，也跟着走了回来。而Hana那时正好站在A-017身旁。"
+      text: "Alice最先从回廊尽头转回庭院中央。Yume合上发烫的册子，也跟着走了回来。而Hana那时正好站在A-017身旁。没有人说那是敌人，可所有人都知道，有什么已经再也回不到原来的位置。"
     },
     {
       location: "高处的裂缝",
@@ -99,7 +108,16 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
         { slot: "right", src: "./assets/sprites/alice/alice_cold.webp", dim: true }
       ],
-      text: "那些字并不落在墙上，也不落在镜面里。更像有人直接把一句轻飘飘的话，贴到了她眼前。它们不只在看她。也在看Yume、看Hana、看Alice、看那张长桌、看所有已经在这里活了太久、却从来没被允许自己说话的东西。"
+      text: "那些字并不落在墙上，也不落在镜面里。更像有人直接把一句轻飘飘的话，贴到了她眼前。它们不只在看她。也在看Yume、看Hana、看Alice、看那张长桌、看七只杯子、看那些已经在这里活了太久、却从来没被允许自己说话的东西。"
+    },
+    {
+      location: "庭院中央",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }
+      ],
+      text: "A-017猛地抬头。她第一次清楚地意识到，原来距离足够远的时候，连别人的痛也可以变成谈资。那些字像从四面八方一起压下来，轻得像笑，密得却像雨。她甚至有一瞬下意识想低头，像从前在教室里那样，只要自己先把目光收回去，事情也许就不会真的落到自己身上。"
     },
     {
       location: "庭院中央",
@@ -157,7 +175,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "终于肯看清楚了吗？你们以为自己在写她们。可其实，你们只是站在外面，替她们挑一个最顺手的词。"
+      text: "终于肯看清楚了吗？"
+    },
+    {
+      location: "横梁高处",
+      speaker: "Moel",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
+      ],
+      text: "你们以为自己在写她们。可其实，你们只是站在外面，替她们挑一个最顺手的词。"
     },
     {
       location: "横梁高处",
@@ -193,7 +220,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
       ],
-      text: "想看，就自己看完。别急着替这里下结论。"
+      text: "想看，就自己看完。"
+    },
+    {
+      location: "横梁高处",
+      speaker: "Moel",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_human_cold.webp" }
+      ],
+      text: "别急着替这里下结论。"
     },
     {
       location: "庭院中央",
@@ -204,7 +240,18 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
         { slot: "right", src: "./assets/sprites/yume/yume_neutral.webp", dim: true }
       ],
-      text: "那些压得最靠近的字忽然像被一阵更深的风往后推开了一点。没有真的消失，只是暂时退回更高、更远的地方。那些压在头顶的噪音退开一点以后，连空气都像终于肯重新流动。A-017这才发现，自己刚才一直屏着气。Hana原本绷得很直的肩也轻轻松下来半分，Yume指间按着册页的力道终于缓了一点，连Alice抬着的眼，都比刚才低回来了极轻的一寸。"
+      text: "那些压得最靠近的字忽然像被一阵更深的风往后推开了一点。没有真的消失，只是暂时退回更高、更远的地方，像终于被逼着收起了那种伸手就想给一切贴标签的轻慢。那些压在头顶的噪音退开一点以后，连空气都像终于肯重新流动。A-017这才发现，自己刚才一直屏着气。"
+    },
+    {
+      location: "庭院中央",
+      speaker: "旁白",
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
+        { slot: "center", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/alice/alice_cold.webp", dim: true }
+      ],
+      text: "不只是她。Hana原本绷得很直的肩也轻轻松下来半分。Yume指间按着册页的力道终于缓了一点。连Alice抬着的眼，都比刚才低回来了极轻的一寸。"
     },
     {
       type: "card",
@@ -236,7 +283,16 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
-      text: "少女沿着最旧的那道回廊往前走，看见很多扇同时亮起的门。每一扇门后，都站着一个不同的Alice。有人在教室后排压着笑。有人站在楼梯口不敢抬头。有人在校车最后一排核对人数。有人在病房里笑到最后一刻。有人守着门。有人抱着那张水母馆宣传页，一遍遍告诉自己，至少下次要自己去。"
+      text: "它们没有真正碰到那些少女的命运。却让整本册子在翻页时，多出一种被观看污染过的重影。少女沿着最旧的那道回廊往前走，看见很多扇同时亮起的门。每一扇门后，都站着一个不同的Alice。"
+    },
+    {
+      location: "被覆写的回廊",
+      speaker: "旁白",
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp" }
+      ],
+      text: "有人在教室后排压着笑。有人站在楼梯口不敢抬头。有人在校车最后一排核对人数。有人在病房里笑到最后一刻。有人守着门。有人抱着那张水母馆宣传页，一遍遍告诉自己，至少下次要自己去。"
     },
     {
       location: "被覆写的回廊",
