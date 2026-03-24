@@ -1061,12 +1061,12 @@
       state.autoMode &&
       renderToken === state.renderToken &&
       !state.coverActive &&
-      !ui.settingOverlay.hidden &&
-      !ui.backlogOverlay.hidden &&
-      !ui.galleryOverlay.hidden &&
-      !ui.cgPreviewOverlay.hidden &&
-      !ui.creditsOverlay.hidden &&
-      !ui.confirmOverlay.hidden
+      ui.settingOverlay.hidden &&
+      ui.backlogOverlay.hidden &&
+      ui.galleryOverlay.hidden &&
+      ui.cgPreviewOverlay.hidden &&
+      ui.creditsOverlay.hidden &&
+      ui.confirmOverlay.hidden
     );
   }
 
