@@ -1,13 +1,13 @@
-﻿window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
+window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "rabbit-ears",
-  title: "第十一章",
+  title: "第十二章",
   subtitle: "兔耳",
   location: "关系印记",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 11",
+      eyebrow: "Chapter 12",
       title: "兔耳",
       subtitle: "女仆不是身份，是姿态。",
       location: "关系印记",
@@ -131,24 +131,42 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp", dim: true }
       ],
-      text: "A-017低头看向掌心里的宣传页。那张纸在某种意义上，难道不也是她自己的印记吗？不是地点本身，而是那个再也没有人能陪她一起抵达的以后。"
+      text: "A-017低头看着掌心里的宣传页，很久没有说话。她听懂了“关系印记”——那张皱纸何尝不是她的印记：不是水母馆本身，而是那个再也没有人能陪她一起抵达的以后；明明不能把谁带回来，却还是舍不得放手。",
+      pauseAfter: 200,
+      textSpeed: 22
     },
     {
       location: "花圃边",
-      speaker: "旁白",
-      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_012_voice.wav",
+      speaker: "Hana",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_011_hana.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [
-        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
+        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/hana/hana_soft.webp" }
+      ],
+      text: "Yume 的册子也会记这些。不是为了让谁好看，是为了别让下一个旁观者把她们的“留下”说成自愿的表演。",
+      pauseAfter: 220,
+      textSpeed: 26
+    },
+    {
+      location: "花圃边",
+      speaker: "A-017",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_012_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_thinking.webp" },
         { slot: "right", src: "./assets/sprites/hana/hana_soft.webp", dim: true }
       ],
-      text: "A-017低头看着那张宣传页，很久没有说话。她听懂了“关系印记”这几个字，却又像还没有真的听懂。因为她几乎立刻就想到了自己手里的这张纸，想到了那种明明已经不能把谁带回来，却还是舍不得放手的东西。"
+      text: "……那如果有一天，连册子也被翻给别人看呢？",
+      pauseAfter: 240,
+      textSpeed: 30
     },
     {
       location: "花圃边",
       speaker: "旁白",
-      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_013_voice.wav",
+      voice: "./assets/voice/11-rabbit-ears/11-rabbit-ears_014_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_day.webp",
       sprites: [

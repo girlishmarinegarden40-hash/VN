@@ -1,13 +1,13 @@
-﻿window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
+window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "shella",
-  title: "第九章",
+  title: "第十章",
   subtitle: "Shella",
   location: "留位置的人",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 09",
+      eyebrow: "Chapter 10",
       title: "Shella",
       subtitle: "笑不是轻松，笑是告诉这个家：这里还没有彻底空掉。",
       location: "留位置的人",
@@ -28,6 +28,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "Shella 很喜欢把东西分成两份。两只杯子，两小块点心，两份并排落在桌边的光。A-017一开始以为那只是习惯，后来才知道，那是她活着时就学会的生存方式。"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "旁白",
+      voice: "./assets/voice/09-shella/09-shella_001a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/shella/shella_smile.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "第二份点心旁的那束光，像她刻意没关的一盏小灯——不是为了等谁真的坐下，而是为了让“缺席”不至于被误写成从未存在。",
+      pauseBefore: 160,
+      pauseAfter: 220,
+      textSpeed: 22
     },
     {
       location: "童年房间",
@@ -136,6 +151,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_anxious.webp" }
       ],
       text: "而庭院之所以把她留下来，也正因为这件事还没有结束。就算另一个人永远不会回来，就算病房里的心跳仪早已停下，Shella 替那一边留的位置，还是固执地继续到了这里。"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "旁白",
+      voice: "./assets/voice/09-shella/09-shella_012_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/shella/shella_smile.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_teary.webp" }
+      ],
+      text: "长桌另一头，Meiling 的指尖掠过杯沿，像在替这桌成双成对的证据又数过一遍。A-017望着那份多出来的甜，忽然想起自己掌心里那张永远多出来的“以后”——原来她们都在用不同的方式，替不会回来的人占座。",
+      pauseBefore: 220,
+      pauseAfter: 320,
+      textSpeed: 22
     }
   ]
 });

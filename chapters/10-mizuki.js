@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "mizuki",
-  title: "第十章",
+  title: "第十一章",
   subtitle: "Mizuki",
   location: "门边",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 10",
+      eyebrow: "Chapter 11",
       title: "Mizuki",
       subtitle: "这一次，我必须先看见。",
       location: "门边",
@@ -53,6 +53,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "我在看，还有没有人会被带走。"
+    },
+    {
+      location: "庭院门边",
+      speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_003a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "远处，Yume 膝上册子翻页的声响极轻，却和 Mizuki 钉在门边的视线落在同一条线上——一个记下消失的位置，一个盯着会不会再有人被拖出门框。",
+      pauseBefore: 180,
+      pauseAfter: 220,
+      textSpeed: 22
     },
     {
       location: "庭院门边",
@@ -182,6 +197,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }
       ],
       text: "但如果还有下一个人路过这里，我至少能先看见。"
+    },
+    {
+      location: "庭院门边",
+      speaker: "旁白",
+      voice: "./assets/voice/10-mizuki/10-mizuki_016a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/mizuki/mizuki_guard.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_teary.webp" }
+      ],
+      text: "A-017下意识碰了碰袖口，像那里也贴着一枚永远没机会再拍完的贴纸。她没说“我懂”，只把呼吸放轻——怕惊动门缝里任何还来得及被看见的东西。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
     },
     {
       location: "庭院门边",

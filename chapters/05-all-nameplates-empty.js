@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "all-nameplates-empty",
-  title: "第四章",
+  title: "第五章",
   subtitle: "所有门牌都是空的",
   location: "庭院回廊",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 04",
+      eyebrow: "Chapter 05",
       title: "所有门牌都是空的",
       subtitle: "名字来得比痛慢",
       location: "庭院回廊",
@@ -426,6 +426,18 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "看吧。这里不只是把人推进去的地方。"
+    },
+    {
+      location: "回廊夜色",
+      speaker: "旁白",
+      voice: "./assets/voice/05-all-nameplates-empty/05-all-nameplates-empty_034_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
+      text: "她本该松一口气。可长桌那头，Meiling 的数数声又响起来，轻得像在夜里敲一枚钉子——七。仿佛这个数字终于等到下一个会把它推翻的人。",
+      pauseBefore: 220,
+      pauseAfter: 300,
+      textSpeed: 24
     }
   ]
 });

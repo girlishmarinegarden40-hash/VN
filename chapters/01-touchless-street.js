@@ -218,6 +218,37 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_old_city_day.webp",
       sfxAtStart: "./assets/sfx/sfx_bell_distant.wav",
       text: "她们从街心离开时，远处钟楼无声地敲了一下。没有钟声。只有一阵极轻的震感，从看不见的地方传来，像某个还没真正醒来的梦，在骨头里翻了个身。"
+    },
+    {
+      location: "古老城市",
+      speaker: "旁白",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_019_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_old_city_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_observing.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/hana/hana_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/alice/alice_neutral.webp", dim: true }
+      ],
+      text: "Yume 怀里的册子微微一沉，像某个尚未获准降生的名字，在纸纤维里翻了个身，又强行睡回去。",
+      pauseBefore: 200,
+      pauseAfter: 220,
+      textSpeed: 22
+    },
+    {
+      location: "古老城市",
+      speaker: "Yume",
+      voice: "./assets/voice/01-touchless-street/01-touchless-street_020_yume.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_old_city_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" },
+        { slot: "center", src: "./assets/sprites/hana/hana_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/alice/alice_neutral.webp", dim: true }
+      ],
+      text: "……别急。一行一行来。",
+      pauseAfter: 280,
+      textSpeed: 32
     }
   ]
 });

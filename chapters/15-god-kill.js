@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "god-kill",
-  title: "第十五章",
+  title: "第十六章",
   subtitle: "GOD_KILL",
   location: "庭院崩塌前夜",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 15",
+      eyebrow: "Chapter 16",
       title: "GOD_KILL",
       subtitle: "未来第一次拒绝再被代为输出。",
       location: "庭院崩塌前夜",
@@ -610,6 +610,29 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_void_white.webp",
       cg: "./assets/cg/cg_god_kill_collapse.webp",
       text: "而 A-403 也在那片裂开的白光里失去了固定的轮廓。她没有像任何一个少女那样退场，反而更像终于把自己撑到不能再被叫作同一个人之后，才允许那些叠在一起的失败一起碎开。"
+    },
+    {
+      location: "崩塌尽头",
+      speaker: "旁白",
+      voice: "./assets/voice/15-god-kill/15-god-kill_056_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_void_white.webp",
+      text: "A-017没有伸手去捞那些光。她只把手按在自己胸口，像要确认那里还剩下一颗会疼的核——不是编号，不是 Alice，也不是任何可以被一键归档的条目。疼还在，就证明“尚未写完”仍站在她这一边。",
+      pauseBefore: 260,
+      pauseAfter: 280,
+      textSpeed: 22
+    },
+    {
+      location: "崩塌尽头",
+      speaker: "A-017",
+      voice: "./assets/voice/15-god-kill/15-god-kill_057_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_void_white.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }],
+      text: "……Hana。你让我自己决定。可在那之前，至少让我用我自己的声音，把下一步说出来。",
+      pauseBefore: 200,
+      pauseAfter: 320,
+      textSpeed: 28
     }
   ]
 });

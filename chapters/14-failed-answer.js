@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "failed-answer",
-  title: "第十四章",
+  title: "第十五章",
   subtitle: "失败答案",
   location: "月光长椅",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 14",
+      eyebrow: "Chapter 15",
       title: "失败答案",
       subtitle: "有些失败，不属于单数。",
       location: "月光长椅",
@@ -29,6 +29,17 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "月下长椅",
       speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_001a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      text: "Visitor 的噪字白天曾贴在天缝上，此刻却像沉进土里——可沉不等于消失，只是换了一种听法：你得把耳朵贴到自己的骨头上，才听得见那些失败还在计数。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
       voice: "./assets/voice/14-failed-answer/14-failed-answer_002_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
@@ -37,6 +48,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
       ],
       text: "她本来只是路过。可脚步走到那里，就怎么也迈不过去了。像她其实一直都知道，自己迟早会有一句话必须亲口问出去。",
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_002a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "月亮把长椅照得像一页反白的纸。天上没有字，骨头里却还记得白天那种痒：无数视线等着她把情绪摆成最好咀嚼的角度。她走近时，木纹里像还嵌着半句没说完的证词——不是水母馆，是“她们凭什么替我决定我多痛算痛”。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
     },
     {
       location: "月下长椅",
@@ -61,6 +87,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "我是那些一直被解释掉、一直被说成没那么严重、一直被压回去的失败，最后叠成的样子。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_004a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp" }
+      ],
+      text: "每一个被统称 Alice 的省略里，都曾有人想举手说“我在这里”——举手举到酸，仍被折进同一行脚注；A-403 便是那行脚注堆太高之后，站起来顶穿纸背的声音。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 22
     },
     {
       location: "月下长椅",
@@ -169,6 +210,47 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/a017/a017_crying.webp", dim: true }
       ],
       text: "我不够单数，没办法只恨一个人。"
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_014_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "庭院中心的喷泉忽然哑了半拍水声，像整个系统深吸了一口气。下一章，不会再有这样一张长椅，容她们把恨意慢慢摊开、抚平。",
+      pauseBefore: 240,
+      pauseAfter: 260,
+      textSpeed: 22
+    },
+    {
+      location: "月下长椅",
+      speaker: "A-403",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_015_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }],
+      text: "走吧。去见证你们亲手搭起来的“公正”，是怎么一起塌掉的。",
+      pauseAfter: 300,
+      textSpeed: 26
+    },
+    {
+      location: "月下长椅",
+      speaker: "旁白",
+      voice: "./assets/voice/14-failed-answer/14-failed-answer_016_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a403/a403_gaze.webp", dim: true }
+      ],
+      text: "月亮仍旧不替任何人落款。长椅上的空白却像第十三张牌提前摊开一角——恨不必单数，答案也不必干净；只要还肯把失败写在名下，就不算把未来交给别人代签。",
+      pauseBefore: 260,
+      pauseAfter: 440,
+      textSpeed: 22
     }
   ]
 });

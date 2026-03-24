@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "a403",
-  title: "第十三章",
+  title: "第十四章",
   subtitle: "A-403",
   location: "第四百零三次失败",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 13",
+      eyebrow: "Chapter 14",
       title: "A-403",
       subtitle: "Alice 从来就不只一个。",
       location: "第四百零三次失败",
@@ -27,6 +27,17 @@ window.AliceCourtyardChapterFiles.push({
       pauseBefore: 180,
       pauseAfter: 220,
       textSpeed: 20
+    },
+    {
+      location: "庭院深夜",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_001a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      text: "每一盏亮起的名字都曾差点被统称吞掉——Alice 从来就不只一个，失败也不只一次；系统爱把她们折成同一行编号，好让旁观的人不必逐个承认脸。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
     },
     {
       location: "喷泉边",
@@ -86,6 +97,20 @@ window.AliceCourtyardChapterFiles.push({
       pauseBefore: 180
     },
     {
+      location: "记录页前",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_006a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
+      ],
+      text: "那一行字像从纸纤维里渗出的旧血——Visitor 若在，大概又会急着替它配标题；可这里不是弹幕池，是被折断了四百零三次仍不肯碎尽的骨头在敲封面。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 22
+    },
+    {
       location: "庭院中央",
       speaker: "旁白",
       voice: "./assets/voice/13-a403/13-a403_007_voice.wav",
@@ -122,6 +147,94 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_013_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_anxious.webp" },
+        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "喷泉的水面像被谁换了一层更冷的玻璃。A-403 把指尖探进去，涟漪荡开时，里面同时晃过许多张脸——有的像她，有的像从未见过的少女——又一齐碎成一圈圈没有意义的波纹。",
+      pauseBefore: 200,
+      pauseAfter: 200,
+      textSpeed: 22
+    },
+    {
+      location: "喷泉边",
+      speaker: "A-017",
+      voice: "./assets/voice/13-a403/13-a403_014_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "……我认识你。不是脸。是那种“早就见过无数次”的恶心。",
+      pauseAfter: 220,
+      textSpeed: 30
+    },
+    {
+      location: "记录页前",
+      speaker: "Yume",
+      voice: "./assets/voice/13-a403/13-a403_015_yume.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }],
+      text: "别碰那行字。",
+      pauseBefore: 160,
+      textSpeed: 32
+    },
+    {
+      location: "记录页前",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_016_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }],
+      text: "可笔尖还是落了下去。墨迹刚一成形，就像从纸背被顶开一样，整页同时浮起几百行彼此打架的笔画。它们互相覆盖、互相否认，像许多个未来在同一秒里抢着说自己才是正版。",
+      sfxAtStart: "./assets/sfx/sfx_text_noise.wav",
+      pauseAfter: 240,
+      textSpeed: 20
+    },
+    {
+      location: "喷泉对面",
+      speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_017_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a403/a403_overwritten.webp" }],
+      text: "你们每次都想把故事折成一条最干净的线。每次折到最后，都会多出一截塞不回去的骨头。我就是那截骨头。",
+      pauseBefore: 220,
+      pauseAfter: 200,
+      textSpeed: 24
+    },
+    {
+      location: "庭院中央",
+      speaker: "Hana",
+      voice: "./assets/voice/13-a403/13-a403_018_hana.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/hana/hana_cold.webp" },
+        { slot: "center", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "你不是来求救的。你是来把我们都拖进同一条失败的。",
+      textSpeed: 26
+    },
+    {
+      location: "喷泉对面",
+      speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_019_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }],
+      text: "你们已经在这里了。还要我拖？",
+      pauseAfter: 200,
+      textSpeed: 34
+    },
+    {
+      location: "喷泉边",
       speaker: "Alice",
       voice: "./assets/voice/13-a403/13-a403_010_alice.wav",
       voiceReady: false,
@@ -134,6 +247,58 @@ window.AliceCourtyardChapterFiles.push({
       pauseBefore: 180,
       pauseAfter: 260,
       textSpeed: 34
+    },
+    {
+      location: "喷泉对面",
+      speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_020_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }],
+      text: "问名字太便宜了。你们台账上从来不缺代号。缺的是——你们敢不敢承认，那些代号背后，每一张脸都曾经能长成别的样子。",
+      pauseBefore: 180,
+      pauseAfter: 220,
+      textSpeed: 22
+    },
+    {
+      location: "庭院中央",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_021_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/hana/hana_cold.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/alice/alice_cold.webp" }
+      ],
+      text: "Alice 下意识把黑白双书按在胸前。书脊却像忽然空了重量，纸页里传来一阵极轻的沙沙声，像有什么东西正从装订线里往外抽走。",
+      pauseAfter: 200,
+      textSpeed: 22
+    },
+    {
+      location: "喷泉边",
+      speaker: "A-017",
+      voice: "./assets/voice/13-a403/13-a403_022_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_teary.webp" },
+        { slot: "right", src: "./assets/sprites/a403/a403_neutral.webp", dim: true }
+      ],
+      text: "那些字……又来了。贴在天上那种。它们在看我们对不对？",
+      pauseBefore: 200,
+      textSpeed: 28
+    },
+    {
+      location: "喷泉对面",
+      speaker: "A-403",
+      voice: "./assets/voice/13-a403/13-a403_023_a403.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }],
+      text: "你听得见，就够了。接下来别再假装只有你们在审判。",
+      pauseAfter: 240,
+      textSpeed: 26
     },
     {
       location: "喷泉对面",
@@ -156,6 +321,30 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "center", src: "./assets/sprites/a403/a403_gaze.webp" }
       ],
       text: "我是你们一直没能处理完的那一页。"
+    },
+    {
+      location: "庭院中央",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_024_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" }],
+      text: "夜没有更深。只是所有灯都像同时被谁调暗了一格，好让下一章的对话，不得不在更窄的光里进行。",
+      pauseBefore: 260,
+      pauseAfter: 320,
+      textSpeed: 24
+    },
+    {
+      location: "庭院中央",
+      speaker: "旁白",
+      voice: "./assets/voice/13-a403/13-a403_025_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/a017/a017_stunned.webp", dim: true }],
+      text: "第十三张牌若曾缺席于台账，此刻也不必急着翻面——先让这截骨头把话说完：谁再把别人的痛折成一条干净的故事线，折痕里都会多出一声别人的呼吸。",
+      pauseBefore: 240,
+      pauseAfter: 400,
+      textSpeed: 22
     }
   ]
 });

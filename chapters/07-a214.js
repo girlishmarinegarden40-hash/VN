@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "a214",
-  title: "第六章",
+  title: "第七章",
   subtitle: "A-214",
   location: "风很大的那天",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 06",
+      eyebrow: "Chapter 07",
       title: "A-214",
       subtitle: "不是所有故事都会给加害者留下道歉的机会。",
       location: "风很大的那天",
@@ -49,6 +49,21 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "right", src: "./assets/sprites/a214/a214_guarded.webp" }],
       text: "她先抬头看了一眼四周。长廊太白，门牌太静，连风声都干净得过分。这地方不像学校，不像医院，也不像她会醒来的任何一个现实角落。可她还是本能地先把下巴抬了一点，像只要自己先露出不在乎的样子，就能把慌乱压回去。"
+    },
+    {
+      location: "庭院入口",
+      speaker: "旁白",
+      voice: "./assets/voice/07-a214/07-a214_001c_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_observing.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a214/a214_guarded.webp" }
+      ],
+      text: "更远处的册页传来极轻的摩擦声。Yume没有走近，只让视线在两人之间落下第一笔——有些重逢不是为了和好，是为了别让谁再被改写成同一个“无辜版本”。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
     },
     {
       location: "庭院入口",
@@ -599,6 +614,21 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }],
       text: "A-017看着她走进那扇白门，忽然第一次真正意识到：原来有些人会离开，而自己还要继续留在这里。"
+    },
+    {
+      location: "白门",
+      speaker: "旁白",
+      voice: "./assets/voice/07-a214/07-a214_038_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
+      ],
+      text: "门关合后，Yume才把那一行的墨迹按深了一点：在加害与受害之间，并没有第三条叫做“我没用力”的安全甬道。",
+      pauseBefore: 240,
+      pauseAfter: 360,
+      textSpeed: 22
     }
   ]
 });

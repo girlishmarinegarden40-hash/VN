@@ -178,6 +178,18 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_garden_after_alice.webp",
       cg: "./assets/cg/cg_noa_on_bench.webp",
       text: "她把未来交给了 Noa。不是把人生交出去，也不是把自己洗成另一个更轻的形状。而是把那张再也不能属于自己的“以后”，终于留给了能够继续往下走的人。"
+    },
+    {
+      location: "长椅边",
+      speaker: "旁白",
+      voice: "./assets/voice/17-noa/17-noa_017_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      cg: "./assets/cg/cg_noa_on_bench.webp",
+      text: "风里像有什么在翻页——很轻，像很久以前有人说过：别急，一行一行来。",
+      pauseBefore: 280,
+      pauseAfter: 400,
+      textSpeed: 22
     }
   ]
 });

@@ -1,7 +1,7 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "a092",
-  title: "第五章",
+  title: "第六章",
   subtitle: "A-092",
   location: "阴天之后",
   lines: [
@@ -28,6 +28,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "A-092是在一个阴天进来的。她鞋底还带着像校门口一路踩进来的泥，表情却空白得像刚从一场很普通的午睡里醒来。"
+    },
+    {
+      location: "庭院入口",
+      speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_001a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_observing.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "Yume 的指尖在册边停了一瞬，像要把「跟着」两个字单独拎出来晾晒——跟着，也是一种位移；人数一多，并不等于每个人都自动无罪。",
+      pauseBefore: 160,
+      pauseAfter: 220,
+      textSpeed: 22
     },
     {
       location: "庭院入口",
@@ -97,6 +112,18 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       text: "而且大家都这样。"
+    },
+    {
+      location: "镜前",
+      speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_009a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_classroom_afternoon.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
+      text: "A-017胃里发冷。那句话她听过太多次——教室、走廊、后来会变成一行行弹幕的地方：大家都这样。仿佛人数一多，就可以把什么都在除法里摊薄，薄到像没发生过。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
     },
     {
       location: "镜前",
@@ -207,6 +234,21 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
       text: "它处理的是那些在某个瞬间，再也无法继续往前走的人。"
+    },
+    {
+      location: "离开",
+      speaker: "旁白",
+      voice: "./assets/voice/06-a092/06-a092_022_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }
+      ],
+      text: "更远处的册页翻过极轻的一声。那像在提醒：旁听若也能被写下，就再也找不到「我什么都没做」这种干净的缝隙——不是推人的人才在册里，笑过、转过脸去的人，也在。",
+      pauseBefore: 220,
+      pauseAfter: 320,
+      textSpeed: 22
     }
   ]
 });

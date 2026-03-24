@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "a017-arrival",
-  title: "第一章",
+  title: "第二章",
   subtitle: "A-017",
   location: "纯白回廊",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 01",
+      eyebrow: "Chapter 02",
       title: "A-017",
       subtitle: "名字回来以前",
       location: "纯白回廊",
@@ -281,6 +281,40 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }],
       text: "镜面又亮了一瞬。这一次，是很久以前的傍晚，是母亲的手。"
+    },
+    {
+      location: "镜前",
+      speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_026_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }],
+      text: "可那只手并没有伸向她。它停在一张浅蓝色的纸边，像正要把它折好收进包里——画面在这里猛地一抖，像有人把胶片硬生生拽断。",
+      pauseBefore: 200,
+      pauseAfter: 220,
+      textSpeed: 24
+    },
+    {
+      location: "镜前",
+      speaker: "A-017",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_027_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_breaking.webp" }],
+      text: "等等——别看后面——",
+      pauseAfter: 260,
+      textSpeed: 36
+    },
+    {
+      location: "镜前",
+      speaker: "旁白",
+      voice: "./assets/voice/02-a017-arrival/02-a017-arrival_028_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_teary.webp" }],
+      text: "镜面没有停。下一帧已经贴到眼前，像某种规则在冷笑：你以为躲开了楼梯，就能躲开整条线吗？",
+      pauseAfter: 320,
+      textSpeed: 26
     }
   ]
 });

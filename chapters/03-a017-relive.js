@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "a017-relive",
-  title: "第二章",
+  title: "第三章",
   subtitle: "再经历",
   location: "纯白回廊",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 02",
+      eyebrow: "Chapter 03",
       title: "再经历",
       subtitle: "先睡一睡吧",
       location: "纯白回廊",
@@ -316,6 +316,22 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }],
       text: "等她终于能把呼吸慢慢压平，傍晚也已经落下来了。可那阵风，那张被卷走的纸，还有她最后硬生生停住的那一下，都还像细沙一样卡在骨头缝里，暂时不会离开。"
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/03-a017-relive/03-a017-relive_027_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/hana/hana_soft.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" },
+        { slot: "right", src: "./assets/sprites/alice/alice_observing.webp", dim: true }
+      ],
+      text: "她尚未察觉，回廊另一端，Alice 已抱着黑白双书驻足良久。书脊冷得像金属，像两柄尚未决定指向谁的秤——而称盘上，已经提前写下了她的编号。",
+      pauseBefore: 220,
+      pauseAfter: 300,
+      textSpeed: 22
     }
   ]
 });

@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "azalea",
-  title: "第七章",
+  title: "第八章",
   subtitle: "Azalea",
   location: "傍晚的旧琴房",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 07",
+      eyebrow: "Chapter 08",
       title: "Azalea",
       subtitle: "她不是被火留下的。她是被“还没有确认完”留下的。",
       location: "傍晚的旧琴房",
@@ -90,6 +90,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp", dim: true }
       ],
       text: "不然别人怎么安心往外走呢。"
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_006a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/azalea/azalea_soft.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "她的清单从来不是冷冰冰的表格，而是一串还会呼吸的名字——少一个音节，她就会先在夜里醒来，像有谁把门在梦里又关快了一次。",
+      pauseBefore: 160,
+      pauseAfter: 220,
+      textSpeed: 22
     },
     {
       location: "喷泉边",
@@ -237,6 +252,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
       text: "那天傍晚，Azalea唱到一半又停住了。可这一次，A-017已经知道，她停下不是因为忘词，也不是因为唱不下去。她只是在听，听这个庭院里是不是还有什么地方，仍然没有被确认妥当。",
+    },
+    {
+      location: "喷泉边",
+      speaker: "旁白",
+      voice: "./assets/voice/07-azalea/07-azalea_020_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/azalea/azalea_singing.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_teary.webp" }
+      ],
+      text: "远处，Yume 在风里极轻地合了一下册子，像替谁把某条尚未划掉的条目按平。歌声再续上时，A-017终于听懂：那不是取悦耳朵的旋律，是在问——还有谁没被算进“可以安心”的那一侧。",
+      pauseBefore: 220,
+      pauseAfter: 340,
+      textSpeed: 22
     }
   ]
 });

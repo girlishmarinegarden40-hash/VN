@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "white-flowers-and-undefined",
-  title: "第三章",
+  title: "第四章",
   subtitle: "白花与未定义",
   location: "庭院傍晚",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 03",
+      eyebrow: "Chapter 04",
       title: "白花与未定义",
       subtitle: "直到名字回来",
       location: "庭院傍晚",
@@ -197,6 +197,18 @@ window.AliceCourtyardChapterFiles.push({
       textSpeed: 34
     },
     {
+      location: "白之书",
+      speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_015a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      cg: "./assets/cg/cg_white_book_judgment.webp",
+      text: "那三个字落在暮色里，比任何烫金章印都轻，却比“通过”更重——不是奖状，是缓刑判决上的签名栏：空白，但笔必须在你手里。",
+      pauseBefore: 200,
+      pauseAfter: 280,
+      textSpeed: 22
+    },
+    {
       location: "庭院傍晚",
       speaker: "A-017",
       voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_016_a017.wav",
@@ -226,6 +238,22 @@ window.AliceCourtyardChapterFiles.push({
     {
       location: "庭院傍晚",
       speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_017a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "right", src: "./assets/sprites/alice/alice_neutral.webp" }
+      ],
+      text: "Alice 的指节在白书边无意识敲了一下，像某条锁链被松一格，却仍挂在腕上——松，不等于摘。",
+      pauseBefore: 180,
+      pauseAfter: 240,
+      textSpeed: 22
+    },
+    {
+      location: "庭院傍晚",
+      speaker: "旁白",
       voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_018_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
@@ -235,6 +263,36 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/alice/alice_slightly_soft.webp", dim: true }
       ],
       text: "她不是被拯救，也不是被原谅。她只是第一次被允许：不必急着成为一个已经写完的答案。"
+    },
+    {
+      location: "庭院傍晚",
+      speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_019_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "Yume 合上册子的瞬间，纸页间掠过一声极轻的细响，像有人提前翻到了更后面的一页，却只肯露出半个尚未成型的笔画。",
+      pauseBefore: 200,
+      pauseAfter: 280,
+      textSpeed: 24
+    },
+    {
+      location: "庭院傍晚",
+      speaker: "旁白",
+      voice: "./assets/voice/04-white-flowers-and-undefined/04-white-flowers-and-undefined_020_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp", dim: true },
+        { slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "暮色把白花浸得更软。她仍不知那花为谁开，却忽然敢想：也许有一天，花也会不为“好看”而开——只为证明根还在，还肯从土里抬头。",
+      pauseBefore: 220,
+      pauseAfter: 360,
+      textSpeed: 22
     }
   ]
 });

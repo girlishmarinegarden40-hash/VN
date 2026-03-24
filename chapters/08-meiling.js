@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "meiling",
-  title: "第八章",
+  title: "第九章",
   subtitle: "Meiling",
   location: "再慢一步",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 08",
+      eyebrow: "Chapter 09",
       title: "Meiling",
       subtitle: "努力把所有事都做好，也不一定会被谁记住。",
       location: "再慢一步",
@@ -53,6 +53,21 @@ window.AliceCourtyardChapterFiles.push({
       ],
       text: "五，六，七……",
       textSpeed: 34
+    },
+    {
+      location: "庭院长桌",
+      speaker: "旁白",
+      voice: "./assets/voice/08-meiling/08-meiling_003a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_day.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_neutral.webp" }
+      ],
+      text: "第七只杯子有时并不真的摆在那里。更多时候，“七”是她把缺席数成可见形状的方式——好让自己还记得：该为谁回头，该为谁把门多留一条缝。",
+      pauseBefore: 160,
+      pauseAfter: 220,
+      textSpeed: 22
     },
     {
       location: "庭院长桌",
@@ -184,6 +199,21 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "right", src: "./assets/sprites/a017/a017_teary.webp", dim: true }
       ],
       text: "可如果我连这个也不做，好像就真的一点痕迹也没有了。"
+    },
+    {
+      location: "庭院长桌",
+      speaker: "旁白",
+      voice: "./assets/voice/08-meiling/08-meiling_017_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_dusk.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/meiling/meiling_small_smile.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/a017/a017_teary.webp" }
+      ],
+      text: "A-017没把“我记住你了”说出口——那太像又把谁塞回名单末尾的一句客气。她只悄悄把旁边的椅子往里推了半寸，像替某个尚未被念到的位置，先把空隙让出来。",
+      pauseBefore: 220,
+      pauseAfter: 320,
+      textSpeed: 22
     }
   ]
 });

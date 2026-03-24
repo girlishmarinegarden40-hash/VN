@@ -37,6 +37,18 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "长椅边",
+      speaker: "旁白",
+      voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_002a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      sprites: [{ slot: "right", src: "./assets/sprites/sienna/sienna_smile.webp" }],
+      text: "空白不是缺席，是尚未被任何人擅自写死的以后——谁急着把牌面填满，谁就在替别人交出未来。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 22
+    },
+    {
+      location: "长椅边",
       speaker: "Moel",
       voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_003_moel.wav",
       voiceReady: false,
@@ -64,6 +76,18 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [{ slot: "right", src: "./assets/sprites/sienna/sienna_smile.webp" }],
       text: "前十二张，是已经被翻开的事。第十三张，是翻牌的人。今夜是我。若有一天换成你把它翻开，它也会是你。"
+    },
+    {
+      location: "长椅边",
+      speaker: "旁白",
+      voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_005a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      sprites: [{ slot: "right", src: "./assets/sprites/sienna/sienna_smile.webp" }],
+      text: "风掠过牌角，十二张里的影像各退半步，像终于肯把舞台中央让给“尚未命名”——统称 Alice 的许多人，也曾只差这一格，就被世界抢先落款。",
+      pauseBefore: 180,
+      pauseAfter: 260,
+      textSpeed: 22
     },
     {
       location: "长椅边",
@@ -158,6 +182,21 @@ window.AliceCourtyardChapterFiles.push({
       text: "远处，Noa 坐在长椅边写字。本子里夹着那张被仔细按平的水母馆宣传页。那一刻，整座庭院都显得很轻。不是因为什么都被解决了，而是终于没有什么再急着把所有人压回同一种答案里。"
     },
     {
+      location: "长椅与回廊",
+      speaker: "旁白",
+      voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_013a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/noa/noa_soft.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/sienna/sienna_neutral.webp", dim: true }
+      ],
+      text: "纸上的水母与孩子气的问号叠在同一道折痕里，像旧的泪还没干，新的风已经学会轻一点吹——不是世界变温柔了，是终于有人肯把锋利从别人的喉咙边拿开。",
+      pauseBefore: 220,
+      pauseAfter: 280,
+      textSpeed: 22
+    },
+    {
       location: "长椅边",
       speaker: "Sienna",
       voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_014_sienna.wav",
@@ -165,6 +204,21 @@ window.AliceCourtyardChapterFiles.push({
       background: "./assets/bg/bg_garden_after_alice.webp",
       sprites: [{ slot: "right", src: "./assets/sprites/sienna/sienna_smile.webp" }],
       text: "这一次，没有人会替你决定。"
+    },
+    {
+      location: "长椅边",
+      speaker: "旁白",
+      voice: "./assets/voice/18-thirteenth-card/18-thirteenth-card_015_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp", dim: true },
+        { slot: "right", src: "./assets/sprites/sienna/sienna_smile.webp", dim: true }
+      ],
+      text: "牌面在夜里轻轻合拢，像册子最后一道折痕——未定义仍在，Visitor 的余噪也可能再来；可只要第十三张还肯留白，故事就仍允许你把自己写进下一行，而不是写进别人的脚注。",
+      pauseBefore: 280,
+      pauseAfter: 520,
+      textSpeed: 22
     }
   ]
 });

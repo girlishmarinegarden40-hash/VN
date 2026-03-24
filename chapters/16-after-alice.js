@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "after-alice",
-  title: "第十六章",
+  title: "第十七章",
   subtitle: "After Alice",
   location: "梦醒之后",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 16",
+      eyebrow: "Chapter 17",
       title: "After Alice",
       subtitle: "看见从来都只是相遇，不是许可。",
       location: "梦醒之后",
@@ -42,6 +42,29 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_garden_after_alice.webp",
       text: "那些曾被系统照料得过于整齐的东西，忽然都有了自己的偏向。草叶往不同的方向长。石路在无人经过的地方慢慢生出新的分岔。就连风吹过来时，都不像从前那样只是为了维持一幅画面。"
+    },
+    {
+      location: "崩塌之后",
+      speaker: "旁白",
+      voice: "./assets/voice/16-after-alice/16-after-alice_003a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      text: "黑白双书随 Alice 一并远去，空白却没有因此收束。它从书脊的约束里溢出来，渗进草缝、喷泉残缘与塌开的回廊断面——像世界终于承认：再也没有谁能把“后来”压进同一册目录，交给某个核心一次输出。",
+      pauseBefore: 200,
+      pauseAfter: 220,
+      textSpeed: 22
+    },
+    {
+      location: "长椅边",
+      speaker: "A-017",
+      voice: "./assets/voice/16-after-alice/16-after-alice_003b_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_after_alice.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/a017/a017_neutral.webp" }],
+      text: "……那 Yume 的册子呢。她还在写吗？还是连记录也一起停了？",
+      pauseBefore: 180,
+      pauseAfter: 200,
+      textSpeed: 28
     },
     {
       location: "长椅边",

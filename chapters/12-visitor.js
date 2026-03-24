@@ -1,13 +1,13 @@
 window.AliceCourtyardChapterFiles = window.AliceCourtyardChapterFiles || [];
 window.AliceCourtyardChapterFiles.push({
   id: "visitor",
-  title: "第十二章",
+  title: "第十三章",
   subtitle: "Visitor",
   location: "被观测的观测者",
   lines: [
     {
       type: "card",
-      eyebrow: "Chapter 12",
+      eyebrow: "Chapter 13",
       title: "Visitor",
       subtitle: "别急着替这里下结论。",
       location: "被观测的观测者",
@@ -50,6 +50,20 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
       text: "她翻到最后一页，看见页尾先浮起一片从未见过的乱码。那些字符彼此缠绕、彼此覆盖，像许多没被处理完的名字正在同一处往外挤。过了几秒，它们才一点点收拢，最后定成同一行字：A-403。"
+    },
+    {
+      location: "册子页尾",
+      speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_003a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
+      ],
+      text: "那一行落定后，纸背像被人从另一侧用指甲刮过——不是警告，是迟到的落款：受害者、旁观者、加害者的笔画曾叠在同一格里，如今终于挤出一个能站起来的轮廓。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 22
     },
     {
       location: "庭院最深处",
@@ -149,6 +163,21 @@ window.AliceCourtyardChapterFiles.push({
     },
     {
       location: "庭院中央",
+      speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_012a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/a017/a017_stunned.webp" },
+        { slot: "center", src: "./assets/sprites/yume/yume_neutral.webp", dim: true }
+      ],
+      text: "回廊另一端，Yume 指节发白地扣住册脊。她比谁都清楚：下一行一旦写下，就不只属于庭院——它还会变成某种可被传阅、可被剪辑、可被配乐的句子。Visitor 不是在“看故事”，是在等一页方便他们下结论的纸。",
+      pauseBefore: 200,
+      pauseAfter: 240,
+      textSpeed: 22
+    },
+    {
+      location: "庭院中央",
       speaker: "A-017",
       voice: "./assets/voice/12-visitor/12-visitor_013_a017.wav",
       voiceReady: false,
@@ -177,6 +206,20 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
       text: "观测者：被观测。"
+    },
+    {
+      location: "记录页前",
+      speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_016_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [
+        { slot: "left", src: "./assets/sprites/yume/yume_neutral.webp" }
+      ],
+      text: "四字落下，墨迹却反渗上来，像册子也在回瞪——她这才明白：自己若只把 Visitor 记成“噪音”，就又成了站在外面挑词的人。下一笔必须写疼，不能只写分类。",
+      pauseBefore: 200,
+      pauseAfter: 280,
+      textSpeed: 22
     },
     {
       location: "高处裂缝",
@@ -288,6 +331,40 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
       text: "庭院最深处的那道影子站得更稳了一点。A-017 知道，真正的异常还没有开始离开。它只是终于长成了可以被所有人看见的形状。"
+    },
+    {
+      location: "回廊尽头",
+      speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_023a_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      text: "裂缝深处仍有字在滚动，像无数只手抢着替别人交出未来——可未来若不经由当事人的呼吸数过，就只是一串好读的标签。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 22
+    },
+    {
+      location: "回廊尽头",
+      speaker: "A-017",
+      voice: "./assets/voice/12-visitor/12-visitor_024_a017.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_garden_night.webp",
+      sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
+      text: "那东西在叫我。不是耳朵……是骨头。",
+      pauseBefore: 200,
+      pauseAfter: 260,
+      textSpeed: 30
+    },
+    {
+      location: "记录页前",
+      speaker: "旁白",
+      voice: "./assets/voice/12-visitor/12-visitor_025_voice.wav",
+      voiceReady: false,
+      background: "./assets/bg/bg_corridor_white.webp",
+      sprites: [{ slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }],
+      text: "风还没吹到回廊，Yume 膝上的册子却自己掀起最后一页。空白处像被火烤过一样慢慢卷起边缘，仿佛某个编号正从纸纤维里往外渗。",
+      pauseAfter: 300,
+      textSpeed: 22
     }
   ]
 });
