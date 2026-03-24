@@ -921,17 +921,14 @@
     if (!line.voice) {
       state.currentVoiceSrc = null;
       ui.voiceName.textContent = "Not set";
-      return;
-    }
-
-    if (line.voiceReady === false) {
-      state.currentVoiceSrc = null;
-      ui.voiceName.textContent = line.speaker ? `${line.speaker} - Reserved` : "Reserved";
+      voiceAudio.pause();
+      voiceAudio.removeAttribute("src");
+      voiceAudio.load();
       return;
     }
 
     state.currentVoiceSrc = line.voice;
-    ui.voiceName.textContent = line.speaker ? `${line.speaker} - Ready` : "Ready";
+    ui.voiceName.textContent = line.speaker ? `${line.speaker} - Linked` : "Linked";
     voiceAudio.src = line.voice;
     voiceAudio.volume = typeof line.voiceVolume === "number" ? line.voiceVolume : 0.92;
 
