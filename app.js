@@ -603,14 +603,7 @@
           }
 
           if (state.autoMode) {
-            const autoDelay = line.autoDelay ?? defaultAutoDelay;
-            const pauseAfter = line.pauseAfter ?? 0;
-            state.autoTimer = window.setTimeout(() => {
-              if (state.coverActive || !ui.settingOverlay.hidden || !ui.backlogOverlay.hidden || !ui.galleryOverlay.hidden || !ui.cgPreviewOverlay.hidden || !ui.creditsOverlay.hidden || !ui.confirmOverlay.hidden) {
-                return;
-              }
-              nextLine();
-            }, autoDelay + pauseAfter);
+            scheduleAutoAdvanceForLine(line, renderToken);
           }
         }
       );
@@ -1063,6 +1056,99 @@
     renderCurrentLine();
   }
 
+  function canAutoAdvance(renderToken) {
+    return (
+      state.autoMode &&
+      renderToken === state.renderToken &&
+      !state.coverActive &&
+      !ui.settingOverlay.hidden &&
+      !ui.backlogOverlay.hidden &&
+      !ui.galleryOverlay.hidden &&
+      !ui.cgPreviewOverlay.hidden &&
+      !ui.creditsOverlay.hidden &&
+      !ui.confirmOverlay.hidden
+    );
+  }
+
+  function scheduleAutoAdvanceForLine(line, renderToken) {
+    clearAutoTimer();
+
+    if (!state.autoMode) {
+      return;
+    }
+
+    const pauseAfter = line.pauseAfter ?? 0;
+    const fallbackDelay = (line.autoDelay ?? defaultAutoDelay) + pauseAfter;
+    const safeNext = () => {
+      if (!canAutoAdvance(renderToken)) {
+        return;
+      }
+      nextLine();
+    };
+
+    if (line.type === "card" && !line.text) {
+      state.autoTimer = window.setTimeout(safeNext, (line.cardDuration ?? defaultCardDuration) + pauseAfter);
+      return;
+    }
+
+    const canWaitForVoice =
+      Boolean(line.voice) &&
+      state.currentVoiceSrc === line.voice &&
+      state.audioUnlocked &&
+      !state.muted;
+
+    if (!canWaitForVoice) {
+      state.autoTimer = window.setTimeout(safeNext, fallbackDelay);
+      return;
+    }
+
+    const finishAfterPause = () => {
+      clearAutoTimer();
+      state.autoTimer = window.setTimeout(safeNext, pauseAfter);
+    };
+
+    if (
+      voiceAudio.ended ||
+      (Number.isFinite(voiceAudio.duration) &&
+        voiceAudio.duration > 0 &&
+        voiceAudio.currentTime >= voiceAudio.duration - 0.05)
+    ) {
+      finishAfterPause();
+      return;
+    }
+
+    let watchdogTimer = null;
+
+    const cleanup = () => {
+      voiceAudio.removeEventListener("ended", onEnded);
+      voiceAudio.removeEventListener("error", onError);
+      voiceAudio.removeEventListener("abort", onError);
+      if (watchdogTimer) {
+        window.clearTimeout(watchdogTimer);
+        watchdogTimer = null;
+      }
+    };
+
+    const onEnded = () => {
+      cleanup();
+      finishAfterPause();
+    };
+
+    const onError = () => {
+      cleanup();
+      state.autoTimer = window.setTimeout(safeNext, fallbackDelay);
+    };
+
+    voiceAudio.addEventListener("ended", onEnded);
+    voiceAudio.addEventListener("error", onError);
+    voiceAudio.addEventListener("abort", onError);
+
+    watchdogTimer = window.setTimeout(() => {
+      cleanup();
+      state.autoTimer = window.setTimeout(safeNext, fallbackDelay);
+    }, 60000);
+  }
+
   function toggleAutoMode() {
     state.autoMode = !state.autoMode;
     ui.autoButton.textContent = state.autoMode ? "Auto On" : "Auto";
@@ -1075,7 +1161,7 @@
     }
 
     if (state.typingDone && !state.preLineTimer && !state.coverActive) {
-      state.autoTimer = window.setTimeout(nextLine, defaultAutoDelay);
+      scheduleAutoAdvanceForLine(story.lines[state.index], state.renderToken);
     }
   }
 
