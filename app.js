@@ -995,12 +995,22 @@
       return;
     }
 
-    preloadVoice(line.voice);
+    const preloadEntry = preloadVoice(line.voice);
     state.currentVoiceSrc = line.voice;
     state.currentVoiceBaseVolume = typeof line.voiceVolume === "number" ? line.voiceVolume : 0.92;
-    state.currentVoiceStatus = "loading";
     ui.voiceName.textContent = line.speaker ? `${line.speaker} - Linked` : "Linked";
-    setVoiceStatus("loading");
+
+    if (preloadEntry?.status === "error") {
+      state.currentVoiceStatus = "missing";
+      setVoiceStatus("missing");
+      voiceAudio.pause();
+      voiceAudio.removeAttribute("src");
+      voiceAudio.load();
+      return;
+    }
+
+    state.currentVoiceStatus = preloadEntry?.status === "loaded" ? "ready" : "loading";
+    setVoiceStatus(state.currentVoiceStatus);
     voiceAudio.src = line.voice;
     voiceAudio.volume = state.muted ? 0 : getEffectiveVoiceVolume(state.currentVoiceBaseVolume);
 
@@ -1198,6 +1208,7 @@
     }
 
     let watchdogTimer = null;
+    let loadingGuardTimer = null;
 
     const cleanup = () => {
       voiceAudio.removeEventListener("ended", onEnded);
@@ -1206,6 +1217,10 @@
       if (watchdogTimer) {
         window.clearTimeout(watchdogTimer);
         watchdogTimer = null;
+      }
+      if (loadingGuardTimer) {
+        window.clearTimeout(loadingGuardTimer);
+        loadingGuardTimer = null;
       }
     };
 
@@ -1222,6 +1237,16 @@
     voiceAudio.addEventListener("ended", onEnded);
     voiceAudio.addEventListener("error", onError);
     voiceAudio.addEventListener("abort", onError);
+
+    loadingGuardTimer = window.setTimeout(() => {
+      if (!canAutoAdvance(renderToken)) {
+        return;
+      }
+      if (state.currentVoiceSrc === line.voice && state.currentVoiceStatus === "loading") {
+        cleanup();
+        state.autoTimer = window.setTimeout(safeNext, fallbackDelay);
+      }
+    }, 1800);
 
     watchdogTimer = window.setTimeout(() => {
       cleanup();
@@ -1631,11 +1656,33 @@
     }
 
     const audio = new Audio();
+    const entry = { audio, status: "loading" };
     audio.preload = "auto";
+    audio.addEventListener(
+      "canplaythrough",
+      () => {
+        entry.status = "loaded";
+      },
+      { once: true }
+    );
+    audio.addEventListener(
+      "loadeddata",
+      () => {
+        if (entry.status !== "error") {
+          entry.status = "loaded";
+        }
+      },
+      { once: true }
+    );
+    audio.addEventListener(
+      "error",
+      () => {
+        entry.status = "error";
+      },
+      { once: true }
+    );
     audio.src = src;
     audio.load();
-
-    const entry = { audio };
     preloadedVoices.set(src, entry);
     return entry;
   }
