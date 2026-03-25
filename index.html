@@ -83,6 +83,7 @@
         <p id="dialogueText" class="dialogue-text"></p>
 
         <div class="textbox-footer">
+          <p id="voiceStatus" class="voice-status" hidden>Voice Playing</p>
           <p id="textboxHint" class="textbox-hint">Tap to continue</p>
         </div>
       </section>
@@ -115,6 +116,19 @@
           <p class="meta-label">Voice</p>
           <p id="voiceName" class="meta-value">Not set</p>
         </div>
+      </section>
+
+      <section class="setting-audio">
+        <label class="audio-slider-row" for="bgmVolumeRange">
+          <span class="audio-slider-label">BGM Volume</span>
+          <span id="bgmVolumeValue" class="audio-slider-value">100%</span>
+          <input id="bgmVolumeRange" class="audio-slider" type="range" min="0" max="100" step="1" value="100">
+        </label>
+        <label class="audio-slider-row" for="voiceVolumeRange">
+          <span class="audio-slider-label">Voice Volume</span>
+          <span id="voiceVolumeValue" class="audio-slider-value">100%</span>
+          <input id="voiceVolumeRange" class="audio-slider" type="range" min="0" max="100" step="1" value="100">
+        </label>
       </section>
 
       <section class="setting-actions">

@@ -19,10 +19,15 @@
     locationName: document.getElementById("locationName"),
     bgmName: document.getElementById("bgmName"),
     voiceName: document.getElementById("voiceName"),
+    bgmVolumeRange: document.getElementById("bgmVolumeRange"),
+    bgmVolumeValue: document.getElementById("bgmVolumeValue"),
+    voiceVolumeRange: document.getElementById("voiceVolumeRange"),
+    voiceVolumeValue: document.getElementById("voiceVolumeValue"),
     speakerTag: document.getElementById("speakerTag"),
     sceneMeta: document.getElementById("sceneMeta"),
     dialogueText: document.getElementById("dialogueText"),
     textboxHint: document.getElementById("textboxHint"),
+    voiceStatus: document.getElementById("voiceStatus"),
     backgroundLayer: document.getElementById("backgroundLayer"),
     cgFrame: document.getElementById("cgFrame"),
     cgLayer: document.getElementById("cgLayer"),
@@ -104,6 +109,7 @@
   const chapterMetaById = Object.fromEntries(chapterMeta.map((chapter) => [chapter.id, chapter]));
   const preloadedImages = new Map();
   const preloadedVideos = new Map();
+  const preloadedVoices = new Map();
   const galleryCgs = collectUniqueCgs();
   const galleryBgms = collectUniqueBgms();
 
@@ -142,7 +148,11 @@
     currentBgmSrc: null,
     currentBgmTargetVolume: 0.55,
     currentBgmLabel: "Not started",
+    bgmMasterVolume: 1,
     currentVoiceSrc: null,
+    currentVoiceBaseVolume: 0.92,
+    currentVoiceStatus: null,
+    voiceMasterVolume: 1,
     currentGalleryBgmSrc: null,
     currentVideoSrc: null,
     coverActive: true,
@@ -167,6 +177,9 @@
   preloadVisualAssets();
   buildChapterMenu();
   bindEvents();
+  syncAudioControls();
+  applyAudioMix();
+  preloadChapterVoices(story.lines[state.index]?.chapterId);
   openCover();
 
   function saveProgress() {
@@ -175,7 +188,9 @@
       unlockedChapters: Array.from(state.unlockedChapters),
       completedChapters: Array.from(state.completedChapters),
       seenCgs: Array.from(state.seenCgs),
-      seenBgms: Array.from(state.seenBgms)
+      seenBgms: Array.from(state.seenBgms),
+      bgmMasterVolume: state.bgmMasterVolume,
+      voiceMasterVolume: state.voiceMasterVolume
     };
     window.localStorage.setItem(storageKey, JSON.stringify(payload));
   }
@@ -245,6 +260,22 @@
       unlockAudio();
       playUiClick();
       toggleMute();
+    });
+
+    ui.bgmVolumeRange.addEventListener("input", (event) => {
+      const value = Number(event.target.value) / 100;
+      state.bgmMasterVolume = clampVolume(value);
+      syncAudioControls();
+      applyAudioMix();
+      saveProgress();
+    });
+
+    ui.voiceVolumeRange.addEventListener("input", (event) => {
+      const value = Number(event.target.value) / 100;
+      state.voiceMasterVolume = clampVolume(value);
+      syncAudioControls();
+      applyAudioMix();
+      saveProgress();
     });
 
     ui.returnToTitleButton.addEventListener("click", (event) => {
@@ -420,6 +451,46 @@
       finishVideoLine(true);
     });
 
+    voiceAudio.addEventListener("playing", () => {
+      setVoiceStatus("playing");
+    });
+
+    voiceAudio.addEventListener("waiting", () => {
+      if (state.currentVoiceSrc) {
+        setVoiceStatus("loading");
+      }
+    });
+
+    voiceAudio.addEventListener("canplay", () => {
+      if (state.currentVoiceSrc && voiceAudio.paused) {
+        setVoiceStatus("ready");
+      }
+    });
+
+    voiceAudio.addEventListener("pause", () => {
+      if (!state.currentVoiceSrc) {
+        setVoiceStatus(null);
+        return;
+      }
+      if (voiceAudio.ended) {
+        setVoiceStatus("ready");
+        return;
+      }
+      setVoiceStatus("ready");
+    });
+
+    voiceAudio.addEventListener("ended", () => {
+      if (state.currentVoiceSrc) {
+        setVoiceStatus("ready");
+      }
+    });
+
+    voiceAudio.addEventListener("error", () => {
+      if (state.currentVoiceSrc) {
+        setVoiceStatus("missing");
+      }
+    });
+
     window.addEventListener("keydown", (event) => {
       if (event.key === " " || event.key === "Enter") {
         event.preventDefault();
@@ -537,6 +608,7 @@
 
     const line = story.lines[state.index];
     const chapter = story.chapters.find((item) => item.id === line.chapterId);
+    preloadChapterVoices(line.chapterId);
     const sceneLabel = line.location || chapter?.location || "";
     const chapterLabel = chapter ? `${chapter.title} - ${chapter.subtitle}` : story.title;
 
@@ -782,7 +854,7 @@
     if (state.currentBgmSrc === line.bgm) {
       state.currentBgmTargetVolume = targetVolume;
       if (!state.muted) {
-        bgmAudio.volume = targetVolume;
+        bgmAudio.volume = getEffectiveBgmVolume(targetVolume);
         if (state.audioUnlocked && bgmAudio.paused) {
           bgmAudio.play().catch(() => {});
         }
@@ -901,7 +973,7 @@
     ui.videoSkipButton.hidden = true;
 
     if (state.videoActive && restoreStoryBgm && state.audioUnlocked && !state.muted && state.currentBgmSrc && bgmAudio.paused) {
-      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.volume = getEffectiveBgmVolume();
       bgmAudio.play().catch(() => {});
     }
 
@@ -913,17 +985,24 @@
   function updateVoice(line) {
     if (!line.voice) {
       state.currentVoiceSrc = null;
+      state.currentVoiceBaseVolume = 0.92;
+      state.currentVoiceStatus = null;
       ui.voiceName.textContent = "Not set";
+      setVoiceStatus(null);
       voiceAudio.pause();
       voiceAudio.removeAttribute("src");
       voiceAudio.load();
       return;
     }
 
+    preloadVoice(line.voice);
     state.currentVoiceSrc = line.voice;
+    state.currentVoiceBaseVolume = typeof line.voiceVolume === "number" ? line.voiceVolume : 0.92;
+    state.currentVoiceStatus = "loading";
     ui.voiceName.textContent = line.speaker ? `${line.speaker} - Linked` : "Linked";
+    setVoiceStatus("loading");
     voiceAudio.src = line.voice;
-    voiceAudio.volume = typeof line.voiceVolume === "number" ? line.voiceVolume : 0.92;
+    voiceAudio.volume = state.muted ? 0 : getEffectiveVoiceVolume(state.currentVoiceBaseVolume);
 
     if (state.audioUnlocked && !state.muted) {
       voiceAudio.play().catch(() => {});
@@ -1094,6 +1173,7 @@
     const canWaitForVoice =
       Boolean(line.voice) &&
       state.currentVoiceSrc === line.voice &&
+      state.currentVoiceStatus !== "missing" &&
       state.audioUnlocked &&
       !state.muted;
 
@@ -1172,9 +1252,10 @@
     voiceAudio.muted = state.muted;
     galleryAudio.muted = state.muted;
     ui.videoLayer.muted = state.muted || !state.audioUnlocked;
+    applyAudioMix();
 
     if (!state.muted && state.audioUnlocked && state.currentBgmSrc && bgmAudio.paused) {
-      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.volume = getEffectiveBgmVolume();
       bgmAudio.play().catch(() => {});
     }
   }
@@ -1259,6 +1340,63 @@
     }
   }
 
+  function clampVolume(value) {
+    return Math.max(0, Math.min(1, value));
+  }
+
+  function getEffectiveBgmVolume(targetVolume = state.currentBgmTargetVolume) {
+    return clampVolume(targetVolume) * state.bgmMasterVolume;
+  }
+
+  function getEffectiveVoiceVolume(baseVolume = state.currentVoiceBaseVolume) {
+    return clampVolume(baseVolume) * state.voiceMasterVolume;
+  }
+
+  function syncAudioControls() {
+    ui.bgmVolumeRange.value = String(Math.round(state.bgmMasterVolume * 100));
+    ui.voiceVolumeRange.value = String(Math.round(state.voiceMasterVolume * 100));
+    ui.bgmVolumeValue.textContent = `${Math.round(state.bgmMasterVolume * 100)}%`;
+    ui.voiceVolumeValue.textContent = `${Math.round(state.voiceMasterVolume * 100)}%`;
+  }
+
+  function applyAudioMix() {
+    bgmAudio.volume = state.muted ? 0 : getEffectiveBgmVolume();
+    galleryAudio.volume = state.muted ? 0 : getEffectiveBgmVolume();
+    voiceAudio.volume = state.muted ? 0 : getEffectiveVoiceVolume();
+  }
+
+  function setVoiceStatus(mode) {
+    state.currentVoiceStatus = mode || null;
+    if (!mode) {
+      ui.voiceStatus.hidden = true;
+      ui.voiceStatus.classList.remove("is-loading", "is-playing");
+      ui.voiceStatus.textContent = "";
+      return;
+    }
+
+    ui.voiceStatus.hidden = false;
+    ui.voiceStatus.classList.remove("is-loading", "is-playing");
+
+    if (mode === "loading") {
+      ui.voiceStatus.classList.add("is-loading");
+      ui.voiceStatus.textContent = "Voice Loading";
+      return;
+    }
+
+    if (mode === "playing") {
+      ui.voiceStatus.classList.add("is-playing");
+      ui.voiceStatus.textContent = "Voice Playing";
+      return;
+    }
+
+    if (mode === "missing") {
+      ui.voiceStatus.textContent = "Voice Missing";
+      return;
+    }
+
+    ui.voiceStatus.textContent = "Voice Ready";
+  }
+
   function clearTypingTimer() {
     if (state.typingTimer) {
       window.clearInterval(state.typingTimer);
@@ -1298,6 +1436,7 @@
 
   function transitionBgm(src, targetVolume, fadeMs) {
     clearBgmFadeTimer();
+    const effectiveTargetVolume = getEffectiveBgmVolume(targetVolume);
 
     const startNextTrack = () => {
       bgmAudio.src = src;
@@ -1312,10 +1451,10 @@
       state.bgmFadeTimer = window.setInterval(() => {
         step += 1;
         const progress = step / steps;
-        bgmAudio.volume = state.muted ? 0 : targetVolume * progress;
+        bgmAudio.volume = state.muted ? 0 : effectiveTargetVolume * progress;
         if (step >= steps) {
           clearBgmFadeTimer();
-          bgmAudio.volume = state.muted ? 0 : targetVolume;
+          bgmAudio.volume = state.muted ? 0 : effectiveTargetVolume;
         }
       }, 50);
     };
@@ -1373,6 +1512,8 @@
     syncTextboxVisibility();
     renderCurrentLine(true);
     buildChapterMenu();
+    syncAudioControls();
+    applyAudioMix();
     saveProgress();
   }
 
@@ -1480,6 +1621,39 @@
     return entry;
   }
 
+  function preloadVoice(src) {
+    if (!src) {
+      return null;
+    }
+
+    if (preloadedVoices.has(src)) {
+      return preloadedVoices.get(src);
+    }
+
+    const audio = new Audio();
+    audio.preload = "auto";
+    audio.src = src;
+    audio.load();
+
+    const entry = { audio };
+    preloadedVoices.set(src, entry);
+    return entry;
+  }
+
+  function preloadChapterVoices(chapterId) {
+    const chapter = chapterMetaById[chapterId];
+    if (!chapter) {
+      return;
+    }
+
+    for (let i = chapter.startIndex; i <= chapter.endIndex; i += 1) {
+      const line = story.lines[i];
+      if (line?.voice) {
+        preloadVoice(line.voice);
+      }
+    }
+  }
+
   function setImageSourceWhenReady(target, src, onReady) {
     const entry = preloadImage(src);
     if (!entry) {
@@ -1549,6 +1723,14 @@
             state.seenBgms.add(src);
           }
         });
+      }
+
+      if (typeof parsed.bgmMasterVolume === "number") {
+        state.bgmMasterVolume = clampVolume(parsed.bgmMasterVolume);
+      }
+
+      if (typeof parsed.voiceMasterVolume === "number") {
+        state.voiceMasterVolume = clampVolume(parsed.voiceMasterVolume);
       }
     } catch (error) {
       const parsedNumber = Number.parseInt(raw, 10);
@@ -1672,6 +1854,7 @@
     clearAutoTimer();
     stopVideoPlayback(false);
     state.coverActive = true;
+    preloadChapterVoices(story.lines[state.index]?.chapterId);
     setOverlay(ui.coverOverlay, true);
     ui.coverContinueButton.hidden = !hasSavedProgress();
   }
@@ -1819,7 +2002,7 @@
 
     state.currentGalleryBgmSrc = src;
     galleryAudio.src = src;
-    galleryAudio.volume = state.muted ? 0 : state.currentBgmTargetVolume;
+    galleryAudio.volume = state.muted ? 0 : getEffectiveBgmVolume();
     bgmAudio.pause();
     galleryAudio.play().catch(() => {});
   }
@@ -1832,7 +2015,7 @@
     state.currentGalleryBgmSrc = null;
 
     if (restoreStoryBgm && state.audioUnlocked && !state.muted && state.currentBgmSrc) {
-      bgmAudio.volume = state.currentBgmTargetVolume;
+      bgmAudio.volume = getEffectiveBgmVolume();
       bgmAudio.play().catch(() => {});
     }
   }
