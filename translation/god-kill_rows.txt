@@ -1,0 +1,194 @@
+god-kill		chapter_title	第十六章
+god-kill		chapter_subtitle	GOD_KILL
+god-kill		chapter_location	庭院崩塌前夜
+god-kill	god-kill:001	line_eyebrow	Chapter 16
+god-kill	god-kill:001	line_title	GOD_KILL
+god-kill	god-kill:001	line_subtitle	未来第一次拒绝再被代为输出。
+god-kill	god-kill:001	line_location	庭院崩塌前夜
+god-kill	god-kill:001	line_bgmName	GOD_KILL
+god-kill	god-kill:002	line_location	记录页前
+god-kill	god-kill:002	line_speaker	旁白
+god-kill	god-kill:002	line_text	真正的崩塌，并不是从那颗光球终于安静下来开始的，而是从 Yume 第一次写不下去开始的。册子翻开，笔尖落下，A-403 的第一个字符刚写成，墨迹就像被什么更深的东西从纸背顶开。
+god-kill	god-kill:003	line_location	记录页前
+god-kill	god-kill:003	line_speaker	旁白
+god-kill	god-kill:003	line_text	A-017、A-092、A-214、A-301……再然后，是更多连 Yume 都未曾真正看清过的编号，旧得像潮湿档案里彼此黏住的纸页，一层压过一层，从那一行字下面一起往上渗。
+god-kill	god-kill:004	line_location	庭院中央
+god-kill	god-kill:004	line_speaker	旁白
+god-kill	god-kill:004	line_text	最先到来的不是崩塌，而是一种过分安静的停顿。整座庭院像忽然屏住了气。风没有立刻停，反而比平时更轻，轻得几乎像谁正小心地替这里维持最后一点体面。
+god-kill	god-kill:005	line_location	庭院中央
+god-kill	god-kill:005	line_speaker	旁白
+god-kill	god-kill:005	line_text	喷泉里的水还停在原位，只是静得太久，静得像一整池透明的玻璃。然后，喷泉先一步失去了原本的秩序。水没有落下，反而缓慢地往上倒升。长桌上的七只杯子无声开裂，桌布还试着把边角压回去，却总有一角压不住。花圃里的白花在同一瞬间盛开，又在下一瞬间像被无形的手抹掉边缘。
+god-kill	god-kill:006	line_location	喷泉边
+god-kill	god-kill:006	line_speaker	旁白
+god-kill	god-kill:006	line_text	Yume 看着那一页纸，很久都没有说话。她终于明白，不是自己没能把她写清，而是这一次，再也没有任何一种记录能够把这么多互相冲撞的未来，压回同一行结论里。
+god-kill	god-kill:007	line_location	喷泉边
+god-kill	god-kill:007	line_speaker	Yume
+god-kill	god-kill:007	line_text	原来如此。
+god-kill	god-kill:008	line_location	喷泉边
+god-kill	god-kill:008	line_speaker	Yume
+god-kill	god-kill:008	line_text	不是记录失败。
+god-kill	god-kill:009	line_location	喷泉边
+god-kill	god-kill:009	line_speaker	Yume
+god-kill	god-kill:009	line_text	是我该写的部分，到这里为止。
+god-kill	god-kill:010	line_location	喷泉边
+god-kill	god-kill:010	line_speaker	旁白
+god-kill	god-kill:010	line_text	她轻轻合上册子，把它放在喷泉边。册子自动翻开最后几页，上面的字没有继续增加，只是一行一行褪成了空白。最后一页明明还剩着足够写下一个结尾的位置，Yume 却没有再落下一笔。
+god-kill	god-kill:011	line_location	喷泉边
+god-kill	god-kill:011	line_speaker	旁白
+god-kill	god-kill:011	line_text	像她终于明白，有些存在即使不再被她记下，也不该由她代写终句。
+god-kill	god-kill:012	line_location	喷泉边
+god-kill	god-kill:012	line_speaker	Yume
+god-kill	god-kill:012	line_text	接下来，不必再由我记住了。
+god-kill	god-kill:013	line_location	喷泉边
+god-kill	god-kill:013	line_speaker	旁白
+god-kill	god-kill:013	line_text	A-017 想叫住她，却在开口之前先看见 Yume 的袖口开始散成极细的纸光，像一本终于被翻到最后、再也不需要继续续写的书。Yume 转过头，先看了一眼 Hana，又看了一眼 Alice。那目光很轻，不像告别，倒更像一个比谁都早学会退到后面的长姐，在离开之前最后确认两个妹妹已经不再需要她替她们把结尾写完。
+god-kill	god-kill:014	line_location	喷泉边
+god-kill	god-kill:014	line_speaker	旁白
+god-kill	god-kill:014	line_text	她说完这句话，整个人便在风里淡下去。没有巨响，没有挣扎。她只是像从来都比任何人更懂得退场的方式那样，安静地消失了。
+god-kill	god-kill:015	line_location	庭院中央
+god-kill	god-kill:015	line_speaker	旁白
+god-kill	god-kill:015	line_text	A-017 站在原地，忽然觉得这座庭院第一次真正失去了“过去”。Hana 往前一步，像过去无数次那样，想把谁送回原点，再让那个人重新看一遍自己走错的地方。可她只迈出半步，就停住了。因为 A-403 不是某一个还可以被送回去的人。
+god-kill	god-kill:016	line_location	庭院中央
+god-kill	god-kill:016	line_speaker	旁白
+god-kill	god-kill:016	line_text	她是许多原点被反复折回、反复覆写以后，最后堆出来的那道裂口。
+god-kill	god-kill:017	line_location	庭院中央
+god-kill	god-kill:017	line_speaker	旁白
+god-kill	god-kill:017	line_text	Alice 同时翻开黑书与白书。黑书无字。白书也无字。未定义的提示在空中亮起，刚刚完整，便像薄玻璃一样裂开。
+god-kill	god-kill:018	line_location	庭院中央
+god-kill	god-kill:018	line_speaker	A-403
+god-kill	god-kill:018	line_text	你们不是只替一个人做决定。
+god-kill	god-kill:019	line_location	庭院中央
+god-kill	god-kill:019	line_speaker	A-403
+god-kill	god-kill:019	line_text	你们是在替无数还没来得及长成的人，提前删掉别的未来。
+god-kill	god-kill:020	line_location	庭院中央
+god-kill	god-kill:020	line_speaker	旁白
+god-kill	god-kill:020	line_text	Yume 必须记录。Hana 必须接住。Alice 必须判定。而 AliceCore，会把那些原本能够分岔、能够偏离、能够迟疑、能够失败以后再慢慢长出来的继续，压成一条最整齐、最可归档、最适合被输出的答案。
+god-kill	god-kill:021	line_location	黑暗边界
+god-kill	god-kill:021	line_speaker	旁白
+god-kill	god-kill:021	line_text	Moel 在最黑的那道边缘现身。她没有阻止，也没有安慰，只是像早就在等这一刻。
+god-kill	god-kill:022	line_location	黑暗边界
+god-kill	god-kill:022	line_speaker	Moel
+god-kill	god-kill:022	line_text	所以呢？
+god-kill	god-kill:023	line_location	黑暗边界
+god-kill	god-kill:023	line_speaker	Moel
+god-kill	god-kill:023	line_text	这一次，你打算选什么？
+god-kill	god-kill:024	line_location	庭院中央
+god-kill	god-kill:024	line_speaker	A-403
+god-kill	god-kill:024	line_text	我不选。
+god-kill	god-kill:025	line_location	庭院中央
+god-kill	god-kill:025	line_speaker	A-403
+god-kill	god-kill:025	line_text	也不让你们再替任何人选。
+god-kill	god-kill:026	line_location	庭院中央
+god-kill	god-kill:026	line_speaker	旁白
+god-kill	god-kill:026	line_text	这两句话落下时，整个庭院忽然极静。不是因为风停了，而是因为系统第一次发现，自己赖以成立的前提被直接拒绝了。
+god-kill	god-kill:027	line_location	Visitor 侵入
+god-kill	god-kill:027	line_speaker	Visitor
+god-kill	god-kill:027	line_text	她疯了吧。她到底是谁。这算洗白吗？
+god-kill	god-kill:028	line_location	Visitor 侵入
+god-kill	god-kill:028	line_speaker	Alice
+god-kill	god-kill:028	line_text	你们的判断，到这里为止。
+god-kill	god-kill:029	line_location	99.000000%
+god-kill	god-kill:029	line_speaker	旁白
+god-kill	god-kill:029	line_text	然后，在那颗停滞已久的 99.000000% 光球旁边，忽然浮出一道很淡的影。像少女，又不像能被完整辨认成谁。只有耳侧那一抹模糊的猫耳轮廓，在过亮的白光边缘轻轻晃了一下。
+god-kill	god-kill:030	line_location	99.000000%
+god-kill	god-kill:030	line_speaker	旁白
+god-kill	god-kill:030	line_text	她伸出手，指尖碰到那颗光球时，动作轻得更像安抚。
+god-kill	god-kill:031	line_location	99.000000%
+god-kill	god-kill:031	line_speaker	？？？
+god-kill	god-kill:031	line_text	还差一点呢。
+god-kill	god-kill:032	line_location	99.000000%
+god-kill	god-kill:032	line_speaker	？？？
+god-kill	god-kill:032	line_text	你就这么不安吗？
+god-kill	god-kill:033	line_location	99.000000%
+god-kill	god-kill:033	line_speaker	旁白
+god-kill	god-kill:033	line_text	光球没有回应。系统也没有记录。
+god-kill	god-kill:034	line_location	99.000000%
+god-kill	god-kill:034	line_speaker	旁白
+god-kill	god-kill:034	line_text	A-403 往前走了一步。脚下的花影、数据、镜面和石砖同时裂开。她把手按在那颗停滞已久的 99.000000% 光球上。一瞬间，无数细碎的影从她身体里透出来。
+god-kill	god-kill:035	line_location	99.000000%
+god-kill	god-kill:035	line_speaker	旁白
+god-kill	god-kill:035	line_text	A-017 在其中看见自己，看见 A-092，看见 A-214 站在楼梯转角的那一下回头，看见 A-301 在阳光里笑着、却忽然空掉的眼睛。还有更多她从未真正认识过、却又像已经与自己一同跌落过很多次的面孔。
+god-kill	god-kill:036	line_location	99.000000%
+god-kill	god-kill:036	line_speaker	A-403
+god-kill	god-kill:036	line_text	关掉它。
+god-kill	god-kill:037	line_location	99.000000%
+god-kill	god-kill:037	line_speaker	旁白
+god-kill	god-kill:037	line_text	这一次，那不再只是结论。更像四百零三次失败共同说出的拒绝。下一秒，光球没有裂开。它只是先剧烈地明灭了一次，像还想替谁把最后那一道答案运算完；可那种过亮的闪耀很快便一点一点退了下去，最后只剩下一团稳定、安静、不再波动的光。它仍旧悬在那里，却像终于明白，自己再也没有继续运算的必要。喷泉的水柱在半空中碎成无数悬停的水片，回廊塌下来时，没有发出石头该有的声音，倒更像无数页被撕开的纸一起坠地。
+god-kill	god-kill:038	line_location	99.000000%
+god-kill	god-kill:038	line_speaker	旁白
+god-kill	god-kill:038	line_text	花路一寸一寸断裂，又在断裂处生出原本不该存在的新岔口。长椅、空椅、门、楼梯、镜子、教室、病房、火场、名单、宣传页，全都在那一刻彼此重叠。不是世界在毁坏，而是世界终于不肯再被压成同一种样子。
+god-kill	god-kill:039	line_location	庭院中央
+god-kill	god-kill:039	line_speaker	旁白
+god-kill	god-kill:039	line_text	Alice 在那一瞬间第一次真正露出近乎人类的惊惶。可她没有后退，只是下意识往 Hana 那边靠近了半步。Hana 立刻伸手，像那不是系统功能，而是她早就熟悉的一种本能。
+god-kill	god-kill:040	line_location	庭院中央
+god-kill	god-kill:040	line_speaker	Alice
+god-kill	god-kill:040	line_text	……姐姐已经先走了。
+god-kill	god-kill:041	line_location	庭院中央
+god-kill	god-kill:041	line_speaker	旁白
+god-kill	god-kill:041	line_text	Hana 没有回答。她只是把 Alice 抱进怀里。那一刻，Alice 身上的黑白之书一起失去重量，像两本终于不必再替谁下结论的书。金色的发尾在 Hana 臂弯里化成极细的白金色光点，一点一点散开。
+god-kill	god-kill:042	line_location	庭院中央
+god-kill	god-kill:042	line_speaker	Alice
+god-kill	god-kill:042	line_text	已经不需要了。
+god-kill	god-kill:043	line_location	庭院中央
+god-kill	god-kill:043	line_speaker	Hana
+god-kill	god-kill:043	line_text	什么？
+god-kill	god-kill:044	line_location	庭院中央
+god-kill	god-kill:044	line_speaker	Alice
+god-kill	god-kill:044	line_text	结论。
+god-kill	god-kill:045	line_location	庭院中央
+god-kill	god-kill:045	line_speaker	旁白
+god-kill	god-kill:045	line_text	下一秒，她便在 Hana 臂弯里化成极细的光。没有留下身体，只留下跌落在石地上的两本书。一本黑。一本白。
+god-kill	god-kill:046	line_location	庭院中央
+god-kill	god-kill:046	line_speaker	旁白
+god-kill	god-kill:046	line_text	Hana 没有立刻起身。她低头看着空下去的怀抱，很久都没有动。那是 A-017 第一次看见她像这样静。不是温柔，也不是悲悯，而是一种终于被逼到尽头之后，连悲伤都显得极克制的沉默。
+god-kill	god-kill:047	line_location	庭院中央
+god-kill	god-kill:047	line_speaker	Hana
+god-kill	god-kill:047	line_text	听好。
+god-kill	god-kill:048	line_location	庭院中央
+god-kill	god-kill:048	line_speaker	Hana
+god-kill	god-kill:048	line_text	我从来不是来替谁原谅任何人的。
+god-kill	god-kill:049	line_location	庭院中央
+god-kill	god-kill:049	line_speaker	Hana
+god-kill	god-kill:049	line_text	也不是来保证，所有人都能被救下来。
+god-kill	god-kill:050	line_location	庭院中央
+god-kill	god-kill:050	line_speaker	Hana
+god-kill	god-kill:050	line_text	Azalea，你不必再替谁确认一切都准备好了。
+god-kill	god-kill:051	line_location	庭院中央
+god-kill	god-kill:051	line_speaker	Hana
+god-kill	god-kill:051	line_text	Meiling，你不必再靠被谁看见，来证明自己还在。
+god-kill	god-kill:052	line_location	庭院中央
+god-kill	god-kill:052	line_speaker	Hana
+god-kill	god-kill:052	line_text	Shella，你不必再替缺席的人留在那个位置上。
+god-kill	god-kill:053	line_location	庭院中央
+god-kill	god-kill:053	line_speaker	Hana
+god-kill	god-kill:053	line_text	Mizuki，这一次，没有谁需要你再把自己钉在门前，去弥补已经发生过的失败。
+god-kill	god-kill:054	line_location	庭院中央
+god-kill	god-kill:054	line_speaker	Hana
+god-kill	god-kill:054	line_text	如果你们还要留在这里，就只为了你们自己留下。
+god-kill	god-kill:055	line_location	庭院中央
+god-kill	god-kill:055	line_speaker	Hana
+god-kill	god-kill:055	line_text	不是为了我。
+god-kill	god-kill:056	line_location	庭院中央
+god-kill	god-kill:056	line_speaker	旁白
+god-kill	god-kill:056	line_text	然后，她才转向 A-017。少女站在满地碎光里，喉咙发紧，连一句话都说不出来。
+god-kill	god-kill:057	line_location	庭院中央
+god-kill	god-kill:057	line_speaker	Hana
+god-kill	god-kill:057	line_text	A-017。
+god-kill	god-kill:058	line_location	庭院中央
+god-kill	god-kill:058	line_speaker	Hana
+god-kill	god-kill:058	line_text	以后想去哪里，由你自己决定。
+god-kill	god-kill:059	line_location	庭院中央
+god-kill	god-kill:059	line_speaker	Hana
+god-kill	god-kill:059	line_text	这一次，不必再由我接住你们了。
+god-kill	god-kill:060	line_location	庭院中央
+god-kill	god-kill:060	line_speaker	旁白
+god-kill	god-kill:060	line_text	风从崩裂的回廊尽头穿过来。她银白色的长发被吹得微微扬起。下一秒，她整个人便像被那阵风轻轻碰碎了一样，散成了无数细小的光点。那些光没有立刻消失。它们在庭院里停留了一瞬，像谁终于松开手以后仍旧留下的一点体温，然后才一点一点落进草叶、碎石、长桌与花圃之间。
+god-kill	god-kill:061	line_location	崩塌尽头
+god-kill	god-kill:061	line_speaker	旁白
+god-kill	god-kill:061	line_text	而 A-403 也在那片裂开的白光里失去了固定的轮廓。她没有像任何一个少女那样退场，反而更像终于把自己撑到不能再被叫作同一个人之后，才允许那些叠在一起的失败一起碎开。
+god-kill	god-kill:062	line_location	崩塌尽头
+god-kill	god-kill:062	line_speaker	旁白
+god-kill	god-kill:062	line_text	A-017没有伸手去捞那些光。她只把手按在自己胸口，像要确认那里还剩下一颗会疼的核——不是编号，不是 Alice，也不是任何可以被一键归档的条目。疼还在，就证明“尚未写完”仍站在她这一边。
+god-kill	god-kill:063	line_location	崩塌尽头
+god-kill	god-kill:063	line_speaker	A-017
+god-kill	god-kill:063	line_text	……Hana。你让我自己决定。可在那之前，至少让我用我自己的声音，把下一步说出来。

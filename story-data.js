@@ -2,19 +2,67 @@
   const chapterFiles = Array.isArray(window.AliceCourtyardChapterFiles)
     ? window.AliceCourtyardChapterFiles.slice()
     : [];
+  const localization = window.AliceCourtyardLocalization || null;
+  const storyLocalization = localization?.story || {};
+  const chapterLocalization = localization?.chapters || {};
+  const lineLocalization = localization?.lines || {};
 
-  const chapters = chapterFiles.map((chapter) => ({
-    id: chapter.id,
-    title: chapter.title,
-    subtitle: chapter.subtitle,
-    location: chapter.location
-  }));
+  function toLineId(chapterId, index) {
+    return `${chapterId}:${String(index + 1).padStart(3, "0")}`;
+  }
+
+  function isPlainObject(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function mergeLocalizedRecord(source, override) {
+    if (!override || typeof override !== "object") {
+      return source;
+    }
+
+    const next = {
+      ...source,
+      ...override
+    };
+
+    if (isPlainObject(source.prop) && isPlainObject(override.prop)) {
+      next.prop = {
+        ...source.prop,
+        ...override.prop
+      };
+    }
+
+    return next;
+  }
+
+  const chapters = chapterFiles.map((chapter) => {
+    const localizedChapter = mergeLocalizedRecord(chapter, chapterLocalization[chapter.id]);
+    return {
+      id: chapter.id,
+      title: localizedChapter.title,
+      subtitle: localizedChapter.subtitle,
+      location: localizedChapter.location
+    };
+  });
 
   const lines = chapterFiles.flatMap((chapter) =>
-    (chapter.lines || []).map((line) => ({
-      chapterId: line.chapterId || chapter.id,
-      ...line
-    }))
+    (chapter.lines || []).map((line, index) => {
+      const lineId = line.lineId || toLineId(chapter.id, index);
+      const localizedLine = mergeLocalizedRecord(
+        {
+          ...line,
+          chapterId: line.chapterId || chapter.id,
+          lineId
+        },
+        lineLocalization[lineId]
+      );
+
+      return {
+        ...localizedLine,
+        chapterId: localizedLine.chapterId || chapter.id,
+        lineId
+      };
+    })
   );
 
   // Future-ready line fields:
@@ -31,7 +79,8 @@
   // pauseAfterVideo: 300
 
   window.AliceCourtyardStory = {
-    title: "爱丽丝庭院",
+    title: storyLocalization.title || "爱丽丝庭院",
+    locale: localization?.locale || "zh-CN",
     chapters,
     lines
   };

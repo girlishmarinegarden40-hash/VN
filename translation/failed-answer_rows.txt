@@ -1,0 +1,65 @@
+failed-answer		chapter_title	第十五章
+failed-answer		chapter_subtitle	失败答案
+failed-answer		chapter_location	月光长椅
+failed-answer	failed-answer:001	line_eyebrow	Chapter 15
+failed-answer	failed-answer:001	line_title	失败答案
+failed-answer	failed-answer:001	line_subtitle	有些失败，不属于单数。
+failed-answer	failed-answer:001	line_location	月光长椅
+failed-answer	failed-answer:001	line_bgmName	A-403
+failed-answer	failed-answer:002	line_location	月下长椅
+failed-answer	failed-answer:002	line_speaker	旁白
+failed-answer	failed-answer:002	line_text	A-017后来是在长椅边再次见到 A-403 的。那时庭院已经安静下来，可那种安静不是事情过去后的安静，而更像所有声音都被压到了看不见的地方，还在继续。
+failed-answer	failed-answer:003	line_location	月下长椅
+failed-answer	failed-answer:003	line_speaker	旁白
+failed-answer	failed-answer:003	line_text	Visitor 的噪字白天曾贴在天缝上，此刻却像沉进土里——可沉不等于消失，只是换了一种听法：你得把耳朵贴到自己的骨头上，才听得见那些失败还在计数。
+failed-answer	failed-answer:004	line_location	月下长椅
+failed-answer	failed-answer:004	line_speaker	旁白
+failed-answer	failed-answer:004	line_text	她本来只是路过。可脚步走到那里，就怎么也迈不过去了。像她其实一直都知道，自己迟早会有一句话必须亲口问出去。
+failed-answer	failed-answer:005	line_location	月下长椅
+failed-answer	failed-answer:005	line_speaker	旁白
+failed-answer	failed-answer:005	line_text	月亮把长椅照得像一页反白的纸。天上没有字，骨头里却还记得白天那种痒：无数视线等着她把情绪摆成最好咀嚼的角度。她走近时，木纹里像还嵌着半句没说完的证词——不是水母馆，是“她们凭什么替我决定我多痛算痛”。
+failed-answer	failed-answer:006	line_location	月下长椅
+failed-answer	failed-answer:006	line_speaker	A-017
+failed-answer	failed-answer:006	line_text	你到底是谁？
+failed-answer	failed-answer:007	line_location	月下长椅
+failed-answer	failed-answer:007	line_speaker	A-403
+failed-answer	failed-answer:007	line_text	我是那些一直被解释掉、一直被说成没那么严重、一直被压回去的失败，最后叠成的样子。
+failed-answer	failed-answer:008	line_location	月下长椅
+failed-answer	failed-answer:008	line_speaker	旁白
+failed-answer	failed-answer:008	line_text	每一个被统称 Alice 的省略里，都曾有人想举手说“我在这里”——举手举到酸，仍被折进同一行脚注；A-403 便是那行脚注堆太高之后，站起来顶穿纸背的声音。
+failed-answer	failed-answer:009	line_location	月下长椅
+failed-answer	failed-answer:009	line_speaker	旁白
+failed-answer	failed-answer:009	line_text	A-017没有立刻反驳。她只是把那张已经被按平很多次的水母馆宣传页捏得更紧，紧到纸边重新顶进掌心。
+failed-answer	failed-answer:010	line_location	月下长椅
+failed-answer	failed-answer:010	line_speaker	A-403
+failed-answer	failed-answer:010	line_text	你真正想回去的，也许从来都不是水母馆。
+failed-answer	failed-answer:011	line_location	月下长椅
+failed-answer	failed-answer:011	line_speaker	A-017
+failed-answer	failed-answer:011	line_text	……你又知道什么。
+failed-answer	failed-answer:012	line_location	月下长椅
+failed-answer	failed-answer:012	line_speaker	A-403
+failed-answer	failed-answer:012	line_text	因为你想回去的，是那个还没有被谁毁掉以前的自己。
+failed-answer	failed-answer:013	line_location	月下长椅
+failed-answer	failed-answer:013	line_speaker	旁白
+failed-answer	failed-answer:013	line_text	那句话落下来的时候，A-017整个人都像被风从里面吹空了一下。她本来以为自己一直抓着的，是一张纸、一个地点、一个没有实现的约定。直到这时她才发现，自己抓着的其实是更早、更小、也更来不及被救回来的东西。
+failed-answer	failed-answer:014	line_location	月下长椅
+failed-answer	failed-answer:014	line_speaker	A-017
+failed-answer	failed-answer:014	line_text	那我该恨谁？
+failed-answer	failed-answer:015	line_location	月下长椅
+failed-answer	failed-answer:015	line_speaker	A-403
+failed-answer	failed-answer:015	line_text	你可以恨很多人。
+failed-answer	failed-answer:016	line_location	月下长椅
+failed-answer	failed-answer:016	line_speaker	A-403
+failed-answer	failed-answer:016	line_text	也可以恨整个让这些事一直成立下去的东西。
+failed-answer	failed-answer:017	line_location	月下长椅
+failed-answer	failed-answer:017	line_speaker	A-403
+failed-answer	failed-answer:017	line_text	我不够单数，没办法只恨一个人。
+failed-answer	failed-answer:018	line_location	月下长椅
+failed-answer	failed-answer:018	line_speaker	旁白
+failed-answer	failed-answer:018	line_text	庭院中心的喷泉忽然哑了半拍水声，像整个系统深吸了一口气。下一章，不会再有这样一张长椅，容她们把恨意慢慢摊开、抚平。
+failed-answer	failed-answer:019	line_location	月下长椅
+failed-answer	failed-answer:019	line_speaker	A-403
+failed-answer	failed-answer:019	line_text	走吧。去见证你们亲手搭起来的“公正”，是怎么一起塌掉的。
+failed-answer	failed-answer:020	line_location	月下长椅
+failed-answer	failed-answer:020	line_speaker	旁白
+failed-answer	failed-answer:020	line_text	月亮仍旧不替任何人落款。长椅上的空白却像第十三张牌提前摊开一角——恨不必单数，答案也不必干净；只要还肯把失败写在名下，就不算把未来交给别人代签。

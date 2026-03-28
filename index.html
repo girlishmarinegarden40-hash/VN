@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alice Courtyard | Web VN</title>
-  <link rel="stylesheet" href="./styles.css?v=20260323d">
+  <link rel="stylesheet" href="./styles.css?v=20260328e">
 </head>
 <body>
   <div class="app-shell">
@@ -19,6 +19,10 @@
           <button id="coverStartButton" class="cover-button" type="button">Start from Beginning</button>
           <button id="coverGalleryButton" class="cover-button ghost" type="button">Gallery</button>
           <button id="coverCreditsButton" class="cover-button ghost" type="button">Credits</button>
+        </div>
+        <div class="cover-language" aria-label="Language Switch">
+          <button id="coverLanguageZhButton" class="cover-button ghost language-button" type="button">中文</button>
+          <button id="coverLanguageEnButton" class="cover-button ghost language-button" type="button">English</button>
         </div>
       </div>
       <div class="cover-notice" aria-label="Copyright Notice">
@@ -129,6 +133,14 @@
           <span id="voiceVolumeValue" class="audio-slider-value">100%</span>
           <input id="voiceVolumeRange" class="audio-slider" type="range" min="0" max="100" step="1" value="100">
         </label>
+      </section>
+
+      <section class="setting-language">
+        <div class="setting-block-title">Language</div>
+        <div class="setting-actions setting-language-actions">
+          <button id="languageZhButton" class="ghost-button language-button" type="button">中文</button>
+          <button id="languageEnButton" class="ghost-button language-button" type="button">English</button>
+        </div>
       </section>
 
       <section class="setting-actions">
@@ -299,7 +311,66 @@
   <script src="./chapters/interlude-12-threshold-ed.js?v=20260327a"></script>
   <script src="./chapters/interlude-17-razor-afterword.js?v=20260327s"></script>
   <script src="./chapters/19-ending-movie.js?v=20260324a"></script>
-  <script src="./story-data.js?v=20260323c"></script>
-  <script src="./app.js?v=20260324a"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const requestedLocale = (params.get("lang") || params.get("locale") || "").toLowerCase();
+      const versions = {
+        en: "20260328d",
+        story: "20260328b",
+        app: "20260328g"
+      };
+
+      window.AliceCourtyardRequestedLocale = requestedLocale === "en" ? "en" : "zh";
+
+      function appendBootstrapNotice(message) {
+        const notice = document.createElement("div");
+        notice.setAttribute("role", "alert");
+        notice.style.position = "fixed";
+        notice.style.left = "16px";
+        notice.style.right = "16px";
+        notice.style.bottom = "16px";
+        notice.style.zIndex = "9999";
+        notice.style.padding = "12px 14px";
+        notice.style.borderRadius = "12px";
+        notice.style.background = "rgba(12, 12, 18, 0.92)";
+        notice.style.color = "#f7f1e5";
+        notice.style.font = "500 14px/1.5 'Segoe UI', sans-serif";
+        notice.style.boxShadow = "0 10px 28px rgba(0, 0, 0, 0.28)";
+        notice.textContent = message;
+        document.body.appendChild(notice);
+      }
+
+      function loadScript(src) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = src;
+          script.async = false;
+          script.onload = () => resolve(src);
+          script.onerror = () => reject(new Error(`Failed to load ${src}`));
+          document.body.appendChild(script);
+        });
+      }
+
+      async function bootstrapStory() {
+        if (window.AliceCourtyardRequestedLocale === "en") {
+          try {
+            await loadScript(`./translations/en.js?v=${versions.en}`);
+          } catch (error) {
+            console.error("[Alice Courtyard] English localization failed to load.", error);
+            appendBootstrapNotice("English draft failed to load. Falling back to the default text for this session.");
+          }
+        }
+
+        await loadScript(`./story-data.js?v=${versions.story}`);
+        await loadScript(`./app.js?v=${versions.app}`);
+      }
+
+      bootstrapStory().catch((error) => {
+        console.error("[Alice Courtyard] Story bootstrap failed.", error);
+        appendBootstrapNotice("The story failed to initialize. Please refresh the page once.");
+      });
+    })();
+  </script>
 </body>
 </html>

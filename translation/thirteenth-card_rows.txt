@@ -1,0 +1,62 @@
+thirteenth-card		chapter_title	尾声之后
+thirteenth-card		chapter_subtitle	第十三张空白牌
+thirteenth-card		chapter_location	空白仍在继续
+thirteenth-card	thirteenth-card:001	line_eyebrow	Postscript
+thirteenth-card	thirteenth-card:001	line_title	第十三张空白牌
+thirteenth-card	thirteenth-card:001	line_subtitle	没有人会替你决定。
+thirteenth-card	thirteenth-card:001	line_location	空白仍在继续
+thirteenth-card	thirteenth-card:001	line_bgmName	After Alice
+thirteenth-card	thirteenth-card:002	line_location	长椅边
+thirteenth-card	thirteenth-card:002	line_speaker	旁白
+thirteenth-card	thirteenth-card:002	line_text	再后来的夜里，Sienna 带着十三张牌出现。她把牌一张张摊开：镜子、白花、空椅、火场、名单、门、黑猫、空白册页、埋下的兔耳、水母馆传单、长椅上的本子，以及长桌尽头的黑白双书。
+thirteenth-card	thirteenth-card:003	line_location	长椅边
+thirteenth-card	thirteenth-card:003	line_speaker	旁白
+thirteenth-card	thirteenth-card:003	line_text	这些都在前十二张牌面上一闪而过。只有最后一张，仍然空白。
+thirteenth-card	thirteenth-card:004	line_location	长椅边
+thirteenth-card	thirteenth-card:004	line_speaker	旁白
+thirteenth-card	thirteenth-card:004	line_text	空白不是缺席，是尚未被任何人擅自写死的以后——谁急着把牌面填满，谁就在替别人交出未来。
+thirteenth-card	thirteenth-card:005	line_location	长椅边
+thirteenth-card	thirteenth-card:005	line_speaker	Moel
+thirteenth-card	thirteenth-card:005	line_text	你把它留白？
+thirteenth-card	thirteenth-card:006	line_location	长椅边
+thirteenth-card	thirteenth-card:006	line_speaker	Sienna
+thirteenth-card	thirteenth-card:006	line_text	因为第十三张，本来就不该有固定牌面。
+thirteenth-card	thirteenth-card:007	line_location	长椅边
+thirteenth-card	thirteenth-card:007	line_speaker	Sienna
+thirteenth-card	thirteenth-card:007	line_text	前十二张，是已经被翻开的事。第十三张，是翻牌的人。今夜是我。若有一天换成你把它翻开，它也会是你。
+thirteenth-card	thirteenth-card:008	line_location	长椅边
+thirteenth-card	thirteenth-card:008	line_speaker	旁白
+thirteenth-card	thirteenth-card:008	line_text	风掠过牌角，十二张里的影像各退半步，像终于肯把舞台中央让给“尚未命名”——统称 Alice 的许多人，也曾只差这一格，就被世界抢先落款。
+thirteenth-card	thirteenth-card:009	line_location	长椅边
+thirteenth-card	thirteenth-card:009	line_speaker	旁白
+thirteenth-card	thirteenth-card:009	line_text	Moel 没有立刻接话，只是看着那张空白牌在 Sienna 指间停了很久。像连她也承认，有些位置如果太早被谁占满，后面的人就真的走不进来了。
+thirteenth-card	thirteenth-card:010	line_location	庭院深夜
+thirteenth-card	thirteenth-card:010	line_speaker	旁白
+thirteenth-card	thirteenth-card:010	line_text	更后来的夜里，Moon 和 Dea 也常常会来。她们不像黑书和白书的情绪残响，更像那两本书终于停下定义之后，最先长出来的两张白纸。
+thirteenth-card	thirteenth-card:011	line_location	庭院深夜
+thirteenth-card	thirteenth-card:011	line_speaker	旁白
+thirteenth-card	thirteenth-card:011	line_text	Dea 更像孩子，总把问题捧在手心里，亮亮地举给别人看。Moon 更像站在她身后一点的位置，先观察，很久以后才开口。她们都爱追着 Sienna 问问题，像终于有人愿意教她们提问，而不是替她们下答案。
+thirteenth-card	thirteenth-card:012	line_location	庭院深夜
+thirteenth-card	thirteenth-card:012	line_speaker	Dea
+thirteenth-card	thirteenth-card:012	line_text	如果一页纸什么都不写，它也还是存在的吗？
+thirteenth-card	thirteenth-card:013	line_location	庭院深夜
+thirteenth-card	thirteenth-card:013	line_speaker	Sienna
+thirteenth-card	thirteenth-card:013	line_text	当然。白纸不是为了等谁来替你写满。它首先是，你终于不必再替别人写结论。
+thirteenth-card	thirteenth-card:014	line_location	庭院深夜
+thirteenth-card	thirteenth-card:014	line_speaker	Moon
+thirteenth-card	thirteenth-card:014	line_text	如果没有答案，问题还算存在吗？
+thirteenth-card	thirteenth-card:015	line_location	庭院深夜
+thirteenth-card	thirteenth-card:015	line_speaker	Sienna
+thirteenth-card	thirteenth-card:015	line_text	算。愿意继续问下去，本身就是一种存在。
+thirteenth-card	thirteenth-card:016	line_location	长椅与回廊
+thirteenth-card	thirteenth-card:016	line_speaker	旁白
+thirteenth-card	thirteenth-card:016	line_text	远处，Noa 坐在长椅边写字。本子里夹着那张被仔细按平的水母馆宣传页。那一刻，整座庭院都显得很轻。不是因为什么都被解决了，而是终于没有什么再急着把所有人压回同一种答案里。
+thirteenth-card	thirteenth-card:017	line_location	长椅与回廊
+thirteenth-card	thirteenth-card:017	line_speaker	旁白
+thirteenth-card	thirteenth-card:017	line_text	纸上的水母与孩子气的问号叠在同一道折痕里，像旧的泪还没干，新的风已经学会轻一点吹——不是世界变温柔了，是终于有人肯把锋利从别人的喉咙边拿开。
+thirteenth-card	thirteenth-card:018	line_location	长椅边
+thirteenth-card	thirteenth-card:018	line_speaker	Sienna
+thirteenth-card	thirteenth-card:018	line_text	这一次，没有人会替你决定。
+thirteenth-card	thirteenth-card:019	line_location	长椅边
+thirteenth-card	thirteenth-card:019	line_speaker	旁白
+thirteenth-card	thirteenth-card:019	line_text	牌面在夜里轻轻合拢，像册子最后一道折痕——未定义仍在，Visitor 的余噪也可能再来；可只要第十三张还肯留白，故事就仍允许你把自己写进下一行，而不是写进别人的脚注。

@@ -1,0 +1,104 @@
+after-alice		chapter_title	第十七章
+after-alice		chapter_subtitle	After Alice
+after-alice		chapter_location	梦醒之后
+after-alice	after-alice:001	line_eyebrow	Chapter 17
+after-alice	after-alice:001	line_title	After Alice
+after-alice	after-alice:001	line_subtitle	看见从来都只是相遇，不是许可。
+after-alice	after-alice:001	line_location	梦醒之后
+after-alice	after-alice:001	line_bgmName	After Alice
+after-alice	after-alice:002	line_location	崩塌之后
+after-alice	after-alice:002	line_speaker	旁白
+after-alice	after-alice:002	line_text	风不是一下回来的。它先从塌开的那截回廊外面试探着吹进来，把几片还没落稳的光点轻轻拨开。等 A-017 再抬起头时，庭院里已经看不见 Yume、Alice 和 Hana 站在原来的位置上了。
+after-alice	after-alice:003	line_location	崩塌之后
+after-alice	after-alice:003	line_speaker	旁白
+after-alice	after-alice:003	line_text	没有人来重启系统。也没有谁把这里恢复成原样。喷泉缺了一角。长桌边的一只杯子永远少了半道裂痕的另一边。回廊尽头塌下去一截，露出后面原本并不存在的天空。可花没有死，水也还在流。
+after-alice	after-alice:004	line_location	崩塌之后
+after-alice	after-alice:004	line_speaker	旁白
+after-alice	after-alice:004	line_text	那些曾被系统照料得过于整齐的东西，忽然都有了自己的偏向。草叶往不同的方向长。石路在无人经过的地方慢慢生出新的分岔。就连风吹过来时，都不像从前那样只是为了维持一幅画面。
+after-alice	after-alice:005	line_location	崩塌之后
+after-alice	after-alice:005	line_speaker	旁白
+after-alice	after-alice:005	line_text	黑白双书随 Alice 一并远去，空白却没有因此收束。它从书脊的约束里溢出来，渗进草缝、喷泉残缘与塌开的回廊断面——像世界终于承认：再也没有谁能把“后来”压进同一册目录，交给某个核心一次输出。
+after-alice	after-alice:006	line_location	长椅边
+after-alice	after-alice:006	line_speaker	A-017
+after-alice	after-alice:006	line_text	……那 Yume 的册子呢。她还在写吗？还是连记录也一起停了？
+after-alice	after-alice:007	line_location	长椅边
+after-alice	after-alice:007	line_speaker	旁白
+after-alice	after-alice:007	line_text	A-017 坐在长椅边，看着那座忽然失去了原本重心的庭院，胸口空得发疼。她没有因为系统崩塌而得到任何近似圆满的感觉。她甚至直到很久以后，仍然无法把“Hana 已经离开了自己能看见的位置”这件事真正说出口。
+after-alice	after-alice:008	line_location	长椅边
+after-alice	after-alice:008	line_speaker	旁白
+after-alice	after-alice:008	line_text	有很多次，她都几乎要下意识回头。像从前那样，先去看喷泉边、回廊口，或者那条风总会先吹过的路，确认那个银白长发的身影是不是还在那里。每一次回头落空，都像在身体里重新学一遍“已经不在”。
+after-alice	after-alice:009	line_location	长椅边
+after-alice	after-alice:009	line_speaker	旁白
+after-alice	after-alice:009	line_text	Moel 就是在她第不知道多少次坐回长椅边的时候走过来的。黑发和猫耳都被风吹得有些乱。她蹲在椅背上，看着 A-017 手里的宣传页，像看着某种还没被交出去的未来。
+after-alice	after-alice:010	line_location	长椅边
+after-alice	after-alice:010	line_speaker	Moel
+after-alice	after-alice:010	line_text	别把这地方想成重启。
+after-alice	after-alice:011	line_location	长椅边
+after-alice	after-alice:011	line_speaker	Moel
+after-alice	after-alice:011	line_text	AliceCore 从来都不只看见一种未来。它先把无数可能生成出来，让它们彼此碰撞、彼此覆写，再从里面抽出一条最整齐、最适合被归档的路径，把它当作答案输出。
+after-alice	after-alice:012	line_location	长椅边
+after-alice	after-alice:012	line_speaker	Moel
+after-alice	after-alice:012	line_text	其余那些没被选中的继续，并不是从来不存在。只是一直被压回更深的地方，像从未发生。
+after-alice	after-alice:013	line_location	长椅边
+after-alice	after-alice:013	line_speaker	Moel
+after-alice	after-alice:013	line_text	而 GOD_KILL 之后，AliceCore 第一次停止了这种输出。未来不需要再由它替存在决定。
+after-alice	after-alice:014	line_location	长椅边
+after-alice	after-alice:014	line_speaker	A-017
+after-alice	after-alice:014	line_text	如果再也没有人看见她们呢？
+after-alice	after-alice:015	line_location	长椅边
+after-alice	after-alice:015	line_speaker	Moel
+after-alice	after-alice:015	line_text	那也不代表她们不在。
+after-alice	after-alice:016	line_location	长椅边
+after-alice	after-alice:016	line_speaker	Moel
+after-alice	after-alice:016	line_text	旧系统一直以为，存在要先被记录、被判定、被观测，才算成立。
+after-alice	after-alice:017	line_location	长椅边
+after-alice	after-alice:017	line_speaker	Moel
+after-alice	after-alice:017	line_text	可看见从来都只是相遇。
+after-alice	after-alice:018	line_location	长椅边
+after-alice	after-alice:018	line_speaker	Moel
+after-alice	after-alice:018	line_text	不是许可。
+after-alice	after-alice:019	line_location	喷泉边
+after-alice	after-alice:019	line_speaker	旁白
+after-alice	after-alice:019	line_text	后来，庭院里偶尔也会有与三姐妹重新相遇的时候。但那不是旧系统把她们叫回原位。Yume 不再负责记录。Alice 不再负责判定。Hana 也不再负责把谁送回原点。她们只是以另一种不必被稳定看见的方式，继续留在这里。
+after-alice	after-alice:020	line_location	喷泉边
+after-alice	after-alice:020	line_speaker	旁白
+after-alice	after-alice:020	line_text	有时，A-017 会在喷泉边看见 Yume，空白册子摊在膝上。Moel 跳上石沿，看着那本再也写不出字的册子，低低说一句：你果然还是会留页。
+after-alice	after-alice:021	line_location	长桌尽头
+after-alice	after-alice:021	line_speaker	旁白
+after-alice	after-alice:021	line_text	有时，长桌尽头会多出一道金色的影子。Alice 只把那本快被风翻乱的书轻轻按回该停的页上，或让一枚差点滑落桌沿的书签停在原处。Moel 蹲在桌边看一会儿，会懒懒吐出一句：都已经不用替谁下结论了，你还在管这个。
+after-alice	after-alice:022	line_location	回廊深夜
+after-alice	after-alice:022	line_speaker	旁白
+after-alice	after-alice:022	line_text	而 Hana 最常出现在谁也无法确定自己是否真的看见了她的时候。花圃边，回廊口，或者某个人正要跌回旧痛里之前，肩头忽然先落下来的一点很轻的温度。Moel 有一次走到半截忽然停住，像有什么极轻地碰了碰她后背乱起来的衣角。
+after-alice	after-alice:023	line_location	回廊深夜
+after-alice	after-alice:023	line_speaker	Moel
+after-alice	after-alice:023	line_text	从前的你们，只是梦。
+after-alice	after-alice:024	line_location	回廊深夜
+after-alice	after-alice:024	line_speaker	Moel
+after-alice	after-alice:024	line_text	现在的你们，才是梦醒之后，也不会消失的存在。
+after-alice	after-alice:025	line_location	回廊深夜
+after-alice	after-alice:025	line_speaker	Moel
+after-alice	after-alice:025	line_text	既然你们现在都这么闲、这么爱发呆，偶尔也陪我“出去”玩玩嘛。
+after-alice	after-alice:026	line_location	回廊深夜
+after-alice	after-alice:026	line_speaker	旁白
+after-alice	after-alice:026	line_text	她说完，尾巴在夜风里轻轻一晃，眼角弯起来，露出一个很轻、却一看就让人想起爱丽丝猫的笑。
+after-alice	after-alice:027	line_location	花圃边
+after-alice	after-alice:027	line_speaker	旁白
+after-alice	after-alice:027	line_text	黄昏时，Azalea、Meiling、Shella 和 Mizuki 一起走进花圃。她们把那些曾经维持自身存在方式的兔耳一对对埋进土里。那不是葬礼，更像把旧的依附方式轻轻放回地面，让留下来的身体第一次只凭自己继续存在。
+after-alice	after-alice:028	line_location	花圃边
+after-alice	after-alice:028	line_speaker	旁白
+after-alice	after-alice:028	line_text	这一回，蹲下来把土覆回去的人不是 Hana，而是 A-017。她终于明白，有些结束不是响亮地碎掉，而是从此再也不会被谁亲手摆回原位。
+after-alice	after-alice:029	line_location	花圃边
+after-alice	after-alice:029	line_speaker	A-017
+after-alice	after-alice:029	line_text	为什么你们还能留在这里？别的那些 Alice，最后不是都得离开吗？
+after-alice	after-alice:030	line_location	花圃边
+after-alice	after-alice:030	line_speaker	Azalea
+after-alice	after-alice:030	line_text	因为我们从来就不是等着被送回去的人。
+after-alice	after-alice:031	line_location	花圃边
+after-alice	after-alice:031	line_speaker	Moel
+after-alice	after-alice:031	line_text	普通的 A-line 是完整灵魂，会离开。她们不是。她们是被 Hana 安放进载体里的幸福碎片、未完成动作，还有关系残响。
+after-alice	after-alice:032	line_location	花圃边
+after-alice	after-alice:032	line_speaker	Moel
+after-alice	after-alice:032	line_text	兔耳埋掉，结束的是旧关系。不是她们。
+after-alice	after-alice:033	line_location	花圃边
+after-alice	after-alice:033	line_speaker	旁白
+after-alice	after-alice:033	line_text	A-017站在那片新覆好的土前，很久都没有说话。她这才第一次真正懂得，庭院不是所有亡者的收容所。它只留下那些已经不能被还原为原来那个人、却仍然真实存在的东西。

@@ -8,6 +8,12 @@
   const defaultTypingSpeed = 18;
   const defaultAutoDelay = 1800;
   const defaultCardDuration = 2150;
+  const currentLanguage = String(story.locale || "").toLowerCase().startsWith("en") ? "en" : "zh";
+  const initialUrl = new URL(window.location.href);
+  const shouldResumeAfterLanguageSwitch = initialUrl.searchParams.get("resume") === "1";
+  const shouldAutoStartEntry = initialUrl.searchParams.get("autostart") === "1";
+
+  document.documentElement.lang = currentLanguage === "en" ? "en" : "zh-CN";
 
   const ui = {
     coverOverlay: document.getElementById("coverOverlay"),
@@ -15,6 +21,8 @@
     coverContinueButton: document.getElementById("coverContinueButton"),
     coverGalleryButton: document.getElementById("coverGalleryButton"),
     coverCreditsButton: document.getElementById("coverCreditsButton"),
+    coverLanguageZhButton: document.getElementById("coverLanguageZhButton"),
+    coverLanguageEnButton: document.getElementById("coverLanguageEnButton"),
     chapterName: document.getElementById("chapterName"),
     locationName: document.getElementById("locationName"),
     bgmName: document.getElementById("bgmName"),
@@ -54,6 +62,8 @@
     muteButton: document.getElementById("muteButton"),
     galleryButton: document.getElementById("galleryButton"),
     returnToTitleButton: document.getElementById("returnToTitleButton"),
+    languageZhButton: document.getElementById("languageZhButton"),
+    languageEnButton: document.getElementById("languageEnButton"),
     backlogButton: document.getElementById("backlogButton"),
     resetButton: document.getElementById("resetButton"),
     settingOverlay: document.getElementById("settingOverlay"),
@@ -137,6 +147,7 @@
     chapterCardTimer: null,
     sceneGateTimer: null,
     cgRevealTimer: null,
+    videoLoadGuardTimer: null,
     propDisplayTimer: null,
     propHideTimer: null,
     typingDone: true,
@@ -178,9 +189,12 @@
   buildChapterMenu();
   bindEvents();
   syncAudioControls();
+  syncLanguageControls();
   applyAudioMix();
   preloadChapterVoices(story.lines[state.index]?.chapterId);
   openCover();
+  resumeAfterLanguageSwitchIfNeeded();
+  autoStartEntryIfNeeded();
 
   function saveProgress() {
     const payload = {
@@ -193,6 +207,10 @@
       voiceMasterVolume: state.voiceMasterVolume
     };
     window.localStorage.setItem(storageKey, JSON.stringify(payload));
+  }
+
+  function hasStoredProgress() {
+    return Boolean(window.localStorage.getItem(storageKey));
   }
 
   function bindEvents() {
@@ -276,6 +294,23 @@
       syncAudioControls();
       applyAudioMix();
       saveProgress();
+    });
+
+    [
+      [ui.coverLanguageZhButton, "zh"],
+      [ui.coverLanguageEnButton, "en"],
+      [ui.languageZhButton, "zh"],
+      [ui.languageEnButton, "en"]
+    ].forEach(([button, language]) => {
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        playUiClick();
+        switchLanguage(language);
+      });
     });
 
     ui.returnToTitleButton.addEventListener("click", (event) => {
@@ -909,6 +944,10 @@
       preloadImage(line.poster);
     }
 
+    clearVideoLoadGuardTimer();
+    let metadataReady = false;
+    let playbackStarted = false;
+
     const onEnded = () => {
       if (renderToken !== state.renderToken) {
         return;
@@ -923,11 +962,60 @@
       finishVideoLine(true, 0);
     };
 
+    const onLoadedMetadata = () => {
+      if (renderToken !== state.renderToken) {
+        return;
+      }
+      metadataReady = true;
+    };
+
+    const onPlaying = () => {
+      if (renderToken !== state.renderToken) {
+        return;
+      }
+      playbackStarted = true;
+      clearVideoLoadGuardTimer();
+      ui.textboxHint.textContent = state.videoSkippable ? "Video playing" : "Video locked";
+    };
+
     ui.videoLayer.onended = onEnded;
     ui.videoLayer.onerror = onError;
-    ui.videoLayer.onloadedmetadata = null;
+    ui.videoLayer.onloadedmetadata = onLoadedMetadata;
+    ui.videoLayer.onplaying = onPlaying;
 
-    ui.videoLayer.play().catch(() => {
+    state.videoLoadGuardTimer = window.setTimeout(() => {
+      if (renderToken !== state.renderToken || !state.videoActive) {
+        return;
+      }
+
+      const mediaError = ui.videoLayer.error;
+      const noSource = typeof ui.videoLayer.networkState === "number" && ui.videoLayer.networkState === 3;
+
+      if (!playbackStarted && (mediaError || noSource)) {
+        finishVideoLine(true, 0);
+        return;
+      }
+
+      if (!metadataReady && !playbackStarted) {
+        ui.textboxHint.textContent = state.videoSkippable ? "Tap Skip to continue" : "Video ready";
+      }
+    }, 2500);
+
+    ui.videoLayer.play().catch((error) => {
+      if (renderToken !== state.renderToken || !state.videoActive) {
+        return;
+      }
+
+      const errorName = error?.name || "";
+      const errorMessage = String(error?.message || "");
+      const mediaError = ui.videoLayer.error;
+      const noSource = typeof ui.videoLayer.networkState === "number" && ui.videoLayer.networkState === 3;
+
+      if (mediaError || noSource || errorName === "NotSupportedError" || /not supported|no supported source/i.test(errorMessage)) {
+        finishVideoLine(true, 0);
+        return;
+      }
+
       // Keep the video frame visible and allow manual skip if autoplay is blocked.
       ui.textboxHint.textContent = state.videoSkippable ? "Tap Skip to continue" : "Video ready";
     });
@@ -951,9 +1039,11 @@
   }
 
   function stopVideoPlayback(restoreStoryBgm) {
+    clearVideoLoadGuardTimer();
     ui.videoLayer.onended = null;
     ui.videoLayer.onerror = null;
     ui.videoLayer.onloadedmetadata = null;
+    ui.videoLayer.onplaying = null;
 
     if (!ui.videoLayer.paused) {
       ui.videoLayer.pause();
@@ -1382,6 +1472,84 @@
     ui.voiceVolumeRange.value = String(Math.round(state.voiceMasterVolume * 100));
     ui.bgmVolumeValue.textContent = `${Math.round(state.bgmMasterVolume * 100)}%`;
     ui.voiceVolumeValue.textContent = `${Math.round(state.voiceMasterVolume * 100)}%`;
+  }
+
+  function syncLanguageControls() {
+    [
+      [ui.coverLanguageZhButton, "zh"],
+      [ui.coverLanguageEnButton, "en"],
+      [ui.languageZhButton, "zh"],
+      [ui.languageEnButton, "en"]
+    ].forEach(([button, language]) => {
+      if (!button) {
+        return;
+      }
+
+      const isActive = currentLanguage === language;
+      button.classList.toggle("is-active", isActive);
+      button.disabled = isActive;
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function switchLanguage(language) {
+    if (!language || language === currentLanguage) {
+      return;
+    }
+
+    saveProgress();
+
+    const nextUrl = new URL(window.location.href);
+
+    if (language === "en") {
+      nextUrl.searchParams.set("lang", "en");
+      nextUrl.searchParams.delete("locale");
+    } else {
+      nextUrl.searchParams.delete("lang");
+      nextUrl.searchParams.delete("locale");
+    }
+
+    if (hasStoredProgress() || hasSavedProgress()) {
+      nextUrl.searchParams.set("resume", "1");
+    } else {
+      nextUrl.searchParams.delete("resume");
+    }
+
+    window.location.assign(nextUrl.toString());
+  }
+
+  function resumeAfterLanguageSwitchIfNeeded() {
+    if (!shouldResumeAfterLanguageSwitch || !(hasStoredProgress() || hasSavedProgress())) {
+      return;
+    }
+
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.delete("resume");
+
+    if (window.history && typeof window.history.replaceState === "function") {
+      window.history.replaceState({}, "", nextUrl.toString());
+    }
+
+    state.coverActive = false;
+    setOverlay(ui.coverOverlay, false);
+    renderCurrentLine(false);
+  }
+
+  function autoStartEntryIfNeeded() {
+    if (!shouldAutoStartEntry || hasStoredProgress() || hasSavedProgress()) {
+      return;
+    }
+
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.delete("autostart");
+
+    if (window.history && typeof window.history.replaceState === "function") {
+      window.history.replaceState({}, "", nextUrl.toString());
+    }
+
+    state.coverActive = false;
+    setOverlay(ui.coverOverlay, false);
+    resetProgress();
   }
 
   function applyAudioMix() {
@@ -1848,6 +2016,13 @@
     state.deferredLineStarter = null;
   }
 
+  function clearVideoLoadGuardTimer() {
+    if (state.videoLoadGuardTimer) {
+      window.clearTimeout(state.videoLoadGuardTimer);
+      state.videoLoadGuardTimer = null;
+    }
+  }
+
   function clearPropTimers() {
     if (state.propDisplayTimer) {
       window.clearTimeout(state.propDisplayTimer);
@@ -1903,7 +2078,7 @@
     state.coverActive = true;
     preloadChapterVoices(story.lines[state.index]?.chapterId);
     setOverlay(ui.coverOverlay, true);
-    ui.coverContinueButton.hidden = !hasSavedProgress();
+    ui.coverContinueButton.hidden = !(hasStoredProgress() || hasSavedProgress());
   }
 
   function returnToTitle() {

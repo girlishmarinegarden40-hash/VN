@@ -1,0 +1,89 @@
+a403		chapter_title	第十四章
+a403		chapter_subtitle	A-403
+a403		chapter_location	第四百零三次失败
+a403	a403:001	line_eyebrow	Chapter 14
+a403	a403:001	line_title	A-403
+a403	a403:001	line_subtitle	Alice 从来就不只一个。
+a403	a403:001	line_location	第四百零三次失败
+a403	a403:001	line_bgmName	Visitor
+a403	a403:002	line_location	庭院深夜
+a403	a403:002	line_speaker	旁白
+a403	a403:002	line_text	那一夜，庭院先不是看见了谁，而是先感觉到某个一直压在更深处的东西终于浮了上来。回廊尽头的门牌一扇扇亮起，像有人在黑暗里依次把许多从未真正结束过的人生重新照亮。
+a403	a403:003	line_location	庭院深夜
+a403	a403:003	line_speaker	旁白
+a403	a403:003	line_text	每一盏亮起的名字都曾差点被统称吞掉——Alice 从来就不只一个，失败也不只一次；系统爱把她们折成同一行编号，好让旁观的人不必逐个承认脸。
+a403	a403:004	line_location	喷泉边
+a403	a403:004	line_speaker	旁白
+a403	a403:004	line_text	A-017最先察觉到的，不是声音，而是空气忽然变重了。整座庭院像在同一瞬间屏住一口气，连喷泉边的水面都安静得过分，仿佛有什么东西正借着那层水光，把自己慢慢推回人形。
+a403	a403:005	line_location	喷泉边
+a403	a403:005	line_speaker	旁白
+a403	a403:005	line_text	她下意识低头看了一眼。原本只该映出自己脸的地方，却先出现了一张模糊不定的脸。那张脸在很多轮廓之间缓慢晃动，有时像她自己，有时像 A-214，有时又像某个从未被真正讲完的陌生人。
+a403	a403:006	line_location	喷泉边
+a403	a403:006	line_speaker	旁白
+a403	a403:006	line_text	等 A-017 再抬起头时，那个人已经站在喷泉对面。像她本来就一直在那里，只是直到这一刻，庭院才终于承认自己再也压不住她了。
+a403	a403:007	line_location	喷泉对面
+a403	a403:007	line_speaker	旁白
+a403	a403:007	line_text	她身上的编号不是没有，而是不稳定。像被反复覆写过太多次的旧痕，一会儿浮在手腕，一会儿从锁骨边淡下去，最后又总会从更深一点的地方重新显出来。
+a403	a403:008	line_location	记录页前
+a403	a403:008	line_speaker	旁白
+a403	a403:008	line_text	几乎是同一时间，Yume手里的册子自己翻到了最后一页。纸张擦过指尖，发出过分锋利的响声。等她低下头，页尾已经只剩一行终于定下来的字：A-403。
+a403	a403:009	line_location	记录页前
+a403	a403:009	line_speaker	旁白
+a403	a403:009	line_text	那一行字像从纸纤维里渗出的旧血——Visitor 若在，大概又会急着替它配标题；可这里不是弹幕池，是被折断了四百零三次仍不肯碎尽的骨头在敲封面。
+a403	a403:010	line_location	庭院中央
+a403	a403:010	line_speaker	旁白
+a403	a403:010	line_text	Yume没有立刻把那一页合上。Hana和Alice也一起回到了庭院中央。四人偶从各自的位置抬起头，连风都像停在了离她们更远一点的地方。
+a403	a403:011	line_location	喷泉对面
+a403	a403:011	line_speaker	A-403
+a403	a403:011	line_text	原来已经四百零三次了。
+a403	a403:012	line_location	喷泉对面
+a403	a403:012	line_speaker	旁白
+a403	a403:012	line_text	她说出那个次数时，不像在数自己。更像在替那些早就被压成一团、再也分不出先后的失败一起确认：原来她们真的已经失败了这么多次。
+a403	a403:013	line_location	喷泉边
+a403	a403:013	line_speaker	旁白
+a403	a403:013	line_text	喷泉的水面像被谁换了一层更冷的玻璃。A-403 把指尖探进去，涟漪荡开时，里面同时晃过许多张脸——有的像她，有的像从未见过的少女——又一齐碎成一圈圈没有意义的波纹。
+a403	a403:014	line_location	喷泉边
+a403	a403:014	line_speaker	A-017
+a403	a403:014	line_text	……我认识你。不是脸。是那种“早就见过无数次”的恶心。
+a403	a403:015	line_location	记录页前
+a403	a403:015	line_speaker	Yume
+a403	a403:015	line_text	别碰那行字。
+a403	a403:016	line_location	记录页前
+a403	a403:016	line_speaker	旁白
+a403	a403:016	line_text	可笔尖还是落了下去。墨迹刚一成形，就像从纸背被顶开一样，整页同时浮起几百行彼此打架的笔画。它们互相覆盖、互相否认，像许多个未来在同一秒里抢着说自己才是正版。
+a403	a403:017	line_location	喷泉对面
+a403	a403:017	line_speaker	A-403
+a403	a403:017	line_text	你们每次都想把故事折成一条最干净的线。每次折到最后，都会多出一截塞不回去的骨头。我就是那截骨头。
+a403	a403:018	line_location	庭院中央
+a403	a403:018	line_speaker	Hana
+a403	a403:018	line_text	你不是来求救的。你是来把我们都拖进同一条失败的。
+a403	a403:019	line_location	喷泉对面
+a403	a403:019	line_speaker	A-403
+a403	a403:019	line_text	你们已经在这里了。还要我拖？
+a403	a403:020	line_location	喷泉边
+a403	a403:020	line_speaker	Alice
+a403	a403:020	line_text	你是谁？
+a403	a403:021	line_location	喷泉对面
+a403	a403:021	line_speaker	A-403
+a403	a403:021	line_text	问名字太便宜了。你们台账上从来不缺代号。缺的是——你们敢不敢承认，那些代号背后，每一张脸都曾经能长成别的样子。
+a403	a403:022	line_location	庭院中央
+a403	a403:022	line_speaker	旁白
+a403	a403:022	line_text	Alice 下意识把黑白双书按在胸前。书脊却像忽然空了重量，纸页里传来一阵极轻的沙沙声，像有什么东西正从装订线里往外抽走。
+a403	a403:023	line_location	喷泉边
+a403	a403:023	line_speaker	A-017
+a403	a403:023	line_text	那些字……又来了。贴在天上那种。它们在看我们对不对？
+a403	a403:024	line_location	喷泉对面
+a403	a403:024	line_speaker	A-403
+a403	a403:024	line_text	你听得见，就够了。接下来别再假装只有你们在审判。
+a403	a403:025	line_location	喷泉对面
+a403	a403:025	line_speaker	旁白
+a403	a403:025	line_text	A-403看着她，忽然很轻地笑了一下。那笑意短得更像某种终于被逼出来的疲惫。
+a403	a403:026	line_location	喷泉对面
+a403	a403:026	line_speaker	A-403
+a403	a403:026	line_text	我是你们一直没能处理完的那一页。
+a403	a403:027	line_location	庭院中央
+a403	a403:027	line_speaker	旁白
+a403	a403:027	line_text	夜没有更深。只是所有灯都像同时被谁调暗了一格，好让下一章的对话，不得不在更窄的光里进行。
+a403	a403:028	line_location	庭院中央
+a403	a403:028	line_speaker	旁白
+a403	a403:028	line_text	第十三张牌若曾缺席于台账，此刻也不必急着翻面——先让这截骨头把话说完：谁再把别人的痛折成一条干净的故事线，折痕里都会多出一声别人的呼吸。
