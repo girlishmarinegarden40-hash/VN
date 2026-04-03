@@ -105,7 +105,7 @@ window.AliceCourtyardChapterFiles.push({
       sprites: [
         { slot: "left", src: "./assets/sprites/yume/yume_slight_surprise.webp" }
       ],
-      text: "那一行字像从纸纤维里渗出的旧血——Visitor 若在，大概又会急着替它配标题；可这里不是弹幕池，是被折断了四百零三次仍不肯碎尽的骨头在敲封面。",
+      text: "那一行字像从纸纤维里渗出的旧血——Visitor 若在，大概又会急着替它配调、贴签；可这里不是任由人站在外面指点的围观场，是被否定了四百零三次仍不肯散尽的重量，从纸背顶穿上来的。",
       pauseBefore: 200,
       pauseAfter: 260,
       textSpeed: 22

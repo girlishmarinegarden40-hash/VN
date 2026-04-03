@@ -120,7 +120,7 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_classroom_afternoon.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
-      text: "A-017胃里发冷。那句话她听过太多次——教室、走廊、后来会变成一行行弹幕的地方：大家都这样。仿佛人数一多，就可以把什么都在除法里摊薄，薄到像没发生过。",
+      text: "A-017胃里发冷。那句话她听过太多次——教室、走廊、后来会被无数人在外面一句一句转述评论的地方：大家都这样。仿佛人数一多，就可以把什么都在除法里摊薄，薄到像没发生过。",
       pauseBefore: 200,
       pauseAfter: 240,
       textSpeed: 22
@@ -224,7 +224,7 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
-      text: "A-017站在回廊阴影里，没有出去。她并不怜悯她，却第一次清楚地意识到，庭院处理的不是“好人”和“坏人”。"
+      text: "A-017站在回廊阴影里，没有出去。她并不怜悯 A-092，可手指压着墙面，慢慢发凉——她知道那种“只是跟着”的句子长什么样，因为她也曾经听过太多次了。"
     },
     {
       location: "离开",
@@ -233,7 +233,7 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_corridor_white.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_anxious.webp" }],
-      text: "它处理的是那些在某个瞬间，再也无法继续往前走的人。"
+      text: "那种发冷，不是恨意，也不是宽容。更像终于有人替她说出了某件她一直不敢细看的事：有些伤，是无数个“只是跟着”叠出来的。没有一只手推人，却有很多双手一起把空气推成了那个形状。"
     },
     {
       location: "离开",

@@ -201,7 +201,7 @@ window.AliceCourtyardChapterFiles.push({
       voice: "./assets/voice/15-god-kill/15-god-kill_019_voice.wav",
       voiceReady: false,
       background: "./assets/bg/bg_garden_night.webp",
-      text: "Yume 必须记录。Hana 必须接住。Alice 必须判定。而 AliceCore，会把那些原本能够分岔、能够偏离、能够迟疑、能够失败以后再慢慢长出来的继续，压成一条最整齐、最可归档、最适合被输出的答案。"
+      text: "A-017忽然看见了整座庭院最清楚的一面——Yume记录，Hana接住，Alice判定，三者咬合得天衣无缝，像早已被运行了无数遍、不需要任何人点头就会自动转动的程序。可齿轮咬合得越紧，运转的方向就越只剩下一条。AliceCore藏在最深处，把那些原本可以分叉、可以迟疑、可以在失败里慢慢长成别的形状的可能，全都折回同一条最整齐的轨道，输出为唯一的答案。"
     },
     {
       location: "黑暗边界",

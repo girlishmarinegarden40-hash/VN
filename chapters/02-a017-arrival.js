@@ -80,7 +80,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/yume/yume_observing.webp" },
         { slot: "center", src: "./assets/sprites/a017/a017_stunned.webp" }
       ],
-      text: "深紫到黑渐变的长发先垂进了这片纯白。金色眼睛安静得不像人的眼睛，更像某种古老装置里始终未熄的光。她站在少女面前，翻开册子，看了一眼，又抬头看她。"
+      text: "深紫到黑渐变的长发先进入她的视野。她最先看见的不是那张脸，而是翻开册子的那个动作——熟练得像已经做过一千次，落笔前先停了一拍，像在等面前这个人自己先说点什么。然后那双金色的眼抬起来，平静地把她从头看到脚。"
     },
     {
       location: "纯白回廊",

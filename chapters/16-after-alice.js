@@ -310,7 +310,7 @@ window.AliceCourtyardChapterFiles.push({
         { slot: "left", src: "./assets/sprites/moel/moel_human_neutral.webp" },
         { slot: "right", src: "./assets/sprites/a017/a017_anxious.webp", dim: true }
       ],
-      text: "普通的 A-line 是完整灵魂，会离开。她们不是。她们是被 Hana 安放进载体里的幸福碎片、未完成动作，还有关系残响。"
+      text: "普通的 A-line 进来，走完了就会离开。她们不是。她们是被 Hana 留住的残响——那些动作太执着，太深，碎了也不肯彻底散掉； Hana 没有让它们消失，给了它们可以停下来的形状。"
     },
     {
       location: "花圃边",

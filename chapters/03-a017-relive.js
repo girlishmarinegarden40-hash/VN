@@ -315,7 +315,7 @@ window.AliceCourtyardChapterFiles.push({
       voiceReady: false,
       background: "./assets/bg/bg_garden_dusk.webp",
       sprites: [{ slot: "center", src: "./assets/sprites/a017/a017_neutral.webp" }],
-      text: "等她终于能把呼吸慢慢压平，傍晚也已经落下来了。可那阵风，那张被卷走的纸，还有她最后硬生生停住的那一下，都还像细沙一样卡在骨头缝里，暂时不会离开。"
+      text: "等她终于能把呼吸慢慢压平，傍晚也已经落下来了。可那阵风，那张被卷走的纸，还有她最后硬生生停住的那一下，都还沉在某个地方，像水浸透了厚布——干不了，动一下就重一下。"
     },
     {
       location: "喷泉边",
